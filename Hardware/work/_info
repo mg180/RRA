@@ -1,0 +1,129 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Matt/Google Drive/Digital Design/RS-CPU
+Econtroller
+Z0 w1453078232
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware
+Z4 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd
+Z5 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd
+l0
+L4
+V9@PC70n8O7J?5Ie@U2m;E2
+!s100 9IMfbURiC@6n3gRjam==N2
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1453078237
+!i10b 1
+Z8 !s108 1453078237.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd|
+Z10 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Av1
+R1
+R2
+DEx4 work 10 controller 0 22 9@PC70n8O7J?5Ie@U2m;E2
+l25
+L18
+VooT>iDM?F@1HPE1MeeI^i1
+!s100 2`BmBQ>KckNOXOXa`0<8J2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Erra
+Z13 w1453080739
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z15 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd
+Z16 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd
+l0
+L6
+VYL2GP;:39_[k37:L1?fLm0
+!s100 nbAH41JWTIRkN8zYbT:F61
+R6
+32
+Z17 !s110 1453080746
+!i10b 1
+Z18 !s108 1453080746.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd|
+Z20 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd|
+!i113 1
+R11
+R12
+Av1
+R14
+R1
+R2
+Z21 DEx4 work 3 rra 0 22 YL2GP;:39_[k37:L1?fLm0
+l87
+L29
+Z22 VESLE`RmgYhI5^WVjf7lV42
+Z23 !s100 C?NA6^nm7:XPD_1a2J:hX3
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Erra_controller
+Z24 w1453078035
+R1
+R2
+R3
+R4
+R5
+l0
+L4
+VV6Do^0P;6?31S_m`X[TYO0
+!s100 44d]6=4Gg8KL@ff8[;=ha2
+R6
+32
+Z25 !s110 1453078040
+!i10b 1
+Z26 !s108 1453078040.000000
+R9
+R10
+!i113 1
+R11
+R12
+Av1
+R1
+R2
+DEx4 work 14 rra_controller 0 22 V6Do^0P;6?31S_m`X[TYO0
+l25
+L18
+V5KgoOS0CDA9bUfZz56f<f2
+!s100 WAkzz:]MYU:cnOgm9JHNV2
+R6
+32
+R25
+!i10b 1
+R26
+R9
+R10
+!i113 1
+R11
+R12
