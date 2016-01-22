@@ -35,78 +35,80 @@ begin
 
   process (c_state)
   begin
-    case c_state is
-      when s_WAITING =>
-        case mode is
-          when "00" =>  --Manual
-            l_keypad <= '1';
-            l_memory <= '0';
-            n_state  <= s_LOAD_KEYPAD;
-          when "01" =>  --Record
-            l_keypad <= '0';
-            l_memory <= '0';
-            n_state  <= s_CHECK_KEYPAD;
-          when "10" =>  --Playback
-            l_keypad <= '0';
-            l_memory <= '1';
-            n_state  <= s_GET_MEMORY_NEXT;
-          when others=> --Unknown
-            l_keypad <= '0';
-            l_memory <= '0';
-            n_state  <= s_WAITING;
-        end case;
+    if rising_edge(clk) then
+      case c_state is
+        when s_WAITING =>
+          case mode is
+            when "00" =>  --Manual
+              l_keypad <= '1';
+              l_memory <= '0';
+              n_state  <= s_LOAD_KEYPAD;
+            when "01" =>  --Record
+              l_keypad <= '0';
+              l_memory <= '0';
+              n_state  <= s_CHECK_KEYPAD;
+            when "10" =>  --Playback
+              l_keypad <= '0';
+              l_memory <= '1';
+              n_state  <= s_GET_MEMORY_NEXT;
+            when others=> --Unknown
+              l_keypad <= '0';
+              l_memory <= '0';
+              n_state  <= s_WAITING;
+          end case;
 
-        w_memory <= '0';
-
-      when s_LOAD_KEYPAD =>
-        l_keypad <= '0';
-        l_memory <= '0';
-        w_memory <= '0';
-        if moving = '1' then
-          n_state <= s_MOVING;
-        else 
-          n_state <= s_WAITING;
-        end if;
-
-      when s_CHECK_KEYPAD =>
-        if store = '1' then
-          l_keypad <= '0';
-          w_memory <= '1';
-          n_state  <= s_SET_MEMORY_NEXT;
-        else 
-          l_keypad <= '1';
           w_memory <= '0';
-          n_state  <= s_LOAD_KEYPAD;
-        end if;
 
-        l_memory <= '0';
+        when s_LOAD_KEYPAD =>
+          l_keypad <= '0';
+          l_memory <= '0';
+          w_memory <= '0';
+          if moving = '1' then
+            n_state <= s_MOVING;
+          else 
+            n_state <= s_WAITING;
+          end if;
 
-      when s_GET_MEMORY_NEXT =>
-        l_keypad <= '0';
-        l_memory <= '0';
-        w_memory <= '0';
-        if moving = '1' then
-          n_state <= s_MOVING;
-        else 
+        when s_CHECK_KEYPAD =>
+          if store = '1' then
+            l_keypad <= '0';
+            w_memory <= '1';
+            n_state  <= s_SET_MEMORY_NEXT;
+          else 
+            l_keypad <= '1';
+            w_memory <= '0';
+            n_state  <= s_LOAD_KEYPAD;
+          end if;
+
+          l_memory <= '0';
+
+        when s_GET_MEMORY_NEXT =>
+          l_keypad <= '0';
+          l_memory <= '0';
+          w_memory <= '0';
+          if moving = '1' then
+            n_state <= s_MOVING;
+          else 
+            n_state <= s_WAITING;
+          end if;
+
+        when s_SET_MEMORY_NEXT =>
+          l_keypad <= '0';
+          l_memory <= '0';
+          w_memory <= '0';
           n_state <= s_WAITING;
-        end if;
 
-      when s_SET_MEMORY_NEXT =>
-        l_keypad <= '0';
-        l_memory <= '0';
-        w_memory <= '0';
-        n_state <= s_WAITING;
-
-      when s_MOVING =>
-        l_keypad <= '0';
-        l_memory <= '0';
-        w_memory <= '0';
-        if moving = '1' then
-          n_state <= s_MOVING;
-        else 
-          n_state <= s_WAITING;
-        end if;
-    end case;
+        when s_MOVING =>
+          l_keypad <= '0';
+          l_memory <= '0';
+          w_memory <= '0';
+          if moving = '1' then
+            n_state <= s_MOVING;
+          else 
+            n_state <= s_WAITING;
+          end if;
+      end case;
+    end if;
 
   end process;
 

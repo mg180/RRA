@@ -1,4 +1,4 @@
-{C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd}
+{C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -6,7 +6,7 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity controller
 -- Compiling architecture v1 of controller
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd}
+} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO

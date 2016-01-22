@@ -9,23 +9,23 @@ z2
 cModel Technology
 dC:/Users/Matt/Google Drive/Digital Design/RS-CPU
 Econtroller
-Z0 w1453078232
+Z0 w1453501133
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z3 dC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware
-Z4 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd
-Z5 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd
+Z3 dC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware
+Z4 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd
+Z5 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd
 l0
 L4
 V9@PC70n8O7J?5Ie@U2m;E2
 !s100 9IMfbURiC@6n3gRjam==N2
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1453078237
+Z7 !s110 1453502466
 !i10b 1
-Z8 !s108 1453078237.000000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd|
-Z10 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd|
+Z8 !s108 1453502466.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd|
+Z10 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd|
 !i113 1
 Z11 o-work work -2002 -explicit -O0
 Z12 tExplicit 1
@@ -35,8 +35,8 @@ R2
 DEx4 work 10 controller 0 22 9@PC70n8O7J?5Ie@U2m;E2
 l25
 L18
-VooT>iDM?F@1HPE1MeeI^i1
-!s100 2`BmBQ>KckNOXOXa`0<8J2
+VIhRWhFe0EG_BcnBj3>3BI3
+!s100 0769PdC5Jn<]C6e7d>HkM3
 R6
 32
 R7
@@ -48,24 +48,24 @@ R10
 R11
 R12
 Erra
-Z13 w1453080739
+Z13 w1453501670
 Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
 R3
-Z15 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd
-Z16 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd
+Z15 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+Z16 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
 l0
 L6
 VYL2GP;:39_[k37:L1?fLm0
 !s100 nbAH41JWTIRkN8zYbT:F61
 R6
 32
-Z17 !s110 1453080746
+Z17 !s110 1453502468
 !i10b 1
-Z18 !s108 1453080746.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd|
-Z20 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra.vhd|
+Z18 !s108 1453502468.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd|
+Z20 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd|
 !i113 1
 R11
 R12
@@ -76,8 +76,8 @@ R2
 Z21 DEx4 work 3 rra 0 22 YL2GP;:39_[k37:L1?fLm0
 l87
 L29
-Z22 VESLE`RmgYhI5^WVjf7lV42
-Z23 !s100 C?NA6^nm7:XPD_1a2J:hX3
+Z22 V_HK9nRVVP_k082ZA[je6_1
+Z23 !s100 >7@7dONYVo2^^OoZTPSz71
 R6
 32
 R17
@@ -92,20 +92,20 @@ Erra_controller
 Z24 w1453078035
 R1
 R2
-R3
-R4
-R5
+Z25 dC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware
+Z26 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd
+Z27 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd
 l0
 L4
 VV6Do^0P;6?31S_m`X[TYO0
 !s100 44d]6=4Gg8KL@ff8[;=ha2
 R6
 32
-Z25 !s110 1453078040
+Z28 !s110 1453078040
 !i10b 1
-Z26 !s108 1453078040.000000
-R9
-R10
+Z29 !s108 1453078040.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd|
+Z31 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/hardware/rra_controller.vhd|
 !i113 1
 R11
 R12
@@ -119,11 +119,52 @@ V5KgoOS0CDA9bUfZz56f<f2
 !s100 WAkzz:]MYU:cnOgm9JHNV2
 R6
 32
-R25
+R28
 !i10b 1
-R26
-R9
-R10
+R29
+R30
+R31
+!i113 1
+R11
+R12
+Erra_memory
+Z32 w1453502310
+R14
+R1
+R2
+R3
+Z33 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd
+Z34 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd
+l0
+L5
+Vd0cCJhh?H5hi[Y>;]Nc5T3
+!s100 Nz?61g2>;TN89>dXaOO<^1
+R6
+32
+Z35 !s110 1453502467
+!i10b 1
+Z36 !s108 1453502467.000000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd|
+Z38 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+DEx4 work 10 rra_memory 0 22 d0cCJhh?H5hi[Y>;]Nc5T3
+l23
+L19
+V8J]`e7eLP=W@d5?VK=oDF3
+!s100 HBhHEfI9G[nb5XHQ[P?^g0
+R6
+32
+R35
+!i10b 1
+R36
+R37
+R38
 !i113 1
 R11
 R12

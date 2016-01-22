@@ -34,8 +34,8 @@ architecture v1 of rra is
 			rst 	: in  std_ulogic;
 
 			addr	: in  std_ulogic_vector(7 downto 0);
-			data_in	: out std_ulogic_vector(15 downto 0);
-			data_out: in  std_ulogic_vector(15 downto 0);
+			data_in	: in  std_ulogic_vector(63 downto 0);
+			data_out: out std_ulogic_vector(63 downto 0);
 			l_memory: in  std_ulogic;
 			w_memory: in  std_ulogic
 		);
@@ -69,8 +69,8 @@ architecture v1 of rra is
 
 	--Memory
 	signal addr		: std_ulogic_vector(7 downto 0);
-	signal data_in	: std_ulogic_vector(15 downto 0);
-	signal data_out	: std_ulogic_vector(15 downto 0);
+	signal data_in	: std_ulogic_vector(63 downto 0);
+	signal data_out	: std_ulogic_vector(63 downto 0);
 	signal l_memory : std_ulogic;
 	signal w_memory : std_ulogic;
 
