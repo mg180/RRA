@@ -56,14 +56,17 @@ architecture v1 of rra is
 	end component;
 
 	component servo_controller
+	generic(
+			STEP		: integer
+		);
 	port(
-			clk		: in  std_ulogic;
-			rst		: in  std_ulogic;
+			i_clk		: in  std_ulogic;
+			i_rst		: in  std_ulogic;
 
-			speed 	: in  std_ulogic_vector(3 downto 0);
-			current	: out unsigned(15 downto 0);
-			target  : in  unsigned(15 downto 0);
-			pwm_out : out std_ulogic
+			i_speed 	: in  std_ulogic_vector(3 downto 0);
+			o_current	: out unsigned(15 downto 0);
+			i_target  	: in  unsigned(15 downto 0);
+			o_pwm_out 	: out std_ulogic
 		);
 	end component;
 
@@ -75,6 +78,7 @@ architecture v1 of rra is
 	signal w_memory : std_ulogic;
 
 	--Movement (c - current, t - target)
+	constant SERVO_STEP					: integer := 10;
 	signal moving						: std_ulogic;
 	signal c_lower_pos,		t_lower_pos	: unsigned(15 downto 0);
 	signal c_middle_pos,	t_middle_pos: unsigned(15 downto 0);
@@ -86,7 +90,8 @@ architecture v1 of rra is
 
 begin
 	
-	rra_memory	: memory port map(
+	rra_memory	: memory 
+	port map(
 		clk 		=> clk,
 		rst 		=> rst,
 		addr		=> addr,
@@ -96,7 +101,8 @@ begin
 		w_memory	=> w_memory
 	);
 
-	rra_controller	: controller port map(
+	rra_controller	: controller 
+	port map(
 		clk 		=> clk,
 		rst 		=> rst,
 		mode 		=> mode,
@@ -107,31 +113,43 @@ begin
 		w_memory	=> w_memory
 	);
 
-	rra_servo_lower : servo_controller port map(
-		clk 		=> clk,
-		rst 		=> rst,
-		speed		=> speed,
-		current		=> c_lower_pos,
-		target		=> t_lower_pos,
-		pwm_out		=> l_pwm
+	rra_servo_lower : servo_controller 
+	generic map(
+		STEP 		=> SERVO_STEP
+	)
+	port map(
+		i_clk 		=> clk,
+		i_rst 		=> rst,
+		i_speed		=> speed,
+		o_current	=> c_lower_pos,
+		i_target	=> t_lower_pos,
+		o_pwm_out	=> l_pwm
 	);
 
-	rra_servo_middle: servo_controller port map(
-		clk 		=> clk,
-		rst 		=> rst,
-		speed		=> speed,
-		current		=> c_lower_pos,
-		target		=> t_lower_pos,
-		pwm_out		=> m_pwm
+	rra_servo_middle: servo_controller 
+	generic map(
+		STEP 		=> SERVO_STEP
+	)
+	port map(
+		i_clk 		=> clk,
+		i_rst 		=> rst,
+		i_speed		=> speed,
+		o_current	=> c_lower_pos,
+		i_target	=> t_lower_pos,
+		o_pwm_out	=> m_pwm
 	);
 
-	rra_servo_upper : servo_controller port map(
-		clk 		=> clk,
-		rst 		=> rst,
-		speed		=> speed,
-		current		=> c_lower_pos,
-		target		=> t_lower_pos,
-		pwm_out		=> u_pwm
+	rra_servo_upper : servo_controller 
+	generic map(
+		STEP 		=> SERVO_STEP
+	)
+	port map(
+		i_clk 		=> clk,
+		i_rst 		=> rst,
+		i_speed		=> speed,
+		o_current	=> c_lower_pos,
+		i_target	=> t_lower_pos,
+		o_pwm_out	=> u_pwm
 	);
 
 
