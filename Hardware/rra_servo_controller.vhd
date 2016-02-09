@@ -101,6 +101,8 @@ begin
       end if;
     end if;
 
-    o_pwm_out <= pwm_out;
+    if rising_edge(i_clk) then
+      o_pwm_out <= pwm_out;
+    end if;
   end process;
 end rtl;
