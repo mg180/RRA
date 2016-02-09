@@ -9,7 +9,7 @@ port (
 		rst			: in  std_ulogic;
 
 		--Servo Positions
-		l1,l2		: out std_ulogic;	
+		l1,l2		: out std_ulogic;
 		m1,m2		: out std_ulogic;
 		u1,u2		: out std_ulogic;
 
@@ -28,7 +28,7 @@ end rra;
 
 architecture v1 of rra is
 
-	component rra_memory
+	component memory
 	port(
 			clk		: in  std_ulogic;
 			rst 	: in  std_ulogic;
@@ -55,7 +55,7 @@ architecture v1 of rra is
 		);
 	end component;
 
-	component rra_servo_controller
+	component servo_controller
 	generic(
 			STEP		: integer
 		);
@@ -90,7 +90,7 @@ architecture v1 of rra is
 
 begin
 	
-	memory : rra_memory	 
+	rra_memory	: memory 
 	port map(
 		clk 		=> clk,
 		rst 		=> rst,
@@ -113,7 +113,7 @@ begin
 		w_memory	=> w_memory
 	);
 
-	rra_servo_lower : rra_servo_controller 
+	rra_servo_lower : servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP
 	)
@@ -126,7 +126,7 @@ begin
 		o_pwm_out	=> l_pwm
 	);
 
-	rra_servo_middle: rra_servo_controller 
+	rra_servo_middle: servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP
 	)
@@ -139,7 +139,7 @@ begin
 		o_pwm_out	=> m_pwm
 	);
 
-	rra_servo_upper : rra_servo_controller 
+	rra_servo_upper : servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP
 	)
