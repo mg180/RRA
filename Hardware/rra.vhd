@@ -12,6 +12,8 @@ port (
 		l1,l2		: out std_ulogic;	
 		m1,m2		: out std_ulogic;
 		u1,u2		: out std_ulogic;
+		w1,g1 	: out std_ulogic;
+		b1			: out std_ulogic;
 
 		--Control
 		low_u		: in std_ulogic;
@@ -21,6 +23,7 @@ port (
 		upp_u		: in std_ulogic;
 		upp_d		: in std_ulogic;
 		store 		: in std_ulogic;
+	   low_target : out std_logic_vector(8 downto 0);
 		speed		: in std_ulogic_vector(3 downto 0);
 		mode		: in std_ulogic_vector(1 downto 0)
 	 );
@@ -64,8 +67,8 @@ architecture v1 of rra is
 			i_rst		: in  std_ulogic;
 
 			i_speed 	: in  std_ulogic_vector(3 downto 0);
-			o_current	: out unsigned(15 downto 0);
-			i_target  	: in  unsigned(15 downto 0);
+			o_current	: out unsigned(8 downto 0);
+			i_target  	: in  unsigned(8 downto 0);
 			o_pwm_out 	: out std_ulogic
 		);
 	end component;
@@ -80,13 +83,16 @@ architecture v1 of rra is
 	--Movement (c - current, t - target)
 	constant SERVO_STEP					: integer := 10;
 	signal moving						: std_ulogic;
-	signal c_lower_pos,		t_lower_pos	: unsigned(15 downto 0);
-	signal c_middle_pos,	t_middle_pos: unsigned(15 downto 0);
-	signal c_upper_pos,		t_upper_pos	: unsigned(15 downto 0);
+	signal c_lower_pos,		t_lower_pos	: unsigned(8 downto 0);
+	signal c_middle_pos,	t_middle_pos: unsigned(8 downto 0);
+	signal c_upper_pos,		t_upper_pos	: unsigned(8 downto 0);
+	signal c_wrist_pos,		t_wrist_pos	: unsigned(8 downto 0);
+	signal c_gripper_pos,		t_gripper_pos	: unsigned(8 downto 0);
+	signal c_base_pos,		t_base_pos	: unsigned(8 downto 0);
 
 	--Servo control
 	signal l_keypad 					: std_ulogic;
-	signal l_pwm, m_pwm, u_pwm			: std_ulogic;
+	signal l_pwm, m_pwm, u_pwm, g_pwm, b_pwm, w_pwm			: std_ulogic;
 
 begin
 	
@@ -151,6 +157,45 @@ begin
 		i_target	=> t_lower_pos,
 		o_pwm_out	=> u_pwm
 	);
+	
+   rra_servo_wrist : rra_servo_controller 
+	generic map(
+		STEP 		=> SERVO_STEP
+	)
+	port map(
+		i_clk 		=> clk,
+		i_rst 		=> rst,
+		i_speed		=> speed,
+		o_current	=> c_wrist_pos,
+		i_target	=> t_wrist_pos,
+		o_pwm_out	=> w_pwm
+	);
+	
+	rra_servo_gripper : rra_servo_controller 
+	generic map(
+		STEP 		=> SERVO_STEP
+	)
+	port map(
+		i_clk 		=> clk,
+		i_rst 		=> rst,
+		i_speed		=> speed,
+		o_current	=> c_gripper_pos,
+		i_target	=> t_gripper_pos,
+		o_pwm_out	=> g_pwm
+	);
+	
+	rra_servo_base : rra_servo_controller 
+	generic map(
+		STEP 		=> SERVO_STEP
+	)
+	port map(
+		i_clk 		=> clk,
+		i_rst 		=> rst,
+		i_speed		=> speed,
+		o_current	=> c_base_pos,
+		i_target	=> t_base_pos,
+		o_pwm_out	=> b_pwm
+	);
 
 
 	movement 	: process(c_lower_pos, t_lower_pos, c_middle_pos, t_middle_pos, c_upper_pos, t_upper_pos)
@@ -167,6 +212,10 @@ begin
 		m2 <= m_pwm;
 		u1 <= u_pwm;
 		u2 <= u_pwm;
+		g1 <= g_pwm;
+		w1 <= w_pwm;
+		b1 <= b_pwm;
+		
 	end process;
 end v1;
 
