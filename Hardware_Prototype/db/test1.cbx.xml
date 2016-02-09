@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="test1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|test1|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_jvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test1|lpm_mult:Mult1" CBX_FILE_NAME="mult_98t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_t0p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test1|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test1|lpm_mult:Mult0" CBX_FILE_NAME="mult_78t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test1|lpm_mult:Mult2" CBX_FILE_NAME="mult_s6t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

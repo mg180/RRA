@@ -1,0 +1,238 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity test1 is
+  port(clk_50mhz  : in  std_ulogic;
+       leds       : out std_logic_vector(9 downto 0);
+       segment7_1 : out std_logic_vector(6 downto 0);
+       segment7_2 : out std_logic_vector(6 downto 0);
+       segment7_3 : out std_logic_vector(6 downto 0);
+       segment7_4 : out std_logic_vector(6 downto 0);
+       reset      : in  std_logic; -- Active low
+	    servo      : out std_logic_vector(5 downto 0);
+       buttons    : in  std_logic_vector(9 downto 0)
+       );
+end test1;
+
+architecture rtl of test1 is
+  signal prescaler       : integer                       := 0;  --Bad pratice
+  signal random_counter  : integer                       := 0;
+  signal random_counter2 : integer                       := 0;
+  signal clk_1hz         : std_logic;
+  signal clk_20ms 		     : std_logic;
+  signal test            : integer                       := 9;
+  signal testnumber      : integer                       := 1234;
+  signal test7           : std_logic_vector (3 downto 0) := "0110";
+  signal pwm1_duty		 :integer := 75000;  --50000 = 1ms, 75000 = 1.5ms, 100000 = 2ms
+  signal keypad          : std_logic_vector(15 downto 0);
+begin
+
+  -------------------------------------------------
+  -- Clock prescalers 
+  -- async reset to 0.
+  -- input 50Mhz(clk_50mhz)
+  -- output 50Hz, 1Hz (clk_20ms, clk_1hz)
+  -------------------------------------------------
+  process(clk_50mhz,reset)
+   variable cnt_1hz : integer;
+	 variable cnt_20ms: integer;
+  begin
+    if reset = '0' then
+      clk_1hz <= '0';
+      clk_20ms <= '0';
+      cnt_1hz := 0;
+		  cnt_20ms:= 0;
+    elsif rising_edge(clk_50mhz) then
+	 --Generate 1Hz clk (1s)
+      if (cnt_1hz = 25000000) then
+        clk_1hz     <= not(clk_1hz);
+        cnt_1hz     := 0;
+      else
+        cnt_1hz := cnt_1hz+1;
+      end if;
+		
+		--Generate 20ms clk (50Hz)
+		if (cnt_20ms = 500000) then
+		 clk_20ms <= not(clk_20ms);
+        cnt_20ms     := 0;
+      else
+        cnt_20ms := cnt_20ms+1;
+      end if;
+		
+    end if;
+  end process;
+------------------------------------------------------
+-- end of clk generation
+------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  ------------------------------------------------------
+  -- PWM
+  ------------------------------------------------------
+  process (clk_50mhz, reset)
+	variable pwm1counter		:integer;
+  begin
+	if (reset = '0') then
+		servo <= (others => '0');
+	else
+		if rising_edge(clk_50mhz)then
+			pwm1counter := pwm1counter+1;
+			if (pwm1counter < pwm1_duty) then
+				servo <= (others => '1');
+			else
+				servo <= (others => '0');
+			end if;
+			if pwm1counter = 1000000 then	--This is 20mS
+				pwm1counter := 0;
+			end if;
+		end if;
+	end if;
+  end process;
+ 
+  ----------------END PWM-------------------------------
+
+  --Random counters to drive pwm 0-180..
+  process(clk_1hz)
+	variable updowncounter:integer:=0;
+  begin
+	  if rising_edge(clk_1hz) then
+		  if updowncounter <180 then
+			updowncounter := updowncounter+20;
+			else
+			updowncounter := 0;
+		  end if;
+		  pwm1_duty <= (updowncounter*277)+50000;
+	  end if;
+  end process;
+  
+  
+  
+  ----------------------------------------------------------------------
+  -- 1Hz Counter
+  ----------------------------------------------------------------------
+  process (clk_1hz, reset)
+  begin
+    if reset = '0' then
+      random_counter <= 0;
+    elsif(rising_edge(clk_1hz))then
+      if random_counter = 9999 then
+        random_counter <= 0;
+      else
+        random_counter <= random_counter +1;
+      end if;
+    end if;
+  end process;
+ ----------------------------------------------------------------------
+
+ with keypad select
+ random_counter2 <=
+	0  when "0000000000000001",
+	1  when "0000000000000010",
+	2  when "0000000000000100",
+	3  when "0000000000001000",
+	4  when "0000000000010000",
+	5  when "0000000000100000",
+	6  when "0000000001000000",
+	7  when "0000000010000000",
+	8  when "0000000100000000",
+	9  when "0000001000000000",
+	10 when "0000010000000000",
+	11 when "0000100000000000",
+	12 when "0001000000000000",
+	13 when "0010000000000000",
+	14 when "0100000000000000",
+	15 when "1000000000000000",
+	99 when others;
+
+ 
+----------------------------------------------------------------------
+-- 7 Seg display - int input max 9999
+----------------------------------------------------------------------
+  seg7dis : process(random_counter2)
+    variable dig : integer;
+    variable ten : integer;
+    variable hun : integer;
+    variable tho : integer;
+  begin
+    tho := random_counter2/1000;
+    hun := (random_counter2-(tho*1000))/100;
+    ten := (random_counter2-(tho*1000)-(hun*100))/10;
+    dig := random_counter2-(tho*1000)-(hun*100)-(ten*10);
+
+    case std_logic_vector(to_unsigned(dig, 4)) is
+      when "0000" => segment7_1 <= "0000001";  --   
+      when "0001" => segment7_1 <= "1001111";  -- 
+      when "0010" => segment7_1 <= "0010010";  --   
+      when "0011" => segment7_1 <= "0000110";  --   
+      when "0100" => segment7_1 <= "1001100";  --    
+      when "0101" => segment7_1 <= "0100100";  --   
+      when "0110" => segment7_1 <= "0100000";  --   
+      when "0111" => segment7_1 <= "0001111";  --   
+      when "1000" => segment7_1 <= "0000000";  --     
+      when "1001" => segment7_1 <= "0000100";  --      
+      when others => segment7_1 <= "1111111";  -- when anything other is types
+    end case;
+
+    case std_logic_vector(to_unsigned(ten, 4)) is
+      when "0000" => segment7_2 <= "0000001";  --   
+      when "0001" => segment7_2 <= "1001111";  -- 
+      when "0010" => segment7_2 <= "0010010";  --   
+      when "0011" => segment7_2 <= "0000110";  --   
+      when "0100" => segment7_2 <= "1001100";  --    
+      when "0101" => segment7_2 <= "0100100";  --   
+      when "0110" => segment7_2 <= "0100000";  --   
+      when "0111" => segment7_2 <= "0001111";  --   
+      when "1000" => segment7_2 <= "0000000";  --     
+      when "1001" => segment7_2 <= "0000100";  --      
+      when others => segment7_2 <= "1111111";  -- when anything other is types
+    end case;
+
+    case std_logic_vector(to_unsigned(hun, 4)) is
+      when "0000" => segment7_3 <= "0000001";  --   
+      when "0001" => segment7_3 <= "1001111";  -- 
+      when "0010" => segment7_3 <= "0010010";  --   
+      when "0011" => segment7_3 <= "0000110";  --   
+      when "0100" => segment7_3 <= "1001100";  --    
+      when "0101" => segment7_3 <= "0100100";  --   
+      when "0110" => segment7_3 <= "0100000";  --   
+      when "0111" => segment7_3 <= "0001111";  --   
+      when "1000" => segment7_3 <= "0000000";  --     
+      when "1001" => segment7_3 <= "0000100";  --      
+      when others => segment7_3 <= "1111111";  -- when anything other is types
+    end case;
+
+    case std_logic_vector(to_unsigned(tho, 4)) is
+      when "0000" => segment7_4 <= "0000001";  --   
+      when "0001" => segment7_4 <= "1001111";  -- 
+      when "0010" => segment7_4 <= "0010010";  --   
+      when "0011" => segment7_4 <= "0000110";  --   
+      when "0100" => segment7_4 <= "1001100";  --    
+      when "0101" => segment7_4 <= "0100100";  --   
+      when "0110" => segment7_4 <= "0100000";  --   
+      when "0111" => segment7_4 <= "0001111";  --   
+      when "1000" => segment7_4 <= "0000000";  --     
+      when "1001" => segment7_4 <= "0000100";  --      
+      when others => segment7_4 <= "1111111";  -- when anything other is types
+    end case;
+  end process seg7dis;
+-------------------------------------------------------------------------------
+  leds <= std_logic_vector(to_unsigned(random_counter, 10));
+  
+end rtl;
+
