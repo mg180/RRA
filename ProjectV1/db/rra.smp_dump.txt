@@ -1,0 +1,18 @@
+
+State Machine - |rra|controller:rra_controller|n_state
+Name n_state.s_MOVING n_state.s_GET_MEMORY_NEXT n_state.s_SET_MEMORY_NEXT n_state.s_CHECK_KEYPAD n_state.s_LOAD_KEYPAD n_state.s_WAITING 
+n_state.s_WAITING 0 0 0 0 0 0 
+n_state.s_LOAD_KEYPAD 0 0 0 0 1 1 
+n_state.s_CHECK_KEYPAD 0 0 0 1 0 1 
+n_state.s_SET_MEMORY_NEXT 0 0 1 0 0 1 
+n_state.s_GET_MEMORY_NEXT 0 1 0 0 0 1 
+n_state.s_MOVING 1 0 0 0 0 1 
+
+State Machine - |rra|controller:rra_controller|c_state
+Name c_state.s_MOVING c_state.s_GET_MEMORY_NEXT c_state.s_SET_MEMORY_NEXT c_state.s_CHECK_KEYPAD c_state.s_LOAD_KEYPAD c_state.s_WAITING 
+c_state.s_WAITING 0 0 0 0 0 0 
+c_state.s_LOAD_KEYPAD 0 0 0 0 1 1 
+c_state.s_CHECK_KEYPAD 0 0 0 1 0 1 
+c_state.s_SET_MEMORY_NEXT 0 0 1 0 0 1 
+c_state.s_GET_MEMORY_NEXT 0 1 0 0 0 1 
+c_state.s_MOVING 1 0 0 0 0 1 
