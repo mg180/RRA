@@ -1,0 +1,779 @@
+Analysis & Synthesis report for rra
+Tue Feb 16 01:25:56 2016
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |rra|rra_controller:controller|n_state
+  9. State Machine - |rra|rra_controller:controller|c_state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_lower
+ 16. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_middle
+ 17. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_upper
+ 18. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_wrist
+ 19. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_gripper
+ 20. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_base
+ 21. Port Connectivity Checks: "rra_servo_controller:rra_servo_base"
+ 22. Port Connectivity Checks: "rra_servo_controller:rra_servo_gripper"
+ 23. Port Connectivity Checks: "rra_servo_controller:rra_servo_wrist"
+ 24. Port Connectivity Checks: "rra_servo_controller:rra_servo_upper"
+ 25. Port Connectivity Checks: "rra_servo_controller:rra_servo_middle"
+ 26. Port Connectivity Checks: "rra_servo_controller:rra_servo_lower"
+ 27. Port Connectivity Checks: "rra_controller:controller"
+ 28. Port Connectivity Checks: "rra_memory:memory"
+ 29. Port Connectivity Checks: "rra_key_in:keypad"
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Feb 16 01:25:56 2016      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; rra                                        ;
+; Top-level Entity Name              ; rra                                        ;
+; Family                             ; Cyclone III                                ;
+; Total logic elements               ; 571                                        ;
+;     Total combinational functions  ; 534                                        ;
+;     Dedicated logic registers      ; 337                                        ;
+; Total registers                    ; 337                                        ;
+; Total pins                         ; 48                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; rra                ; rra                ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+; ../rra_servo_controller.vhd      ; yes             ; User VHDL File  ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd ;         ;
+; ../rra_memory.vhd                ; yes             ; User VHDL File  ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd           ;         ;
+; ../rra_key_in.vhd                ; yes             ; User VHDL File  ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd           ;         ;
+; ../rra_controller.vhd            ; yes             ; User VHDL File  ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd       ;         ;
+; ../rra.vhd                       ; yes             ; User VHDL File  ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd                  ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 571       ;
+;                                             ;           ;
+; Total combinational functions               ; 534       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 54        ;
+;     -- 3 input functions                    ; 180       ;
+;     -- <=2 input functions                  ; 300       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 180       ;
+;     -- arithmetic mode                      ; 354       ;
+;                                             ;           ;
+; Total registers                             ; 337       ;
+;     -- Dedicated logic registers            ; 337       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 48        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 286       ;
+; Total fan-out                               ; 2553      ;
+; Average fan-out                             ; 2.64      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; |rra                                        ; 534 (0)           ; 337 (0)      ; 0           ; 0            ; 0       ; 0         ; 48   ; 0            ; |rra                                        ; work         ;
+;    |rra_key_in:keypad|                      ; 27 (27)           ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_key_in:keypad                      ; work         ;
+;    |rra_servo_controller:rra_servo_base|    ; 95 (95)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_base    ; work         ;
+;    |rra_servo_controller:rra_servo_gripper| ; 78 (78)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_gripper ; work         ;
+;    |rra_servo_controller:rra_servo_lower|   ; 99 (99)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_lower   ; work         ;
+;    |rra_servo_controller:rra_servo_middle|  ; 78 (78)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_middle  ; work         ;
+;    |rra_servo_controller:rra_servo_upper|   ; 78 (78)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_upper   ; work         ;
+;    |rra_servo_controller:rra_servo_wrist|   ; 79 (79)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_wrist   ; work         ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |rra|rra_controller:controller|n_state                                                                                                                    ;
++---------------------------+------------------+---------------------------+---------------------------+------------------------+-----------------------+-------------------+
+; Name                      ; n_state.s_MOVING ; n_state.s_GET_MEMORY_NEXT ; n_state.s_SET_MEMORY_NEXT ; n_state.s_CHECK_KEYPAD ; n_state.s_LOAD_KEYPAD ; n_state.s_WAITING ;
++---------------------------+------------------+---------------------------+---------------------------+------------------------+-----------------------+-------------------+
+; n_state.s_WAITING         ; 0                ; 0                         ; 0                         ; 0                      ; 0                     ; 0                 ;
+; n_state.s_LOAD_KEYPAD     ; 0                ; 0                         ; 0                         ; 0                      ; 1                     ; 1                 ;
+; n_state.s_CHECK_KEYPAD    ; 0                ; 0                         ; 0                         ; 1                      ; 0                     ; 1                 ;
+; n_state.s_SET_MEMORY_NEXT ; 0                ; 0                         ; 1                         ; 0                      ; 0                     ; 1                 ;
+; n_state.s_GET_MEMORY_NEXT ; 0                ; 1                         ; 0                         ; 0                      ; 0                     ; 1                 ;
+; n_state.s_MOVING          ; 1                ; 0                         ; 0                         ; 0                      ; 0                     ; 1                 ;
++---------------------------+------------------+---------------------------+---------------------------+------------------------+-----------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |rra|rra_controller:controller|c_state                                                                                                                    ;
++---------------------------+------------------+---------------------------+---------------------------+------------------------+-----------------------+-------------------+
+; Name                      ; c_state.s_MOVING ; c_state.s_GET_MEMORY_NEXT ; c_state.s_SET_MEMORY_NEXT ; c_state.s_CHECK_KEYPAD ; c_state.s_LOAD_KEYPAD ; c_state.s_WAITING ;
++---------------------------+------------------+---------------------------+---------------------------+------------------------+-----------------------+-------------------+
+; c_state.s_WAITING         ; 0                ; 0                         ; 0                         ; 0                      ; 0                     ; 0                 ;
+; c_state.s_LOAD_KEYPAD     ; 0                ; 0                         ; 0                         ; 0                      ; 1                     ; 1                 ;
+; c_state.s_CHECK_KEYPAD    ; 0                ; 0                         ; 0                         ; 1                      ; 0                     ; 1                 ;
+; c_state.s_SET_MEMORY_NEXT ; 0                ; 0                         ; 1                         ; 0                      ; 0                     ; 1                 ;
+; c_state.s_GET_MEMORY_NEXT ; 0                ; 1                         ; 0                         ; 0                      ; 0                     ; 1                 ;
+; c_state.s_MOVING          ; 1                ; 0                         ; 0                         ; 0                      ; 0                     ; 1                 ;
++---------------------------+------------------+---------------------------+---------------------------+------------------------+-----------------------+-------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                           ;
++----------------------------------------------------------+-------------------------------------------------------------------+
+; Register name                                            ; Reason for Removal                                                ;
++----------------------------------------------------------+-------------------------------------------------------------------+
+; rra_servo_controller:rra_servo_gripper|clk_1mhz_count[5] ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[5] ;
+; rra_servo_controller:rra_servo_lower|clk_1mhz_count[5]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[5] ;
+; rra_servo_controller:rra_servo_middle|clk_1mhz_count[5]  ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[5] ;
+; rra_servo_controller:rra_servo_upper|clk_1mhz_count[5]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[5] ;
+; rra_servo_controller:rra_servo_wrist|clk_1mhz_count[5]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[5] ;
+; rra_servo_controller:rra_servo_gripper|clk_1mhz_count[4] ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[4] ;
+; rra_servo_controller:rra_servo_lower|clk_1mhz_count[4]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[4] ;
+; rra_servo_controller:rra_servo_middle|clk_1mhz_count[4]  ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[4] ;
+; rra_servo_controller:rra_servo_upper|clk_1mhz_count[4]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[4] ;
+; rra_servo_controller:rra_servo_wrist|clk_1mhz_count[4]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[4] ;
+; rra_servo_controller:rra_servo_gripper|clk_1mhz_count[3] ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[3] ;
+; rra_servo_controller:rra_servo_lower|clk_1mhz_count[3]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[3] ;
+; rra_servo_controller:rra_servo_middle|clk_1mhz_count[3]  ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[3] ;
+; rra_servo_controller:rra_servo_upper|clk_1mhz_count[3]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[3] ;
+; rra_servo_controller:rra_servo_wrist|clk_1mhz_count[3]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[3] ;
+; rra_servo_controller:rra_servo_gripper|clk_1mhz_count[2] ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[2] ;
+; rra_servo_controller:rra_servo_lower|clk_1mhz_count[2]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[2] ;
+; rra_servo_controller:rra_servo_middle|clk_1mhz_count[2]  ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[2] ;
+; rra_servo_controller:rra_servo_upper|clk_1mhz_count[2]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[2] ;
+; rra_servo_controller:rra_servo_wrist|clk_1mhz_count[2]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[2] ;
+; rra_servo_controller:rra_servo_gripper|clk_1mhz_count[1] ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[1] ;
+; rra_servo_controller:rra_servo_lower|clk_1mhz_count[1]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[1] ;
+; rra_servo_controller:rra_servo_middle|clk_1mhz_count[1]  ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[1] ;
+; rra_servo_controller:rra_servo_upper|clk_1mhz_count[1]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[1] ;
+; rra_servo_controller:rra_servo_wrist|clk_1mhz_count[1]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[1] ;
+; rra_servo_controller:rra_servo_gripper|clk_1mhz_count[0] ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[0] ;
+; rra_servo_controller:rra_servo_lower|clk_1mhz_count[0]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[0] ;
+; rra_servo_controller:rra_servo_middle|clk_1mhz_count[0]  ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[0] ;
+; rra_servo_controller:rra_servo_upper|clk_1mhz_count[0]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[0] ;
+; rra_servo_controller:rra_servo_wrist|clk_1mhz_count[0]   ; Merged with rra_servo_controller:rra_servo_base|clk_1mhz_count[0] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[9] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[9] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[9]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[9] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[9]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[9] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[9]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[9] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[9]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[9] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[8] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[8] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[8]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[8] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[8]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[8] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[8]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[8] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[8]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[8] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[7] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[7] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[7]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[7] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[7]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[7] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[7]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[7] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[7]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[7] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[6] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[6] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[6]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[6] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[6]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[6] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[6]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[6] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[6]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[6] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[5] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[5] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[5]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[5] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[5]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[5] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[5]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[5] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[5]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[5] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[4] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[4] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[4]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[4] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[4]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[4] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[4]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[4] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[4]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[4] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[3] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[3] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[3]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[3] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[3]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[3] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[3]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[3] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[3]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[3] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[2] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[2] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[2]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[2] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[2]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[2] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[2]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[2] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[2]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[2] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[1] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[1] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[1]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[1] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[1]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[1] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[1]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[1] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[1]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[1] ;
+; rra_servo_controller:rra_servo_gripper|clk_1khz_count[0] ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[0] ;
+; rra_servo_controller:rra_servo_lower|clk_1khz_count[0]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[0] ;
+; rra_servo_controller:rra_servo_middle|clk_1khz_count[0]  ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[0] ;
+; rra_servo_controller:rra_servo_upper|clk_1khz_count[0]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[0] ;
+; rra_servo_controller:rra_servo_wrist|clk_1khz_count[0]   ; Merged with rra_servo_controller:rra_servo_base|clk_1khz_count[0] ;
+; rra_controller:controller|c_state.s_LOAD_KEYPAD          ; Lost fanout                                                       ;
+; rra_controller:controller|n_state.s_LOAD_KEYPAD          ; Lost fanout                                                       ;
+; rra_controller:controller|c_state.s_GET_MEMORY_NEXT      ; Lost fanout                                                       ;
+; rra_controller:controller|n_state.s_GET_MEMORY_NEXT      ; Lost fanout                                                       ;
+; rra_controller:controller|c_state.s_MOVING               ; Lost fanout                                                       ;
+; rra_controller:controller|n_state.s_MOVING               ; Lost fanout                                                       ;
+; rra_controller:controller|n_state.s_WAITING              ; Lost fanout                                                       ;
+; rra_controller:controller|n_state.s_CHECK_KEYPAD         ; Lost fanout                                                       ;
+; rra_controller:controller|n_state.s_SET_MEMORY_NEXT      ; Lost fanout                                                       ;
+; rra_controller:controller|c_state.s_WAITING              ; Lost fanout                                                       ;
+; rra_controller:controller|c_state.s_CHECK_KEYPAD         ; Lost fanout                                                       ;
+; rra_controller:controller|c_state.s_SET_MEMORY_NEXT      ; Lost fanout                                                       ;
+; rra_servo_controller:rra_servo_lower|interval[0]         ; Stuck at GND due to stuck port data_in                            ;
+; rra_servo_controller:rra_servo_middle|interval[0]        ; Stuck at GND due to stuck port data_in                            ;
+; rra_servo_controller:rra_servo_upper|interval[0]         ; Stuck at GND due to stuck port data_in                            ;
+; rra_servo_controller:rra_servo_wrist|interval[0]         ; Stuck at GND due to stuck port data_in                            ;
+; rra_servo_controller:rra_servo_gripper|interval[0]       ; Stuck at GND due to stuck port data_in                            ;
+; rra_servo_controller:rra_servo_base|interval[0]          ; Stuck at GND due to stuck port data_in                            ;
+; Total Number of Removed Registers = 98                   ;                                                                   ;
++----------------------------------------------------------+-------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                    ;
++-----------------------------------------------------+--------------------+-----------------------------------------------------+
+; Register name                                       ; Reason for Removal ; Registers Removed due to This Register              ;
++-----------------------------------------------------+--------------------+-----------------------------------------------------+
+; rra_controller:controller|c_state.s_LOAD_KEYPAD     ; Lost Fanouts       ; rra_controller:controller|n_state.s_LOAD_KEYPAD,    ;
+;                                                     ;                    ; rra_controller:controller|c_state.s_WAITING,        ;
+;                                                     ;                    ; rra_controller:controller|c_state.s_CHECK_KEYPAD    ;
+; rra_controller:controller|c_state.s_MOVING          ; Lost Fanouts       ; rra_controller:controller|n_state.s_MOVING,         ;
+;                                                     ;                    ; rra_controller:controller|c_state.s_SET_MEMORY_NEXT ;
+; rra_controller:controller|c_state.s_GET_MEMORY_NEXT ; Lost Fanouts       ; rra_controller:controller|n_state.s_GET_MEMORY_NEXT ;
++-----------------------------------------------------+--------------------+-----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 337   ;
+; Number of registers using Synchronous Clear  ; 166   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 270   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 86    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------+
+; Inverted Register Statistics                                 ;
++----------------------------------------------------+---------+
+; Inverted Register                                  ; Fan out ;
++----------------------------------------------------+---------+
+; rra_servo_controller:rra_servo_lower|interval[9]   ; 1       ;
+; rra_servo_controller:rra_servo_lower|interval[8]   ; 1       ;
+; rra_servo_controller:rra_servo_lower|interval[7]   ; 1       ;
+; rra_servo_controller:rra_servo_lower|interval[6]   ; 1       ;
+; rra_servo_controller:rra_servo_lower|interval[4]   ; 1       ;
+; rra_servo_controller:rra_servo_lower|interval[3]   ; 1       ;
+; rra_servo_controller:rra_servo_lower|interval[2]   ; 1       ;
+; rra_servo_controller:rra_servo_lower|interval[1]   ; 1       ;
+; rra_servo_controller:rra_servo_middle|interval[9]  ; 1       ;
+; rra_servo_controller:rra_servo_middle|interval[8]  ; 1       ;
+; rra_servo_controller:rra_servo_middle|interval[7]  ; 1       ;
+; rra_servo_controller:rra_servo_middle|interval[6]  ; 1       ;
+; rra_servo_controller:rra_servo_middle|interval[4]  ; 1       ;
+; rra_servo_controller:rra_servo_middle|interval[3]  ; 1       ;
+; rra_servo_controller:rra_servo_middle|interval[2]  ; 1       ;
+; rra_servo_controller:rra_servo_middle|interval[1]  ; 1       ;
+; rra_servo_controller:rra_servo_upper|interval[9]   ; 1       ;
+; rra_servo_controller:rra_servo_upper|interval[8]   ; 1       ;
+; rra_servo_controller:rra_servo_upper|interval[7]   ; 1       ;
+; rra_servo_controller:rra_servo_upper|interval[6]   ; 1       ;
+; rra_servo_controller:rra_servo_upper|interval[4]   ; 1       ;
+; rra_servo_controller:rra_servo_upper|interval[3]   ; 1       ;
+; rra_servo_controller:rra_servo_upper|interval[2]   ; 1       ;
+; rra_servo_controller:rra_servo_upper|interval[1]   ; 1       ;
+; rra_servo_controller:rra_servo_wrist|interval[9]   ; 1       ;
+; rra_servo_controller:rra_servo_wrist|interval[8]   ; 1       ;
+; rra_servo_controller:rra_servo_wrist|interval[7]   ; 1       ;
+; rra_servo_controller:rra_servo_wrist|interval[6]   ; 1       ;
+; rra_servo_controller:rra_servo_wrist|interval[4]   ; 1       ;
+; rra_servo_controller:rra_servo_wrist|interval[3]   ; 1       ;
+; rra_servo_controller:rra_servo_wrist|interval[2]   ; 1       ;
+; rra_servo_controller:rra_servo_wrist|interval[1]   ; 1       ;
+; rra_servo_controller:rra_servo_gripper|interval[9] ; 1       ;
+; rra_servo_controller:rra_servo_gripper|interval[8] ; 1       ;
+; rra_servo_controller:rra_servo_gripper|interval[7] ; 1       ;
+; rra_servo_controller:rra_servo_gripper|interval[6] ; 1       ;
+; rra_servo_controller:rra_servo_gripper|interval[4] ; 1       ;
+; rra_servo_controller:rra_servo_gripper|interval[3] ; 1       ;
+; rra_servo_controller:rra_servo_gripper|interval[2] ; 1       ;
+; rra_servo_controller:rra_servo_gripper|interval[1] ; 1       ;
+; rra_servo_controller:rra_servo_base|interval[9]    ; 1       ;
+; rra_servo_controller:rra_servo_base|interval[8]    ; 1       ;
+; rra_servo_controller:rra_servo_base|interval[7]    ; 1       ;
+; rra_servo_controller:rra_servo_base|interval[6]    ; 1       ;
+; rra_servo_controller:rra_servo_base|interval[4]    ; 1       ;
+; rra_servo_controller:rra_servo_base|interval[3]    ; 1       ;
+; rra_servo_controller:rra_servo_base|interval[2]    ; 1       ;
+; rra_servo_controller:rra_servo_base|interval[1]    ; 1       ;
+; Total number of inverted registers = 48            ;         ;
++----------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_1mhz_count[3] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|clk_1khz         ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count[4]     ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count[10]   ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count[9]     ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count[1]     ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count[4]   ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count[11]     ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[3]       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[7]      ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[4]       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[5]       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[4]     ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[1]        ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_1khz_count[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_lower ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; step           ; 10    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_middle ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; step           ; 10    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_upper ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; step           ; 10    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_wrist ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; step           ; 10    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_gripper ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; step           ; 10    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_base ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; step           ; 10    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_servo_controller:rra_servo_base"                                                          ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_current      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; i_target[7..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_target[8]    ; Input  ; Info     ; Stuck at GND                                                                        ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_servo_controller:rra_servo_gripper"                                                       ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_current      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; i_target[7..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_target[8]    ; Input  ; Info     ; Stuck at GND                                                                        ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_servo_controller:rra_servo_wrist"                                                         ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_current      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; i_target[7..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_target[8]    ; Input  ; Info     ; Stuck at GND                                                                        ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_servo_controller:rra_servo_upper" ;
++----------------+-------+----------+------------------------------+
+; Port           ; Type  ; Severity ; Details                      ;
++----------------+-------+----------+------------------------------+
+; i_target[7..0] ; Input ; Info     ; Stuck at VCC                 ;
+; i_target[8]    ; Input ; Info     ; Stuck at GND                 ;
++----------------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_servo_controller:rra_servo_middle" ;
++----------------+-------+----------+-------------------------------+
+; Port           ; Type  ; Severity ; Details                       ;
++----------------+-------+----------+-------------------------------+
+; i_target[7..0] ; Input ; Info     ; Stuck at VCC                  ;
+; i_target[8]    ; Input ; Info     ; Stuck at GND                  ;
++----------------+-------+----------+-------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_servo_controller:rra_servo_lower" ;
++----------------+-------+----------+------------------------------+
+; Port           ; Type  ; Severity ; Details                      ;
++----------------+-------+----------+------------------------------+
+; i_target[7..0] ; Input ; Info     ; Stuck at VCC                 ;
+; i_target[8]    ; Input ; Info     ; Stuck at GND                 ;
++----------------+-------+----------+------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_controller:controller"                                                              ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; l_keypad ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_memory:memory"                                                                      ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; addr     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_key_in:keypad"                                                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; key_err ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Tue Feb 16 01:25:50 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rra -c rra
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_servo_controller.vhd
+    Info (12022): Found design unit 1: rra_servo_controller-rtl
+    Info (12023): Found entity 1: rra_servo_controller
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_memory.vhd
+    Info (12022): Found design unit 1: rra_memory-rtl
+    Info (12023): Found entity 1: rra_memory
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_key_in.vhd
+    Info (12022): Found design unit 1: rra_key_in-rtl
+    Info (12023): Found entity 1: rra_key_in
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_controller.vhd
+    Info (12022): Found design unit 1: rra_controller-v1
+    Info (12023): Found entity 1: rra_controller
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra.vhd
+    Info (12022): Found design unit 1: rra-v1
+    Info (12023): Found entity 1: rra
+Info (12127): Elaborating entity "rra" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(94): object "key_err" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at rra.vhd(98): used implicit default value for signal "data_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(99): object "data_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(109): object "c_wrist_pos" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(110): object "c_gripper_pos" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(111): object "c_base_pos" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(114): object "l_keypad" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at rra.vhd(238): signal "l_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(239): signal "l_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(240): signal "m_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(241): signal "m_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(242): signal "u_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(243): signal "u_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(244): signal "g_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(245): signal "w_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(246): signal "b_pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "rra_key_in" for hierarchy "rra_key_in:keypad"
+Info (12128): Elaborating entity "rra_memory" for hierarchy "rra_memory:memory"
+Info (12128): Elaborating entity "rra_controller" for hierarchy "rra_controller:controller"
+Info (12128): Elaborating entity "rra_servo_controller" for hierarchy "rra_servo_controller:rra_servo_lower"
+Warning (10036): Verilog HDL or VHDL warning at rra_servo_controller.vhd(24): object "speed" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at rra_servo_controller.vhd(69): signal "i_speed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra_servo_controller.vhd(70): signal "i_target" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra_servo_controller.vhd(71): signal "current" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at rra_servo_controller.vhd(39): inferring latch(es) for signal or variable "current", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at rra_servo_controller.vhd(109): signal "i_rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "current[0]" at rra_servo_controller.vhd(39)
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[9] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[8] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[7] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[6] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[4] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[2] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|interval[0] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[9] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[8] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[7] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[6] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[4] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[2] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|interval[0] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[9] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[8] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[7] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[6] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[4] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[2] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|interval[0] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[9] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[8] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[7] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[6] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[4] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[2] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|interval[0] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[9] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[8] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[7] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[6] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[4] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[2] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|interval[0] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[9] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[8] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[7] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[6] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[4] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[2] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|interval[0] will power up to High
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "low_u"
+    Warning (15610): No output dependent on input pin "low_d"
+    Warning (15610): No output dependent on input pin "mid_u"
+    Warning (15610): No output dependent on input pin "mid_d"
+    Warning (15610): No output dependent on input pin "upp_u"
+    Warning (15610): No output dependent on input pin "upp_d"
+    Warning (15610): No output dependent on input pin "mode[0]"
+    Warning (15610): No output dependent on input pin "mode[1]"
+    Warning (15610): No output dependent on input pin "store"
+Info (21057): Implemented 628 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 580 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 88 warnings
+    Info: Peak virtual memory: 572 megabytes
+    Info: Processing ended: Tue Feb 16 01:25:56 2016
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+

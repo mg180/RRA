@@ -8,12 +8,17 @@ port (
 		clk			: in  std_ulogic;
 		rst			: in  std_ulogic;
 
-		--Servo Positions
+		--Servo Positions (PWM)
 		l1,l2		: out std_ulogic;	
 		m1,m2		: out std_ulogic;
 		u1,u2		: out std_ulogic;
-		w1,g1 	: out std_ulogic;
+		w1,g1 		: out std_ulogic;
 		b1			: out std_ulogic;
+
+		--Keypad
+		i_key_row	: in  std_ulogic_vector(3 downto 0);
+		o_key_col 	: out std_ulogic_vector(3 downto 0);
+		o_key_test 	: out std_ulogic_vector(15 downto 0);
 
 		--Control
 		low_u		: in std_ulogic;
@@ -23,13 +28,24 @@ port (
 		upp_u		: in std_ulogic;
 		upp_d		: in std_ulogic;
 		store 		: in std_ulogic;
-	   low_target : out std_logic_vector(8 downto 0);
 		speed		: in std_ulogic_vector(3 downto 0);
 		mode		: in std_ulogic_vector(1 downto 0)
 	 );
 end rra;
 
 architecture v1 of rra is
+
+	component rra_key_in is
+  	port(
+      clk       : in  std_ulogic;
+
+      key_col   : out std_ulogic_vector(3 downto 0);
+      key_row   : in  std_ulogic_vector(3 downto 0);
+      key_out   : out std_ulogic_vector(15 downto 0);
+      key_err   : out std_ulogic
+    );
+  
+  	end component;
 
 	component rra_memory
 	port(
@@ -44,7 +60,7 @@ architecture v1 of rra is
 		);
 	end component;
 
-	component controller
+	component rra_controller
 	port(
 			clk       : in  std_ulogic;
 	        rst       : in  std_ulogic;
@@ -67,11 +83,15 @@ architecture v1 of rra is
 			i_rst		: in  std_ulogic;
 
 			i_speed 	: in  std_ulogic_vector(3 downto 0);
-			o_current	: out unsigned(8 downto 0);
-			i_target  	: in  unsigned(8 downto 0);
+			o_current	: out std_ulogic_vector(8 downto 0);
+			i_target  	: in  std_ulogic_vector(8 downto 0);
 			o_pwm_out 	: out std_ulogic
 		);
 	end component;
+
+	--Keypad
+	signal key_out	: std_ulogic_vector(15 downto 0);
+	signal key_err  : std_ulogic;
 
 	--Memory
 	signal addr		: std_ulogic_vector(7 downto 0);
@@ -81,14 +101,14 @@ architecture v1 of rra is
 	signal w_memory : std_ulogic;
 
 	--Movement (c - current, t - target)
-	constant SERVO_STEP					: integer := 10;
-	signal moving						: std_ulogic;
-	signal c_lower_pos,		t_lower_pos	: unsigned(8 downto 0);
-	signal c_middle_pos,	t_middle_pos: unsigned(8 downto 0);
-	signal c_upper_pos,		t_upper_pos	: unsigned(8 downto 0);
-	signal c_wrist_pos,		t_wrist_pos	: unsigned(8 downto 0);
-	signal c_gripper_pos,		t_gripper_pos	: unsigned(8 downto 0);
-	signal c_base_pos,		t_base_pos	: unsigned(8 downto 0);
+	constant SERVO_STEP						: integer := 10;
+	signal moving							: std_ulogic;
+	signal c_lower_pos,		t_lower_pos		: std_ulogic_vector(8 downto 0);
+	signal c_middle_pos,	t_middle_pos	: std_ulogic_vector(8 downto 0);
+	signal c_upper_pos,		t_upper_pos		: std_ulogic_vector(8 downto 0);
+	signal c_wrist_pos,		t_wrist_pos		: std_ulogic_vector(8 downto 0);
+	signal c_gripper_pos,	t_gripper_pos	: std_ulogic_vector(8 downto 0);
+	signal c_base_pos,		t_base_pos		: std_ulogic_vector(8 downto 0);
 
 	--Servo control
 	signal l_keypad 					: std_ulogic;
@@ -96,6 +116,15 @@ architecture v1 of rra is
 
 begin
 	
+	keypad 		: rra_key_in
+	port map(
+		clk 	=> clk,
+		key_col => o_key_col,
+		key_row => i_key_row,
+		key_out => o_key_test,
+		key_err => key_err
+	);
+
 	memory : rra_memory	 
 	port map(
 		clk 		=> clk,
@@ -107,7 +136,7 @@ begin
 		w_memory	=> w_memory
 	);
 
-	rra_controller	: controller 
+	controller		: rra_controller 
 	port map(
 		clk 		=> clk,
 		rst 		=> rst,
@@ -140,8 +169,8 @@ begin
 		i_clk 		=> clk,
 		i_rst 		=> rst,
 		i_speed		=> speed,
-		o_current	=> c_lower_pos,
-		i_target	=> t_lower_pos,
+		o_current	=> c_middle_pos,
+		i_target	=> t_middle_pos,
 		o_pwm_out	=> m_pwm
 	);
 
@@ -153,8 +182,8 @@ begin
 		i_clk 		=> clk,
 		i_rst 		=> rst,
 		i_speed		=> speed,
-		o_current	=> c_lower_pos,
-		i_target	=> t_lower_pos,
+		o_current	=> c_upper_pos,
+		i_target	=> t_upper_pos,
 		o_pwm_out	=> u_pwm
 	);
 	
@@ -216,6 +245,18 @@ begin
 		w1 <= w_pwm;
 		b1 <= b_pwm;
 		
+	end process;
+
+
+	to_implement: process(clk)
+	begin
+		addr <= (others => '0');
+		t_lower_pos <= "011111111";
+		t_middle_pos <= "011111111";
+		t_upper_pos <= "011111111";
+		t_gripper_pos <= "011111111";
+		t_wrist_pos <= "011111111";
+		t_base_pos <= "011111111";
 	end process;
 end v1;
 

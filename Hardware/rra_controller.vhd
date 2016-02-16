@@ -1,7 +1,7 @@
 library ieee;
 use IEEE.std_logic_1164.all;
 
-entity controller is
+entity rra_controller is
 port (
         clk       : in  std_ulogic;
         rst       : in  std_ulogic;
@@ -13,9 +13,9 @@ port (
         l_memory  : out std_ulogic;
         w_memory  : out std_ulogic
 );
-end controller;
+end rra_controller;
 
-architecture v1 of controller is
+architecture v1 of rra_controller is
 
   type STATE is (s_WAITING, s_LOAD_KEYPAD, s_CHECK_KEYPAD, 
                  s_SET_MEMORY_NEXT, s_GET_MEMORY_NEXT,
@@ -33,7 +33,7 @@ begin
   end if;
   end process;
 
-  process (c_state)
+  process (c_state, clk)
   begin
     if rising_edge(clk) then
       case c_state is
