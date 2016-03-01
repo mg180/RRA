@@ -22,7 +22,7 @@ architecture rtl of rra_servo_controller is
   signal current: integer range 0 to 991;
   signal target: integer range 0 to 991;
   signal speed: unsigned(3 downto 0);
-  signal pwm_out: std_ulogic;
+  signal pwm_out:   std_ulogic;
 
   signal interval: integer range 0 to 991;
   signal interval_count: integer range 0 to 991;
@@ -58,9 +58,23 @@ begin
             if current = target then
               --Do nothing
             elsif current < target then
-              current <= current + STEP;
+              --Check to see if increment would jump over target
+              if (current + STEP) > target then
+                --If it does, assign the target (partial step)
+                current <= target;
+              else
+                --If not, increment by the full step
+                current <= current + STEP;
+              end if;
             elsif current > target then
-              current <= current - STEP;
+              --Check to see if decrement would jump over target
+              if (current - STEP) < target then
+                --If it does, assign the target (partial step)
+                current <= target;
+              else
+                --If not, decrement by the full step
+                current <= current - STEP;
+              end if;
             end if;
             interval_count <= 0;
           end if;

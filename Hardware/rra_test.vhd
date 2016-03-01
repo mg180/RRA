@@ -22,16 +22,8 @@ architecture test1 of rra_test is
 			--Keypad
 			i_key_row	: in  std_ulogic_vector(3 downto 0);
 			o_key_col 	: out std_ulogic_vector(3 downto 0);
-			o_key_test 	: out std_ulogic_vector(15 downto 0);
 
 			--Control
-			low_u		: in std_ulogic;
-			low_d		: in std_ulogic;
-			mid_u		: in std_ulogic;
-			mid_d		: in std_ulogic;
-			upp_u		: in std_ulogic;
-			upp_d		: in std_ulogic;
-			store 		: in std_ulogic;
 			speed		: in std_ulogic_vector(3 downto 0);
 			mode		: in std_ulogic_vector(1 downto 0)
 		);
@@ -78,14 +70,6 @@ begin
 		b1 		=> b1,
 		i_key_row 	=> i_key_row,
 		o_key_col 	=> o_key_col,
-		o_key_test	=> o_key_test,
-		low_u		=> low_u,
-		low_d		=> low_d,
-		mid_u		=> mid_u,
-		mid_d		=> mid_d,
-		upp_u		=> upp_u,
-		upp_d		=> upp_d,
-		store 		=> store,
 		speed 		=> speed,
 		mode 		=> mode
 	);
@@ -109,16 +93,24 @@ begin
 		wait for clk_period;
 		rst <= '0';
 
-		wait for clk_period*4;
-		i_key_row <= "0000";
-		wait for clk_period*4;
-		i_key_row <= "0001";
-		wait for clk_period*4;
-		i_key_row <= "0010";
-		wait for clk_period*4;
-		i_key_row <= "0100";
-		wait for clk_period*4;
-		i_key_row <= "1000";
+		wait for clk_period*0;
+
+		for i in 0 to 4000000 loop
+			i_key_row <= "0000";
+			wait for clk_period*3;
+			i_key_row <= "0001";
+			wait for clk_period*1;	
+		end loop;
+
+		--wait for clk_period*4;
+		--i_key_row <= "0000";
+		
+		--wait for clk_period*4;
+		--i_key_row <= "0010";
+		--wait for clk_period*4;
+		--i_key_row <= "0100";
+		--wait for clk_period*4;
+		--i_key_row <= "1000";
 
 		wait;
 	end process;

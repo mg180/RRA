@@ -18,16 +18,8 @@ port (
 		--Keypad
 		i_key_row	: in  std_ulogic_vector(3 downto 0);
 		o_key_col 	: out std_ulogic_vector(3 downto 0);
-		o_key_test 	: out std_ulogic_vector(15 downto 0);
 
 		--Control
-		low_u		: in std_ulogic;
-		low_d		: in std_ulogic;
-		mid_u		: in std_ulogic;
-		mid_d		: in std_ulogic;
-		upp_u		: in std_ulogic;
-		upp_d		: in std_ulogic;
-		store 		: in std_ulogic;
 		speed		: in std_ulogic_vector(3 downto 0);
 		mode		: in std_ulogic_vector(1 downto 0)
 	 );
@@ -42,6 +34,12 @@ architecture v1 of rra is
       key_col   : out std_ulogic_vector(3 downto 0);
       key_row   : in  std_ulogic_vector(3 downto 0);
       key_out   : out std_ulogic_vector(15 downto 0);
+
+      -- 1 bit per key as shown below:
+      --
+      -- 15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00
+      -- D  C  B  A  #  *  9  8  7  6  5  4  3  2  1  0
+
       key_err   : out std_ulogic
     );
   
@@ -92,6 +90,13 @@ architecture v1 of rra is
 	--Keypad
 	signal key_out	: std_ulogic_vector(15 downto 0);
 	signal key_err  : std_ulogic;
+	signal low_u	: std_ulogic;
+	signal low_d	: std_ulogic;
+	signal mid_u	: std_ulogic;
+	signal mid_d	: std_ulogic;
+	signal upp_u	: std_ulogic;
+	signal upp_d	: std_ulogic;
+	signal store 	: std_ulogic;
 
 	--Memory
 	signal addr		: std_ulogic_vector(7 downto 0);
@@ -121,7 +126,7 @@ begin
 		clk 	=> clk,
 		key_col => o_key_col,
 		key_row => i_key_row,
-		key_out => o_key_test,
+		key_out => key_out,
 		key_err => key_err
 	);
 
@@ -234,30 +239,55 @@ begin
 		else 
 			moving <= '1';
 		end if;
-
-		l1 <= l_pwm;
-		l2 <= l_pwm;
-		m1 <= m_pwm;
-		m2 <= m_pwm;
-		u1 <= u_pwm;
-		u2 <= u_pwm;
-		g1 <= g_pwm;
-		w1 <= w_pwm;
-		b1 <= b_pwm;
-		
 	end process;
 
+	set_target: process(clk)
+	begin
+		if rst = '1' then
+			t_lower_pos <= (others => '0');
+			t_middle_pos <= (others => '0');
+			t_upper_pos <= (others => '0');
+			t_gripper_pos <= (others => '0');
+			t_wrist_pos <= (others => '0');
+			t_base_pos <= (others => '0');
+		else
+			if rising_edge(clk) then
+				if l_keypad = '1' then
+					if low_u = '1' then
+						t_lower_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_lower_pos))) + SERVO_STEP, t_lower_pos'length));
+					end if;
+				end if;
+			end if;
+		end if;
+	end process;
 
 	to_implement: process(clk)
 	begin
 		addr <= (others => '0');
-		t_lower_pos <= "011111111";
-		t_middle_pos <= "011111111";
-		t_upper_pos <= "011111111";
-		t_gripper_pos <= "011111111";
-		t_wrist_pos <= "011111111";
-		t_base_pos <= "011111111";
 	end process;
+
+	-- Map keypad keys to control signals
+	-- 1 bit per key as shown below:
+	--
+	-- 15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00
+	-- D  C  B  A  #  *  9  8  7  6  5  4  3  2  1  0
+	low_u <= key_out(1);
+	low_d <= key_out(7);
+	mid_u <= key_out(2);
+	mid_d <= key_out(8);
+	upp_u <= key_out(3);
+	upp_d <= key_out(9);
+
+	-- Map PWM out signals to port
+	l1 <= l_pwm;
+	l2 <= l_pwm;
+	m1 <= m_pwm;
+	m2 <= m_pwm;
+	u1 <= u_pwm;
+	u2 <= u_pwm;
+	g1 <= g_pwm;
+	w1 <= w_pwm;
+	b1 <= b_pwm;
 end v1;
 
 

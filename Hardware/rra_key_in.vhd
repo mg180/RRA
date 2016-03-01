@@ -16,6 +16,7 @@ end rra_key_in;
 
 architecture rtl of rra_key_in is
   signal col_count:   integer range 0 to 3;
+  signal key_count:  integer range 0 to 3;    -- Used to determine if no key has been pressed on any column
 
   signal key_next:    std_ulogic_vector(15 downto 0);
   signal err:         std_ulogic;
@@ -29,26 +30,32 @@ begin
           case key_row is
             when "0000"=>
               err <= '0';
-              key_next <= (others => '0');
+              key_count <= 1;
+              key_next <= key_next;
             when "0001" =>
               --Key 1
               err <= '0';
+              key_count <= 0;
               key_next <= "0000000000000010";
             when "0010" =>
               --Key 4
               err <= '0';
+              key_count <= 0;
               key_next <= "0000000000010000";
             when "0100" =>
               --Key 7
               err <= '0';
+              key_count <= 0;
               key_next <= "0000000010000000";
             when "1000" =>
               --Key *
               err <= '0';
+              key_count <= 0;
               key_next <= "0000010000000000";
             when others =>
               --Invalid 
               err <= '1';
+              key_count <= 0;
               key_next <= (others => '0');
           end case;
           col_count <= 1;
@@ -57,26 +64,32 @@ begin
           case key_row is
             when "0000"=>
               err <= '0';
-              key_next <= (others => '0');
+              key_count <= key_count + 1;
+              key_next <= key_next;
             when "0001" =>
               --Key 2
               err <= '0';
+              key_count <= key_count;
               key_next <= "0000000000000100";
             when "0010" =>
               --Key 5
               err <= '0';
+              key_count <= key_count;
               key_next <= "0000000000100000";
             when "0100" =>
               --Key 8
               err <= '0';
+              key_count <= key_count;
               key_next <= "0000000100000000";
             when "1000" =>
               --Key 0
               err <= '0';
+              key_count <= key_count;
               key_next <= "0000000000000001";
             when others =>
               --Invalid
               err <= '1';
+              key_count <= key_count;
               key_next <= (others => '0');
           end case;
           col_count <= 2;
@@ -85,26 +98,32 @@ begin
           case key_row is
             when "0000"=>
               err <= '0';
-              key_next <= (others => '0');
+              key_count <= key_count + 1;
+              key_next <= key_next;
             when "0001" =>
               --Key 3
               err <= '0';
+              key_count <= key_count;
               key_next <= "0000000000001000";
             when "0010" =>
               --Key 6
               err <= '0';
+              key_count <= key_count;
               key_next <= "0000000001000000";
             when "0100" =>
               --Key 9
               err <= '0';
+              key_count <= key_count;
               key_next <= "0000001000000000";
             when "1000" =>
               --Key #
               err <= '0';
+              key_count <= key_count;
               key_next <= "0000100000000000";
             when others =>
               --Invalid
               err <= '1';
+              key_count <= key_count;
               key_next <= (others => '0');
           end case;
           col_count <= 3;
@@ -113,26 +132,34 @@ begin
           case key_row is
             when "0000"=>
               err <= '0';
-              key_next <= (others => '0');
+              if key_count = 3 then
+                key_next <= (others => '0');
+              end if;
+              key_next <= key_next;
             when "0001" =>
               --Key A
               err <= '0';
+              key_count <= key_count;
               key_next <= "0001000000000000";
             when "0010" =>
               --Key B
               err <= '0';
+              key_count <= key_count;
               key_next <= "0010000000000000";
             when "0100" =>
               --Key C
               err <= '0';
+              key_count <= key_count;
               key_next <= "0100000000000000";
             when "1000" =>
               --Key D
               err <= '0';
+              key_count <= key_count;
               key_next <= "1000000000000000";
             when others =>
               --Invalid
               err <= '1';
+              key_count <= key_count;
               key_next <= (others => '0');
           end case;
           col_count <= 0;
