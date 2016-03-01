@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="rra">
+		<CBX_INST_ENTRY INSTANCE_NAME="|rra|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_ivo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|rra|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_fvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|rra|lpm_mult:Mult1" CBX_FILE_NAME="mult_r6t.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

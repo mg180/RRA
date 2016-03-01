@@ -1,54 +1,37 @@
-{C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity rra_test
--- Compiling architecture test1 of rra_test
+C:/Users/aaron/Desktop/RRA/Hardware/rra_memory.vhd {0 {vcom -work work -2002 -explicit C:/Users/aaron/Desktop/RRA/Hardware/rra_memory.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vcom-42) Unsupported ModelSim library format for "C:/Users/aaron/Desktop/RRA/Hardware/work". (Format: 4)
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity rra_controller
--- Compiling architecture v1 of rra_controller
+** Error: VHDL Compiler exiting
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4 Compiler 2014.12 Dec  3 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity rra
--- Compiling architecture v1 of rra
+} {3.0 4.0 5.0 6.0} {}} C:/Users/aaron/Desktop/RRA/Hardware/rra.vhd {0 {vcom -work work -2002 -explicit C:/Users/aaron/Desktop/RRA/Hardware/rra.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vcom-42) Unsupported ModelSim library format for "C:/Users/aaron/Desktop/RRA/Hardware/work". (Format: 4)
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity rra_memory
--- Compiling architecture rtl of rra_memory
+** Error: VHDL Compiler exiting
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4 Compiler 2014.12 Dec  3 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity rra_servo_controller
--- Compiling architecture rtl of rra_servo_controller
+} {3.0 4.0 5.0 6.0} {}} C:/Users/aaron/Desktop/RRA/Hardware/rra_servo_controller.vhd {0 {vcom -work work -2002 -explicit C:/Users/aaron/Desktop/RRA/Hardware/rra_servo_controller.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vcom-42) Unsupported ModelSim library format for "C:/Users/aaron/Desktop/RRA/Hardware/work". (Format: 4)
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity rra_key_in
--- Compiling architecture rtl of rra_key_in
+** Error: VHDL Compiler exiting
 
-} {} {}}
+} {3.0 4.0 5.0 6.0} {}} C:/Users/aaron/Desktop/RRA/Hardware/rra_key_in.vhd {0 {vcom -work work -2002 -explicit C:/Users/aaron/Desktop/RRA/Hardware/rra_key_in.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vcom-42) Unsupported ModelSim library format for "C:/Users/aaron/Desktop/RRA/Hardware/work". (Format: 4)
+
+** Error: VHDL Compiler exiting
+
+} {3.0 4.0 5.0 6.0} {}} C:/Users/aaron/Desktop/RRA/Hardware/rra_test.vhd {0 {vcom -work work -2002 -explicit C:/Users/aaron/Desktop/RRA/Hardware/rra_test.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vcom-42) Unsupported ModelSim library format for "C:/Users/aaron/Desktop/RRA/Hardware/work". (Format: 4)
+
+** Error: VHDL Compiler exiting
+
+} {3.0 4.0 5.0 6.0} {}} C:/Users/aaron/Desktop/RRA/Hardware/rra_controller.vhd {0 {vcom -work work -2002 -explicit C:/Users/aaron/Desktop/RRA/Hardware/rra_controller.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vcom-42) Unsupported ModelSim library format for "C:/Users/aaron/Desktop/RRA/Hardware/work". (Format: 4)
+
+** Error: VHDL Compiler exiting
+
+} {3.0 4.0 5.0 6.0} {}}

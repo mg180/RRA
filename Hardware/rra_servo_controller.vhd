@@ -11,25 +11,26 @@ entity rra_servo_controller is
       i_rst   : in  std_ulogic;
 
       i_speed   	: in  std_ulogic_vector(3 downto 0);
-      o_current 	: out std_ulogic_vector(8 downto 0);
-	  o_current_i	: out std_ulogic_vector(8 downto 0);
-      i_target  	: in  std_ulogic_vector(8 downto 0);
+		i_offset 	: in std_ulogic_vector(7 downto 0);
+      o_current 	: out std_ulogic_vector(9 downto 0);
+	   o_current_i	: out std_ulogic_vector(9 downto 0);
+      i_target  	: in  std_ulogic_vector(9 downto 0);
       o_pwm_out 	: out std_ulogic;
-	  o_pwm_out_i	: out std_ulogic
+	   o_pwm_out_i	: out std_ulogic
     );
   
 end rra_servo_controller;
 
 architecture rtl of rra_servo_controller is
-  signal current: integer range 0 to 991;
-  signal current_i : integer range 0 to 991;
-  signal target: integer range 0 to 991;
+  signal current: integer range 0 to 2000;
+  signal current_i : integer range 0 to 2000;
+  signal target: integer range 0 to 2000;
   signal speed: unsigned(3 downto 0);
   signal pwm_out:   std_ulogic;
   signal pwm_out_i:   std_ulogic;
 
-  signal interval: integer range 0 to 991;
-  signal interval_count: integer range 0 to 991;
+  signal interval: integer range 0 to 2000;
+  signal interval_count: integer range 0 to 2000;
 
   signal pwm_count: integer range 0 to 20000;
   signal pwm_count_i: integer range 0 to 20000;
@@ -69,7 +70,8 @@ begin
                 current <= target;
               else
                 --If not, increment by the full step
-                current <= current + STEP;
+                --current <= current + STEP;
+					 current <= target;
               end if;
             elsif current > target then
               --Check to see if decrement would jump over target
@@ -78,7 +80,8 @@ begin
                 current <= target;
               else
                 --If not, decrement by the full step
-                current <= current - STEP;
+                --current <= current - STEP;
+					 current <= target;
               end if;
             end if;
             interval_count <= 0;
@@ -167,7 +170,7 @@ begin
           --Stay high for at least 1ms
           pwm_count_i <= pwm_count_i + 1;
           pwm_out_i <= '1';
-        elsif pwm_count_i < (1000 + (current_i)) then
+        elsif pwm_count_i < (1000 + current_i + (to_integer(signed(i_offset)))) then
           pwm_count_i <= pwm_count_i + 1;
           pwm_out_i <= '1';
         elsif pwm_count_i < 20000 then

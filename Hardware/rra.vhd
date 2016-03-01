@@ -9,7 +9,7 @@ port (
 		rst			: in  std_ulogic;
 
 		--Servo Positions (PWM)
-		l1,l2		: out std_ulogic;
+		l1,l2			: out std_ulogic;
 		l1_i,l2_i	: out std_ulogic;		
 		m1,m2		: out std_ulogic;
 		m1_i,m2_i	: out std_ulogic;
@@ -25,6 +25,15 @@ port (
 		i_key_row	: in  std_ulogic_vector(3 downto 0);
 		o_key_col 	: out std_ulogic_vector(3 downto 0);
 
+		--LEDs
+		 leds       : out std_logic_vector(9 downto 0);
+		
+		--7 segment
+		 segment7_1 : out std_logic_vector(6 downto 0);
+       segment7_2 : out std_logic_vector(6 downto 0);
+       segment7_3 : out std_logic_vector(6 downto 0);
+       segment7_4 : out std_logic_vector(6 downto 0);
+		 
 		--Control
 		speed		: in std_ulogic_vector(3 downto 0);
 		mode		: in std_ulogic_vector(1 downto 0)
@@ -87,9 +96,10 @@ architecture v1 of rra is
 			i_rst		: in  std_ulogic;
 
 			i_speed 	: in  std_ulogic_vector(3 downto 0);
-			o_current	: out std_ulogic_vector(8 downto 0);
-			o_current_i : out std_ulogic_vector(8 downto 0);
-			i_target  	: in  std_ulogic_vector(8 downto 0);
+			o_current	: out std_ulogic_vector(9 downto 0);
+			o_current_i : out std_ulogic_vector(9 downto 0);
+			i_target  	: in  std_ulogic_vector(9 downto 0);
+			i_offset		: in  std_ulogic_vector(7 downto 0);
 			o_pwm_out 	: out std_ulogic;
 			o_pwm_out_i	: out std_ulogic
 		);
@@ -116,18 +126,18 @@ architecture v1 of rra is
 	--Movement (c - current, t - target)
 	constant SERVO_STEP						: integer := 10;
 	signal moving							: std_ulogic;
-	signal c_lower_pos,		t_lower_pos		: std_ulogic_vector(8 downto 0);
-	signal c_lower_pos_i					: std_ulogic_vector(8 downto 0);
-	signal c_middle_pos,	t_middle_pos	: std_ulogic_vector(8 downto 0);
-	signal c_middle_pos_i					: std_ulogic_vector(8 downto 0);
-	signal c_upper_pos,		t_upper_pos		: std_ulogic_vector(8 downto 0);
-	signal c_upper_pos_i					: std_ulogic_vector(8 downto 0);
-	signal c_wrist_pos,		t_wrist_pos		: std_ulogic_vector(8 downto 0);
-	signal c_wrist_pos_i					: std_ulogic_vector(8 downto 0);
-	signal c_gripper_pos,	t_gripper_pos	: std_ulogic_vector(8 downto 0);
-	signal c_gripper_pos_i					: std_ulogic_vector(8 downto 0);
-	signal c_base_pos,		t_base_pos		: std_ulogic_vector(8 downto 0);
-	signal c_base_pos_i						: std_ulogic_vector(8 downto 0);
+	signal c_lower_pos,		t_lower_pos		: std_ulogic_vector(9 downto 0);
+	signal c_lower_pos_i					: std_ulogic_vector(9 downto 0);
+	signal c_middle_pos,	t_middle_pos	: std_ulogic_vector(9 downto 0);
+	signal c_middle_pos_i					: std_ulogic_vector(9 downto 0);
+	signal c_upper_pos,		t_upper_pos		: std_ulogic_vector(9 downto 0);
+	signal c_upper_pos_i					: std_ulogic_vector(9 downto 0);
+	signal c_wrist_pos,		t_wrist_pos		: std_ulogic_vector(9 downto 0);
+	signal c_wrist_pos_i					: std_ulogic_vector(9 downto 0);
+	signal c_gripper_pos,	t_gripper_pos	: std_ulogic_vector(9 downto 0);
+	signal c_gripper_pos_i					: std_ulogic_vector(9 downto 0);
+	signal c_base_pos,		t_base_pos		: std_ulogic_vector(9 downto 0);
+	signal c_base_pos_i						: std_ulogic_vector(9 downto 0);
 	
 	--Servo control
 	signal l_keypad 					: std_ulogic;
@@ -176,6 +186,7 @@ begin
 		i_clk 		=> clk,
 		i_rst 		=> rst,
 		i_speed		=> speed,
+		i_offset 	=> "00111111",
 		o_current	=> c_lower_pos,
 		o_current_i	=> c_lower_pos_i,
 		i_target	=> t_lower_pos,
@@ -192,6 +203,7 @@ begin
 		i_clk 		=> clk,
 		i_rst 		=> rst,
 		i_speed		=> speed,
+		i_offset 	=> "00000000",
 		o_current	=> c_middle_pos,
 		o_current_i	=> c_middle_pos_i,
 		i_target	=> t_middle_pos,
@@ -207,6 +219,7 @@ begin
 		i_clk 		=> clk,
 		i_rst 		=> rst,
 		i_speed		=> speed,
+		i_offset 	=> "00111111",
 		o_current	=> c_upper_pos,
 		o_current_i	=> c_upper_pos_i,
 		i_target	=> t_upper_pos,
@@ -222,6 +235,7 @@ begin
 		i_clk 		=> clk,
 		i_rst 		=> rst,
 		i_speed		=> speed,
+		i_offset 	=> "00000000",
 		o_current	=> c_wrist_pos,
 		o_current_i	=> c_wrist_pos_i,
 		i_target	=> t_wrist_pos,
@@ -237,6 +251,7 @@ begin
 		i_clk 		=> clk,
 		i_rst 		=> rst,
 		i_speed		=> speed,
+		i_offset 	=> "00000000",
 		o_current	=> c_gripper_pos,
 		o_current_i	=> c_gripper_pos_i,
 		i_target	=> t_gripper_pos,
@@ -252,6 +267,7 @@ begin
 		i_clk 		=> clk,
 		i_rst 		=> rst,
 		i_speed		=> speed,
+		i_offset 	=> "00000000",
 		o_current	=> c_base_pos,
 		o_current_i	=> c_base_pos_i,
 		i_target	=> t_base_pos,
@@ -280,28 +296,34 @@ begin
 			t_base_pos <= (others => '0');
 		else
 			if rising_edge(clk) then
-				if l_keypad = '1' then
+				--if l_keypad = '1' then
 					--TODO Check for upper and lower boundaries
 					if low_u = '1' then
-						t_lower_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_lower_pos))) + SERVO_STEP, t_lower_pos'length));
+						--t_lower_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_lower_pos))) + SERVO_STEP, t_lower_pos'length));
+						t_lower_pos <= "1111011111";
 					end if;
 					if low_d = '1' then
-						t_lower_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_lower_pos))) - SERVO_STEP, t_lower_pos'length));
+						--t_lower_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_lower_pos))) - SERVO_STEP, t_lower_pos'length));
+						t_lower_pos <= (others => '0');
 					end if;
 					if mid_u = '1' then
 						t_middle_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_middle_pos))) + SERVO_STEP, t_middle_pos'length));
+						t_middle_pos <= "1111011111";
 					end if;
 					if mid_d = '1' then
 						t_middle_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_middle_pos))) - SERVO_STEP, t_middle_pos'length));
+						t_middle_pos <= (others => '0');
 					end if;
 					if upp_u = '1' then
 						t_upper_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_upper_pos))) + SERVO_STEP, t_upper_pos'length));
+						t_upper_pos <= "1111011111";
 					end if;
 					if upp_d = '1' then
 						t_upper_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_upper_pos))) - SERVO_STEP, t_upper_pos'length));
+						t_upper_pos <= (others => '0');
 					end if;
 				end if;
-			end if;
+			--end if;
 		end if;
 	end process;
 
@@ -322,6 +344,14 @@ begin
 	upp_u <= key_out(3);
 	upp_d <= key_out(9);
 
+	leds(0) <= key_out(1);
+	leds(1) <= key_out(7);
+	leds(2) <= key_out(2);
+	leds(3) <= key_out(8);
+	leds(4) <= key_out(3);
+	leds(5) <= key_out(9);
+	leds(6) <= '1';
+	
 	-- Map PWM out signals to port
 	l1 <= l_pwm;
 	l1_i <= l_pwm_i;
@@ -341,6 +371,82 @@ begin
 	w1_i <= w_pwm_i;
 	b1 <= b_pwm;
 	b1_i <= b_pwm_i;
+	
+	
+----------------------------------------------------------------------
+-- 7 Seg display - int input max 9999
+----------------------------------------------------------------------
+  seg7dis : process(c_lower_pos)
+    variable dig : integer;
+    variable ten : integer;
+    variable hun : integer;
+    variable tho : integer;
+  begin
+    tho := to_integer(unsigned(c_lower_pos))/1000;
+    hun := (to_integer(unsigned(c_lower_pos))-(tho*1000))/100;
+    ten := (to_integer(unsigned(c_lower_pos))-(tho*1000)-(hun*100))/10;
+    dig := to_integer(unsigned(c_lower_pos))-(tho*1000)-(hun*100)-(ten*10);
+
+    case std_logic_vector(to_unsigned(dig, 4)) is
+      when "0000" => segment7_1 <= "0000001";  --   
+      when "0001" => segment7_1 <= "1001111";  -- 
+      when "0010" => segment7_1 <= "0010010";  --   
+      when "0011" => segment7_1 <= "0000110";  --   
+      when "0100" => segment7_1 <= "1001100";  --    
+      when "0101" => segment7_1 <= "0100100";  --   
+      when "0110" => segment7_1 <= "0100000";  --   
+      when "0111" => segment7_1 <= "0001111";  --   
+      when "1000" => segment7_1 <= "0000000";  --     
+      when "1001" => segment7_1 <= "0000100";  --      
+      when others => segment7_1 <= "1111111";  -- when anything other is types
+    end case;
+
+    case std_logic_vector(to_unsigned(ten, 4)) is
+      when "0000" => segment7_2 <= "0000001";  --   
+      when "0001" => segment7_2 <= "1001111";  -- 
+      when "0010" => segment7_2 <= "0010010";  --   
+      when "0011" => segment7_2 <= "0000110";  --   
+      when "0100" => segment7_2 <= "1001100";  --    
+      when "0101" => segment7_2 <= "0100100";  --   
+      when "0110" => segment7_2 <= "0100000";  --   
+      when "0111" => segment7_2 <= "0001111";  --   
+      when "1000" => segment7_2 <= "0000000";  --     
+      when "1001" => segment7_2 <= "0000100";  --      
+      when others => segment7_2 <= "1111111";  -- when anything other is types
+    end case;
+
+    case std_logic_vector(to_unsigned(hun, 4)) is
+      when "0000" => segment7_3 <= "0000001";  --   
+      when "0001" => segment7_3 <= "1001111";  -- 
+      when "0010" => segment7_3 <= "0010010";  --   
+      when "0011" => segment7_3 <= "0000110";  --   
+      when "0100" => segment7_3 <= "1001100";  --    
+      when "0101" => segment7_3 <= "0100100";  --   
+      when "0110" => segment7_3 <= "0100000";  --   
+      when "0111" => segment7_3 <= "0001111";  --   
+      when "1000" => segment7_3 <= "0000000";  --     
+      when "1001" => segment7_3 <= "0000100";  --      
+      when others => segment7_3 <= "1111111";  -- when anything other is types
+    end case;
+
+    case std_logic_vector(to_unsigned(tho, 4)) is
+      when "0000" => segment7_4 <= "0000001";  --   
+      when "0001" => segment7_4 <= "1001111";  -- 
+      when "0010" => segment7_4 <= "0010010";  --   
+      when "0011" => segment7_4 <= "0000110";  --   
+      when "0100" => segment7_4 <= "1001100";  --    
+      when "0101" => segment7_4 <= "0100100";  --   
+      when "0110" => segment7_4 <= "0100000";  --   
+      when "0111" => segment7_4 <= "0001111";  --   
+      when "1000" => segment7_4 <= "0000000";  --     
+      when "1001" => segment7_4 <= "0000100";  --      
+      when others => segment7_4 <= "1111111";  -- when anything other is types
+    end case;
+  end process seg7dis;
+-------------------------------------------------------------------------------
+
+
+
 end v1;
 
 

@@ -1,5 +1,5 @@
 Assembler report for rra
-Mon Feb 15 22:05:27 2016
+Tue Mar 01 21:36:34 2016
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/Testing/output_files/rra.sof
+  5. Assembler Device Options: C:/Users/aaron/Desktop/RRA/Hardware/Testing/output_files/rra.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Feb 15 22:05:27 2016 ;
+; Assembler Status      ; Successful - Tue Mar 01 21:36:34 2016 ;
 ; Revision Name         ; rra                                   ;
 ; Top-level Entity Name ; rra                                   ;
 ; Family                ; Cyclone III                           ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                      ;
-+------------------------------------------------------------------------------------------------+
-; File Name                                                                                      ;
-+------------------------------------------------------------------------------------------------+
-; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/Testing/output_files/rra.sof ;
-+------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------+
+; Assembler Generated Files                                        ;
++------------------------------------------------------------------+
+; File Name                                                        ;
++------------------------------------------------------------------+
+; C:/Users/aaron/Desktop/RRA/Hardware/Testing/output_files/rra.sof ;
++------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/Testing/output_files/rra.sof ;
-+----------------+---------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                 ;
-+----------------+---------------------------------------------------------------------------------------------------------+
-; Device         ; EP3C16F484C6                                                                                            ;
-; JTAG usercode  ; 0x00113C3E                                                                                              ;
-; Checksum       ; 0x00113C3E                                                                                              ;
-+----------------+---------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/aaron/Desktop/RRA/Hardware/Testing/output_files/rra.sof ;
++----------------+---------------------------------------------------------------------------+
+; Option         ; Setting                                                                   ;
++----------------+---------------------------------------------------------------------------+
+; Device         ; EP3C16F484C6                                                              ;
+; JTAG usercode  ; 0x0013937C                                                                ;
+; Checksum       ; 0x0013937C                                                                ;
++----------------+---------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Feb 15 22:05:25 2016
+    Info: Processing started: Tue Mar 01 21:36:32 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off rra -c rra
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 470 megabytes
-    Info: Processing ended: Mon Feb 15 22:05:27 2016
+    Info: Peak virtual memory: 469 megabytes
+    Info: Processing ended: Tue Mar 01 21:36:34 2016
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
