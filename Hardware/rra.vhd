@@ -253,8 +253,24 @@ begin
 		else
 			if rising_edge(clk) then
 				if l_keypad = '1' then
+					--TODO Check for upper and lower boundaries
 					if low_u = '1' then
 						t_lower_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_lower_pos))) + SERVO_STEP, t_lower_pos'length));
+					end if;
+					if low_d = '1' then
+						t_lower_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_lower_pos))) - SERVO_STEP, t_lower_pos'length));
+					end if;
+					if mid_u = '1' then
+						t_middle_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_middle_pos))) + SERVO_STEP, t_middle_pos'length));
+					end if;
+					if mid_d = '1' then
+						t_middle_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_middle_pos))) - SERVO_STEP, t_middle_pos'length));
+					end if;
+					if upp_u = '1' then
+						t_upper_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_upper_pos))) + SERVO_STEP, t_upper_pos'length));
+					end if;
+					if upp_d = '1' then
+						t_upper_pos <= std_ulogic_vector(to_unsigned((to_integer(unsigned(t_upper_pos))) - SERVO_STEP, t_upper_pos'length));
 					end if;
 				end if;
 			end if;
