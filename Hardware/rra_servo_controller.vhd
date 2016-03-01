@@ -10,24 +10,29 @@ entity rra_servo_controller is
       i_clk   : in  std_ulogic;
       i_rst   : in  std_ulogic;
 
-      i_speed   : in  std_ulogic_vector(3 downto 0);
-      o_current : out std_ulogic_vector(8 downto 0);
-      i_target  : in  std_ulogic_vector(8 downto 0);
-      o_pwm_out : out std_ulogic
+      i_speed   	: in  std_ulogic_vector(3 downto 0);
+      o_current 	: out std_ulogic_vector(8 downto 0);
+	  o_current_i	: out std_ulogic_vector(8 downto 0);
+      i_target  	: in  std_ulogic_vector(8 downto 0);
+      o_pwm_out 	: out std_ulogic;
+	  o_pwm_out_i	: out std_ulogic
     );
   
 end rra_servo_controller;
 
 architecture rtl of rra_servo_controller is
   signal current: integer range 0 to 991;
+  signal current_i : integer range 0 to 991;
   signal target: integer range 0 to 991;
   signal speed: unsigned(3 downto 0);
   signal pwm_out:   std_ulogic;
+  signal pwm_out_i:   std_ulogic;
 
   signal interval: integer range 0 to 991;
   signal interval_count: integer range 0 to 991;
 
   signal pwm_count: integer range 0 to 20000;
+  signal pwm_count_i: integer range 0 to 20000;
 
   signal clk_1mhz: std_ulogic;
   signal clk_1khz: std_ulogic;
@@ -83,6 +88,7 @@ begin
         speed <= unsigned(i_speed);
         target <= to_integer(unsigned(i_target));
         o_current <= std_ulogic_vector(to_unsigned(current, o_current'length));
+		o_current_i <= std_ulogic_vector(to_unsigned(current_i, o_current_i'length));
       end if;
   end process;
 
@@ -127,7 +133,7 @@ begin
     else
       if rising_edge(clk_1mhz) then
         if pwm_count < 1000 then
-          --Stay high for atleast 1ms
+          --Stay high for at least 1ms
           pwm_count <= pwm_count + 1;
           pwm_out <= '1';
         elsif pwm_count < (1000 + (current)) then
@@ -147,4 +153,37 @@ begin
       end if;
     end if;
   end process;
+  
+  pwm_i: process(i_clk, clk_1mhz)
+  begin
+
+    if i_rst = '1' then
+      pwm_out_i <= '0';
+      o_pwm_out_i <= '0';
+      pwm_count_i <= 0;
+    else
+      if rising_edge(clk_1mhz) then
+        if pwm_count_i < 1000 then
+          --Stay high for at least 1ms
+          pwm_count_i <= pwm_count_i + 1;
+          pwm_out_i <= '1';
+        elsif pwm_count_i < (1000 + (current_i)) then
+          pwm_count_i <= pwm_count_i + 1;
+          pwm_out_i <= '1';
+        elsif pwm_count_i < 20000 then
+          pwm_count_i <= pwm_count_i + 1;
+          pwm_out_i <= '0';
+        else
+          pwm_count_i <= 0;
+          pwm_out_i <= '0';
+        end if;
+      end if;
+
+      if rising_edge(i_clk) then
+        o_pwm_out_i <= pwm_out_i;
+      end if;
+    end if;
+  end process;
+  
+  current_i <= 991 - current;
 end rtl;

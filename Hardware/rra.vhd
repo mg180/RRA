@@ -9,11 +9,17 @@ port (
 		rst			: in  std_ulogic;
 
 		--Servo Positions (PWM)
-		l1,l2		: out std_ulogic;	
+		l1,l2		: out std_ulogic;
+		l1_i,l2_i	: out std_ulogic;		
 		m1,m2		: out std_ulogic;
+		m1_i,m2_i	: out std_ulogic;
 		u1,u2		: out std_ulogic;
+		u1_i,u2_i	: out std_ulogic;
 		w1,g1 		: out std_ulogic;
+		w1_i,g1_i	: out std_ulogic;
 		b1			: out std_ulogic;
+		b1_i		: out std_ulogic;
+
 
 		--Keypad
 		i_key_row	: in  std_ulogic_vector(3 downto 0);
@@ -82,8 +88,10 @@ architecture v1 of rra is
 
 			i_speed 	: in  std_ulogic_vector(3 downto 0);
 			o_current	: out std_ulogic_vector(8 downto 0);
+			o_current_i : out std_ulogic_vector(8 downto 0);
 			i_target  	: in  std_ulogic_vector(8 downto 0);
-			o_pwm_out 	: out std_ulogic
+			o_pwm_out 	: out std_ulogic;
+			o_pwm_out_i	: out std_ulogic
 		);
 	end component;
 
@@ -109,15 +117,22 @@ architecture v1 of rra is
 	constant SERVO_STEP						: integer := 10;
 	signal moving							: std_ulogic;
 	signal c_lower_pos,		t_lower_pos		: std_ulogic_vector(8 downto 0);
+	signal c_lower_pos_i					: std_ulogic_vector(8 downto 0);
 	signal c_middle_pos,	t_middle_pos	: std_ulogic_vector(8 downto 0);
+	signal c_middle_pos_i					: std_ulogic_vector(8 downto 0);
 	signal c_upper_pos,		t_upper_pos		: std_ulogic_vector(8 downto 0);
+	signal c_upper_pos_i					: std_ulogic_vector(8 downto 0);
 	signal c_wrist_pos,		t_wrist_pos		: std_ulogic_vector(8 downto 0);
+	signal c_wrist_pos_i					: std_ulogic_vector(8 downto 0);
 	signal c_gripper_pos,	t_gripper_pos	: std_ulogic_vector(8 downto 0);
+	signal c_gripper_pos_i					: std_ulogic_vector(8 downto 0);
 	signal c_base_pos,		t_base_pos		: std_ulogic_vector(8 downto 0);
-
+	signal c_base_pos_i						: std_ulogic_vector(8 downto 0);
+	
 	--Servo control
 	signal l_keypad 					: std_ulogic;
-	signal l_pwm, m_pwm, u_pwm, g_pwm, b_pwm, w_pwm			: std_ulogic;
+	signal l_pwm, m_pwm, u_pwm, g_pwm, b_pwm, w_pwm					: std_ulogic;
+	signal l_pwm_i, m_pwm_i, u_pwm_i, g_pwm_i, b_pwm_i, w_pwm_i		: std_ulogic;
 
 begin
 	
@@ -162,9 +177,12 @@ begin
 		i_rst 		=> rst,
 		i_speed		=> speed,
 		o_current	=> c_lower_pos,
+		o_current_i	=> c_lower_pos_i,
 		i_target	=> t_lower_pos,
-		o_pwm_out	=> l_pwm
+		o_pwm_out	=> l_pwm,
+		o_pwm_out_i	=> l_pwm_i
 	);
+	
 
 	rra_servo_middle: rra_servo_controller 
 	generic map(
@@ -175,8 +193,10 @@ begin
 		i_rst 		=> rst,
 		i_speed		=> speed,
 		o_current	=> c_middle_pos,
+		o_current_i	=> c_middle_pos_i,
 		i_target	=> t_middle_pos,
-		o_pwm_out	=> m_pwm
+		o_pwm_out	=> m_pwm,
+		o_pwm_out_i	=> m_pwm_i
 	);
 
 	rra_servo_upper : rra_servo_controller 
@@ -188,8 +208,10 @@ begin
 		i_rst 		=> rst,
 		i_speed		=> speed,
 		o_current	=> c_upper_pos,
+		o_current_i	=> c_upper_pos_i,
 		i_target	=> t_upper_pos,
-		o_pwm_out	=> u_pwm
+		o_pwm_out	=> u_pwm,
+		o_pwm_out_i	=> u_pwm_i
 	);
 	
    rra_servo_wrist : rra_servo_controller 
@@ -201,8 +223,10 @@ begin
 		i_rst 		=> rst,
 		i_speed		=> speed,
 		o_current	=> c_wrist_pos,
+		o_current_i	=> c_wrist_pos_i,
 		i_target	=> t_wrist_pos,
-		o_pwm_out	=> w_pwm
+		o_pwm_out	=> w_pwm,
+		o_pwm_out_i	=> w_pwm_i
 	);
 	
 	rra_servo_gripper : rra_servo_controller 
@@ -214,8 +238,10 @@ begin
 		i_rst 		=> rst,
 		i_speed		=> speed,
 		o_current	=> c_gripper_pos,
+		o_current_i	=> c_gripper_pos_i,
 		i_target	=> t_gripper_pos,
-		o_pwm_out	=> g_pwm
+		o_pwm_out	=> g_pwm,
+		o_pwm_out_i	=> g_pwm_i
 	);
 	
 	rra_servo_base : rra_servo_controller 
@@ -227,8 +253,10 @@ begin
 		i_rst 		=> rst,
 		i_speed		=> speed,
 		o_current	=> c_base_pos,
+		o_current_i	=> c_base_pos_i,
 		i_target	=> t_base_pos,
-		o_pwm_out	=> b_pwm
+		o_pwm_out	=> b_pwm,
+		o_pwm_out_i	=> b_pwm_i
 	);
 
 
@@ -296,14 +324,23 @@ begin
 
 	-- Map PWM out signals to port
 	l1 <= l_pwm;
+	l1_i <= l_pwm_i;
 	l2 <= l_pwm;
+	l2_i <= l_pwm_i;
 	m1 <= m_pwm;
+	m1_i <= m_pwm_i;
 	m2 <= m_pwm;
+	m2_i <= m_pwm_i;
 	u1 <= u_pwm;
+	u1_i <= u_pwm_i;
 	u2 <= u_pwm;
+	u2_i <= u_pwm_i;
 	g1 <= g_pwm;
+	g1_i <= g_pwm_i;
 	w1 <= w_pwm;
+	w1_i <= w_pwm_i;
 	b1 <= b_pwm;
+	b1_i <= b_pwm_i;
 end v1;
 
 
