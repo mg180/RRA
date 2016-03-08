@@ -135,9 +135,10 @@ begin
 					when "0000"=>
 					  err <= '0';
 					  if key_count = 3 then
-						 key_next <= (others => '0');
+							key_next <= (others => '0');
+					  else
+					  	key_next <= key_next;
 					  end if;
-					  key_next <= key_next;
 					when "0001" =>
 					  --Key A
 					  err <= '0';

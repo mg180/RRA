@@ -23,6 +23,13 @@ architecture test1 of rra_test is
 			i_key_row	: in  std_ulogic_vector(3 downto 0);
 			o_key_col 	: out std_ulogic_vector(3 downto 0);
 
+			--7 segment
+			display_id : in  std_ulogic_vector(2 downto 0);
+			segment7_1 : out std_ulogic_vector(6 downto 0);
+	       	segment7_2 : out std_ulogic_vector(6 downto 0);
+	       	segment7_3 : out std_ulogic_vector(6 downto 0);
+	       	segment7_4 : out std_ulogic_vector(6 downto 0);
+
 			--Control
 			speed		: in std_ulogic_vector(3 downto 0);
 			mode		: in std_ulogic_vector(1 downto 0)
@@ -70,6 +77,13 @@ begin
 		b1 		=> b1,
 		i_key_row 	=> i_key_row,
 		o_key_col 	=> o_key_col,
+
+		display_id => (others => '0'),
+		segment7_1 => open,
+		segment7_2 => open,
+		segment7_3 => open,
+		segment7_4 => open,
+
 		speed 		=> speed,
 		mode 		=> mode
 	);
@@ -85,8 +99,8 @@ begin
 	test1: process
 	begin
 		--Set initial values
-		speed <= "0000";
-		mode <= "00";
+		speed <= "1111";
+		mode <= "01";
 		store <= '0';
 		--Reset
 		rst <= '1';
@@ -95,12 +109,14 @@ begin
 
 		wait for clk_period*0;
 
-		for i in 0 to 4000000 loop
+		for i in 0 to 400000 loop
 			i_key_row <= "0000";
 			wait for clk_period*3;
 			i_key_row <= "0001";
 			wait for clk_period*1;	
 		end loop;
+
+			i_key_row <= "0000";
 
 		--wait for clk_period*4;
 		--i_key_row <= "0000";

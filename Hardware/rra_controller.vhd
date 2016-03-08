@@ -79,11 +79,12 @@ begin
 
       when s_GET_MEMORY_NEXT =>
         l_keypad <= '0';
-        l_memory <= '0';
         w_memory <= '0';
         if moving = '1' then
+          l_memory <= '0';
           n_state <= s_MOVING;
         else 
+          l_memory <= '1';
           n_state <= s_WAITING;
         end if;
 

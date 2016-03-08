@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("C:/Users/aaron/Desktop/RRA/Hardware/Testing/output_files/") File("rra.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16F484) Path("C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/Testing/output_files/") File("rra.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

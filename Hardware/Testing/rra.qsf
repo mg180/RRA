@@ -58,15 +58,15 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_V14 -to i_key_row[0]
-set_location_assignment PIN_Y13 -to i_key_row[1]
-set_location_assignment PIN_U13 -to i_key_row[2]
-set_location_assignment PIN_R10 -to i_key_row[3]
+set_location_assignment PIN_R10 -to i_key_row[0]
+set_location_assignment PIN_U13 -to i_key_row[1]
+set_location_assignment PIN_Y13 -to i_key_row[2]
+set_location_assignment PIN_V14 -to i_key_row[3]
 set_location_assignment PIN_B12 -to clk
-set_location_assignment PIN_Y10 -to o_key_col[0]
-set_location_assignment PIN_T8 -to o_key_col[1]
-set_location_assignment PIN_W7 -to o_key_col[2]
-set_location_assignment PIN_AB5 -to o_key_col[3]
+set_location_assignment PIN_V5 -to o_key_col[0]
+set_location_assignment PIN_W7 -to o_key_col[1]
+set_location_assignment PIN_T8 -to o_key_col[2]
+set_location_assignment PIN_Y10 -to o_key_col[3]
 set_location_assignment PIN_AA4 -to l1
 set_location_assignment PIN_W6 -to l1_i
 set_location_assignment PIN_D2 -to speed[3]
@@ -117,4 +117,9 @@ set_location_assignment PIN_B19 -to segment7_4[3]
 set_location_assignment PIN_C19 -to segment7_4[2]
 set_location_assignment PIN_D19 -to segment7_4[1]
 set_location_assignment PIN_G15 -to segment7_4[0]
+set_location_assignment PIN_H6 -to mode[1]
+set_location_assignment PIN_H5 -to mode[0]
+set_location_assignment PIN_J7 -to display_id[2]
+set_location_assignment PIN_G5 -to display_id[1]
+set_location_assignment PIN_G4 -to display_id[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
