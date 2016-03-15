@@ -36,6 +36,7 @@ port (
        	segment7_4 : out std_ulogic_vector(6 downto 0);
 		 
 		--Control
+		led_sel 	: in std_ulogic;
 		speed		: in std_ulogic_vector(3 downto 0);
 		mode		: in std_ulogic_vector(1 downto 0)
 	 );
@@ -379,12 +380,12 @@ begin
 		else
 			if rising_edge(clk) then
 				if l_memory = '1' then
-					t_lower_pos <= data_in(11 downto 0);
-					t_middle_pos <= data_in(23 downto 12);
-					t_upper_pos <= data_in(35 downto 24);
-					t_wrist_pos <= data_in(47 downto 36);
-					t_gripper_pos <= data_in(59 downto 48);
-					t_base_pos <= data_in(71 downto 60);
+					t_lower_pos <= data_out(11 downto 0);
+					t_middle_pos <= data_out(23 downto 12);
+					t_upper_pos <= data_out(35 downto 24);
+					t_wrist_pos <= data_out(47 downto 36);
+					t_gripper_pos <= data_out(59 downto 48);
+					t_base_pos <= data_out(71 downto 60);
 				else
 					if l_keypad = '1' then
 						if key_err = '0' then
@@ -539,16 +540,28 @@ begin
 	bas_r <= key_out(15);
 	store <= key_out(5);
 
-	leds(0) <= l_pwm;
-	leds(1) <= l_pwm_i;
-	leds(2) <= m_pwm;
-	leds(3) <= m_pwm_i;
-	leds(4) <= u_pwm;
-	leds(5) <= u_pwm_i;
-	leds(6) <= w_pwm;
-	leds(7) <= w_pwm_i;
-	leds(8) <= g_pwm;
-	leds(9) <= g_pwm_i;
+	update_leds: process(clk)
+	begin
+		if rising_edge(clk) then
+			if led_sel = '1' then
+				leds(0) <= l_pwm;
+				leds(1) <= l_pwm_i;
+				leds(2) <= m_pwm;
+				leds(3) <= m_pwm_i;
+				leds(4) <= u_pwm;
+				leds(5) <= u_pwm_i;
+				leds(6) <= w_pwm;
+				leds(7) <= w_pwm_i;
+				leds(8) <= g_pwm;
+				leds(9) <= g_pwm_i;
+			else 
+				leds(6 downto 0) <= addr;
+				leds(8 downto 7) <= (others => '0');
+				leds(9) <= moved;
+			end if;
+		end if;
+	end process;
+	
 
 	reset <= NOT rst;
 	

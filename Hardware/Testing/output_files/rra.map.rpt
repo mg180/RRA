@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rra
-Tue Mar 15 05:03:19 2016
+Tue Mar 15 13:04:07 2016
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -39,10 +39,9 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  31. Port Connectivity Checks: "rra_servo_controller:rra_servo_upper"
  32. Port Connectivity Checks: "rra_servo_controller:rra_servo_middle"
  33. Port Connectivity Checks: "rra_servo_controller:rra_servo_lower"
- 34. Port Connectivity Checks: "rra_memory:memory"
- 35. Port Connectivity Checks: "rra_key_in:keypad"
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
+ 34. Port Connectivity Checks: "rra_key_in:keypad"
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -68,16 +67,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 15 05:03:18 2016      ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 15 13:04:06 2016      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; rra                                        ;
 ; Top-level Entity Name              ; rra                                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 19,542                                     ;
-;     Total combinational functions  ; 10,145                                     ;
-;     Dedicated logic registers      ; 10,088                                     ;
-; Total registers                    ; 10088                                      ;
-; Total pins                         ; 75                                         ;
+; Total logic elements               ; 20,128                                     ;
+;     Total combinational functions  ; 10,731                                     ;
+;     Dedicated logic registers      ; 10,167                                     ;
+; Total registers                    ; 10167                                      ;
+; Total pins                         ; 76                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 3                                          ;
@@ -245,28 +244,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 19,542    ;
+; Estimated Total logic elements              ; 20,128    ;
 ;                                             ;           ;
-; Total combinational functions               ; 10145     ;
+; Total combinational functions               ; 10731     ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 7178      ;
-;     -- 3 input functions                    ; 1379      ;
-;     -- <=2 input functions                  ; 1588      ;
+;     -- 4 input functions                    ; 7390      ;
+;     -- 3 input functions                    ; 1743      ;
+;     -- <=2 input functions                  ; 1598      ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 8242      ;
+;     -- normal mode                          ; 8828      ;
 ;     -- arithmetic mode                      ; 1903      ;
 ;                                             ;           ;
-; Total registers                             ; 10088     ;
-;     -- Dedicated logic registers            ; 10088     ;
+; Total registers                             ; 10167     ;
+;     -- Dedicated logic registers            ; 10167     ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 75        ;
+; I/O pins                                    ; 76        ;
 ; Embedded Multiplier 9-bit elements          ; 3         ;
 ; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 10105     ;
-; Total fan-out                               ; 75789     ;
-; Average fan-out                             ; 3.72      ;
+; Maximum fan-out                             ; 10178     ;
+; Total fan-out                               ; 78121     ;
+; Average fan-out                             ; 3.71      ;
 +---------------------------------------------+-----------+
 
 
@@ -275,10 +274,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                           ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |rra                                         ; 10145 (452)       ; 10088 (152)  ; 0           ; 3            ; 1       ; 1         ; 75   ; 0            ; |rra                                                                                                                                          ; work         ;
+; |rra                                         ; 10731 (464)       ; 10167 (162)  ; 0           ; 3            ; 1       ; 1         ; 76   ; 0            ; |rra                                                                                                                                          ; work         ;
 ;    |rra_controller:controller|               ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_controller:controller                                                                                                                ; work         ;
-;    |rra_feedback:feedback|                   ; 1336 (49)         ; 84 (40)      ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback                                                                                                                    ; work         ;
-;       |rra_7seg4:segments|                   ; 1287 (214)        ; 44 (44)      ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments                                                                                                 ; work         ;
+;    |rra_feedback:feedback|                   ; 1334 (49)         ; 81 (40)      ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback                                                                                                                    ; work         ;
+;       |rra_7seg4:segments|                   ; 1285 (211)        ; 41 (41)      ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments                                                                                                 ; work         ;
 ;          |lpm_divide:Div0|                   ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0                                                                                 ; work         ;
 ;             |lpm_divide_2jm:auto_generated|  ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated                                                   ; work         ;
 ;                |sign_div_unsign_3nh:divider| ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider                       ; work         ;
@@ -288,17 +287,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |abs_divider_obg:divider|     ; 426 (40)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider                           ; work         ;
 ;                   |alt_u_div_56f:divider|    ; 357 (357)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider     ; work         ;
 ;                   |lpm_abs_bv9:my_abs_num|   ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|lpm_abs_bv9:my_abs_num    ; work         ;
-;          |lpm_divide:Div2|                   ; 559 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2                                                                                 ; work         ;
-;             |lpm_divide_gvo:auto_generated|  ; 559 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated                                                   ; work         ;
-;                |abs_divider_kbg:divider|     ; 559 (62)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                           ; work         ;
+;          |lpm_divide:Div2|                   ; 560 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2                                                                                 ; work         ;
+;             |lpm_divide_gvo:auto_generated|  ; 560 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated                                                   ; work         ;
+;                |abs_divider_kbg:divider|     ; 560 (61)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                           ; work         ;
 ;                   |alt_u_div_t5f:divider|    ; 450 (450)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider     ; work         ;
-;                   |lpm_abs_av9:my_abs_num|   ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_av9:my_abs_num    ; work         ;
+;                   |lpm_abs_av9:my_abs_num|   ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_av9:my_abs_num    ; work         ;
 ;          |lpm_mult:Mult0|                    ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0                                                                                  ; work         ;
 ;             |multcore:mult_core|             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0|multcore:mult_core                                                               ; work         ;
 ;          |lpm_mult:Mult1|                    ; 21 (0)            ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1                                                                                  ; work         ;
 ;             |mult_u6t:auto_generated|        ; 21 (21)           ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1|mult_u6t:auto_generated                                                          ; work         ;
 ;    |rra_key_in:keypad|                       ; 73 (73)           ; 52 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_key_in:keypad                                                                                                                        ; work         ;
-;    |rra_memory:memory|                       ; 6359 (6359)       ; 9417 (9417)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_memory:memory                                                                                                                        ; work         ;
+;    |rra_memory:memory|                       ; 6935 (6935)       ; 9489 (9489)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_memory:memory                                                                                                                        ; work         ;
 ;    |rra_servo_controller:rra_servo_base|     ; 327 (327)         ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_base                                                                                                      ; work         ;
 ;    |rra_servo_controller:rra_servo_gripper|  ; 308 (308)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_gripper                                                                                                   ; work         ;
 ;    |rra_servo_controller:rra_servo_lower|    ; 338 (338)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_lower                                                                                                     ; work         ;
@@ -441,12 +440,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10088 ;
+; Total registers                              ; 10167 ;
 ; Number of registers using Synchronous Clear  ; 246   ;
-; Number of registers using Synchronous Load   ; 47    ;
-; Number of registers using Asynchronous Clear ; 9821  ;
+; Number of registers using Synchronous Load   ; 119   ;
+; Number of registers using Asynchronous Clear ; 9818  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 9616  ;
+; Number of registers using Clock Enable       ; 9688  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -479,94 +478,88 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+---------------------+
 ; rra_feedback:feedback|rra_7seg4:segments|Add0~0                                                                                                                     ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Add1~0                                                                                                                     ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Add1~0_RTM080                                                                                                              ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Add1~0_RTM080                                                                                                              ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add1~0_RTM082                                                                                                              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add1~0_RTM082                                                                                                              ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Add1~62_RTM0112                                                                                                            ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Add1~62_RTM0112                                                                                                            ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Add2~0                                                                                                                     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add2~56                                                                                                                    ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Add3~0                                                                                                                     ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~4_Duplicate_19                                                                                                      ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~5_Duplicate_20                                                                                                      ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~6_Duplicate_18                                                                                                      ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~7_Duplicate_17                                                                                                      ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~8                                                                                                                   ; Deleted          ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_14                                                                                                      ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_16                                                                                                      ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_RTM0134                                                                                                 ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_RTM0134                                                                                                 ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_RTM064                                                                                                            ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_RTM064                                                                                                            ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_RTM0133                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_RTM0133                                                                                                 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_RTM041                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_RTM041                                                                                                            ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal0~9                                                                                                                   ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal0~11                                                                                                                  ; Deleted          ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_Duplicate_13                                                                                                     ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM084                                                                                                           ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM084                                                                                                           ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM084_RTM0135                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM086                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM086                                                                                                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM086_RTM0134                                                                                                   ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal4~0                                                                                                                   ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal4~0_RTM0117                                                                                                           ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal10~11_Duplicate_18                                                                                                    ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal10~12                                                                                                                 ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal10~12_Duplicate_16                                                                                                    ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~12_Duplicate_19                                                                                                    ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~13                                                                                                                 ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal10~13_Duplicate_17                                                                                                    ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|Equal10~13_Duplicate_17_Duplicate                                                                                          ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~14_Duplicate_18                                                                                                    ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~14_Duplicate_18_Duplicate                                                                                          ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal14~0                                                                                                                  ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal14~0_RTM0113                                                                                                          ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|Equal19~0                                                                                                                  ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM08                                                                                                           ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM08                                                                                                           ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM08_RTM081                                                                                                    ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM08_RTM085                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM06                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM06                                                                                                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM06_RTM083                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM06_RTM087                                                                                                    ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor0~6                                                                                                                 ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor0~6_RTM065                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~6_RTM042                                                                                                          ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor0~7                                                                                                                 ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor0~7_RTM0119                                                                                                         ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~7_RTM0118                                                                                                         ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor0~8                                                                                                                 ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor1~0                                                                                                                 ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor1~1                                                                                                                 ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor1~3                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor1~3_RTM039                                                                                                          ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor1~3_RTM039                                                                                                          ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~3_RTM051                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~3_RTM051                                                                                                          ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor1~4                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor1~4_RTM072                                                                                                          ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideNor1~4_RTM072                                                                                                          ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~4_RTM074                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~4_RTM074                                                                                                          ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor2~0                                                                                                                 ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor2~1                                                                                                                 ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor2~3                                                                                                                 ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideNor2~4                                                                                                                 ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr0                                                                                                                    ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr0_RTM09                                                                                                              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr0~1                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr0~1_RTM012                                                                                                           ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr1                                                                                                                    ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr1_RTM012                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr1_RTM07                                                                                                              ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr2                                                                                                                    ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr2_RTM018                                                                                                             ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr2_RTM022                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2_RTM020                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2_RTM024                                                                                                             ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr2~0                                                                                                                  ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr2~0_RTM0118                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2~0_RTM0117                                                                                                          ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr2~1                                                                                                                  ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr2~1_RTM021                                                                                                           ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr2~1_RTM021                                                                                                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2~1_RTM023                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2~1_RTM023                                                                                                           ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr4                                                                                                                    ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr4_RTM025                                                                                                             ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr4_RTM026                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr4_RTM027                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr4_RTM028                                                                                                             ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr5                                                                                                                    ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr5_RTM029                                                                                                             ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr5_RTM030                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr5_RTM031                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr5_RTM032                                                                                                             ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr6                                                                                                                    ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr6_RTM073                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr6_RTM075                                                                                                             ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr7~0                                                                                                                  ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr8                                                                                                                    ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr8_RTM043                                                                                                             ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr8_RTM047                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8_RTM055                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8_RTM059                                                                                                             ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr8~0                                                                                                                  ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr8~0_RTM046                                                                                                           ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr8~0_RTM046                                                                                                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8~0_RTM058                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8~0_RTM058                                                                                                           ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr10                                                                                                                   ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr10_RTM050                                                                                                            ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr10_RTM051                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr10_RTM062                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr10_RTM063                                                                                                            ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr11                                                                                                                   ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr11_RTM054                                                                                                            ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|WideOr11_RTM055                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr11_RTM066                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr11_RTM067                                                                                                            ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr13                                                                                                                   ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr14                                                                                                                   ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|WideOr14~2                                                                                                                 ; Modified         ; Timing optimization ;
@@ -616,6 +609,7 @@ Encoding Type:  One-Hot
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|lpm_abs_bv9:my_abs_num|_~6                           ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|op_1~1                                               ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|quotient[0]~15                                       ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|_~1                                                  ; Deleted          ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[19]~230               ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[25]~237               ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[26]~235               ; Modified         ; Timing optimization ;
@@ -674,59 +668,59 @@ Encoding Type:  One-Hot
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_28_result_int[1]~0     ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_29_result_int[1]~0     ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_30_result_int[1]~1     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_av9:my_abs_num|cs1a[24]~10                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_av9:my_abs_num|cs1a[24]~10_RESYN148_BDD149   ; Created          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_av9:my_abs_num|cs1a[24]~10_RESYN150_BDD151   ; Created          ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|op_1~1                                               ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[0]~3                                        ; Deleted          ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[3]~0                                        ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[3]~0_Duplicate_30                           ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[3]~0_RTM0156                                ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[3]~0_RTM0147                                ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]_OTERM28_OTERM91_OTERM137                                                                                        ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]_OTERM28_OTERM91_OTERM139                                                                                        ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]_OTERM28_OTERM91_OTERM141                                                                                        ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]_OTERM28_OTERM91_OTERM143                                                                                        ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[1]                                                                                                                 ; Deleted          ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM57                                                                                                         ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM59_OTERM127                                                                                                ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM61_OTERM103                                                                                                ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM61_OTERM105                                                                                                ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM63                                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM34                                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM38_OTERM103                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM38_OTERM105                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM40                                                                                                         ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[3]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[3]_OTERM19_OTERM93_OTERM120                                                                                        ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[3]_OTERM22_OTERM95_NEW_REG114_RTM0116                                                                              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[3]_OTERM22_OTERM95_NEW_REG114_RTM0116                                                                              ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[3]_OTERM22_OTERM95_OTERM115                                                                                        ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[4]                                                                                                                 ; Deleted          ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[4]_OTERM14                                                                                                         ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM11_OTERM87                                                                                                 ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM11_OTERM89_OTERM131                                                                                        ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM3_OTERM89                                                                                                  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM3_OTERM91_OTERM130                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM5_OTERM79                                                                                                  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM5_OTERM81                                                                                                  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM5_OTERM85_OTERM132                                                                                         ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM3_OTERM95_NEW_REG114_RTM0116                                                                               ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM3_OTERM95_NEW_REG114_RTM0116                                                                               ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM3_OTERM95_OTERM115                                                                                         ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM7_OTERM77                                                                                                  ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM7_OTERM79                                                                                                  ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM7_OTERM83_OTERM133                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM9                                                                                                          ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1~0                                                                                                                  ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg1~0_RTM017                                                                                                           ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[0]                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[0]_OTERM53_OTERM129                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[0]_OTERM65_OTERM128                                                                                                ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[1]                                                                                                                 ; Deleted          ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM42_OTERM107                                                                                                ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM42_OTERM109                                                                                                ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM42_OTERM111                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM54_OTERM107                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM54_OTERM109                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM54_OTERM111                                                                                                ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM32                                                                                                         ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM34                                                                                                         ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM36_OTERM123_OTERM149                                                                                       ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM36_OTERM123_OTERM151                                                                                       ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM36_OTERM123_OTERM153                                                                                       ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM36_OTERM123_OTERM155                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM44                                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM46                                                                                                         ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]                                                                                                                 ; Deleted          ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM75_OTERM99                                                                                                 ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM75_OTERM101_OTERM145                                                                                       ; Retimed Register ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM75_OTERM101_OTERM147                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM77_OTERM99                                                                                                 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM77_OTERM101_OTERM136                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM77_OTERM101_OTERM138                                                                                       ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[6]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[6]_OTERM71_OTERM124_OTERM140                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[6]_OTERM71_OTERM124_OTERM142                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[6]_OTERM71_OTERM124_OTERM144                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[6]_OTERM71_OTERM124_OTERM146                                                                                       ; Retimed Register ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg2~0                                                                                                                  ; Modified         ; Timing optimization ;
-; rra_feedback:feedback|rra_7seg4:segments|o_7seg2~0_RTM040                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2~0_RTM052                                                                                                           ; Modified         ; Timing optimization ;
 ; rra_feedback:feedback|rra_7seg4:segments|o_7seg3~0                                                                                                                  ; Modified         ; Timing optimization ;
 ; rra_key_in:keypad|Add0~0                                                                                                                                            ; Deleted          ; Timing optimization ;
 ; rra_key_in:keypad|Mux20~0                                                                                                                                           ; Deleted          ; Timing optimization ;
@@ -736,26 +730,26 @@ Encoding Type:  One-Hot
 ; rra_key_in:keypad|key_count[1]~0                                                                                                                                    ; Modified         ; Timing optimization ;
 ; rra_key_in:keypad|key_next[1]~15                                                                                                                                    ; Modified         ; Timing optimization ;
 ; rra_key_in:keypad|key_next[4]~20                                                                                                                                    ; Modified         ; Timing optimization ;
-; rra_key_in:keypad|key_next[7]~13                                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_key_in:keypad|key_next[7]~14                                                                                                                                    ; Modified         ; Timing optimization ;
 ; rra_key_in:keypad|key_next[10]~21                                                                                                                                   ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_base|Add1~0                                                                                                                          ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_base|Add2~0                                                                                                                          ; Modified         ; Timing optimization ;
-; rra_servo_controller:rra_servo_base|current[0]~15                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_base|current[0]~14                                                                                                                   ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_gripper|Add1~0                                                                                                                       ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_gripper|Add2~0                                                                                                                       ; Modified         ; Timing optimization ;
-; rra_servo_controller:rra_servo_gripper|current[0]~15                                                                                                                ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_gripper|current[0]~14                                                                                                                ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_lower|Add1~0                                                                                                                         ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_lower|Add2~0                                                                                                                         ; Modified         ; Timing optimization ;
-; rra_servo_controller:rra_servo_lower|current[0]~15                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_lower|current[0]~14                                                                                                                  ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_middle|Add1~0                                                                                                                        ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_middle|Add2~0                                                                                                                        ; Modified         ; Timing optimization ;
-; rra_servo_controller:rra_servo_middle|current[0]~15                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_middle|current[0]~14                                                                                                                 ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_upper|Add1~0                                                                                                                         ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_upper|Add2~0                                                                                                                         ; Modified         ; Timing optimization ;
-; rra_servo_controller:rra_servo_upper|current[0]~15                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_upper|current[0]~14                                                                                                                  ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_wrist|Add1~0                                                                                                                         ; Modified         ; Timing optimization ;
 ; rra_servo_controller:rra_servo_wrist|Add2~0                                                                                                                         ; Modified         ; Timing optimization ;
-; rra_servo_controller:rra_servo_wrist|current[0]~15                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_wrist|current[0]~14                                                                                                                  ; Modified         ; Timing optimization ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+---------------------+
 
 
@@ -764,52 +758,58 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_10mhz_count[2] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_1khz           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_10mhz_count[0] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|clk_1khz         ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |rra|addr[5]                                                ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 48 LEs               ; 12 LEs                 ; Yes        ; |rra|rra_feedback:feedback|segVal[11]                       ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_1khz_count[7]  ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 48 LEs               ; 12 LEs                 ; Yes        ; |rra|rra_feedback:feedback|segVal[6]                        ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_1khz_count[9]  ;
 ; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count[15]     ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count_i[10]   ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count[6]     ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count_i[2]   ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count[14]     ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count_i[15]   ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count[3]     ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count_i[4]   ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count[5]      ;
 ; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count_i[1]    ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count[10]     ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count[5]    ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count_i[14]   ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count_i[3]  ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count[4]       ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count_i[17]    ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[1]        ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count[8]      ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count[6]    ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count_i[1]    ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count_i[7]  ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count[12]      ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count_i[0]     ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[7]        ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[0]       ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[0]        ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[1]        ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[8]      ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[0]         ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[9]        ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[0]        ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[1]      ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[9]         ;
+; 8:1                ; 72 bits   ; 360 LEs       ; 360 LEs              ; 0 LEs                  ; Yes        ; |rra|rra_memory:memory|data_out[36]                         ;
 ; 19:1               ; 4 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[12]                         ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_lower_pos[9]                                         ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_middle_pos[8]                                        ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_upper_pos[9]                                         ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_wrist_pos[9]                                         ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_gripper_pos[11]                                      ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_base_pos[10]                                         ;
-; 129:1              ; 72 bits   ; 6192 LEs      ; 6192 LEs             ; 0 LEs                  ; Yes        ; |rra|rra_memory:memory|data_out_prev[67]                    ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[4]                          ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[9]                          ;
-; 21:1               ; 3 bits    ; 42 LEs        ; 18 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[8]                          ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_lower_pos[10]                                        ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_middle_pos[6]                                        ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_upper_pos[0]                                         ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_wrist_pos[6]                                         ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_gripper_pos[5]                                       ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_base_pos[0]                                          ;
+; 9:1                ; 72 bits   ; 432 LEs       ; 432 LEs              ; 0 LEs                  ; Yes        ; |rra|rra_memory:memory|data_out_prev[19]                    ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[7]                          ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[3]                          ;
+; 21:1               ; 3 bits    ; 42 LEs        ; 18 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[2]                          ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[12]       ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[6]        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[12]      ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[5]       ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[5]        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[13]      ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[6]       ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[12]       ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[2]        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[12]       ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[11]       ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[12]     ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[2]      ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[4]        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[13]       ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[10]       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[13]     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[10]     ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[12]        ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[2]         ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[6]         ;
+; 4:1                ; 72 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux11                                ;
+; 8:1                ; 72 bits   ; 360 LEs       ; 360 LEs              ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux60                                ;
+; 16:1               ; 72 bits   ; 720 LEs       ; 720 LEs              ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux60                                ;
+; 32:1               ; 72 bits   ; 1512 LEs      ; 1512 LEs             ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux60                                ;
+; 64:1               ; 72 bits   ; 3024 LEs      ; 3024 LEs             ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux60                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -1125,15 +1125,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rra_memory:memory"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; data_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "rra_key_in:keypad"                                                                         ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1150,7 +1141,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:09     ;
+; Top            ; 00:01:16     ;
 +----------------+--------------+
 
 
@@ -1160,7 +1151,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Mar 15 05:02:01 2016
+    Info: Processing started: Tue Mar 15 13:02:43 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rra -c rra
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_feedback.vhd
@@ -1185,15 +1176,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: rra-v1
     Info (12023): Found entity 1: rra
 Info (12127): Elaborating entity "rra" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(156): object "data_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(174): object "c_lower_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(176): object "c_middle_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(178): object "c_upper_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(180): object "c_wrist_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(182): object "c_gripper_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(184): object "c_base_pos_i" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at rra.vhd(372): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at rra.vhd(506): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(175): object "c_lower_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(177): object "c_middle_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(179): object "c_upper_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(181): object "c_wrist_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(183): object "c_gripper_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(185): object "c_base_pos_i" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at rra.vhd(373): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(507): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "rra_key_in" for hierarchy "rra_key_in:keypad"
 Info (12128): Elaborating entity "rra_memory" for hierarchy "rra_memory:memory"
 Info (12128): Elaborating entity "rra_controller" for hierarchy "rra_controller:controller"
@@ -1398,19 +1388,19 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 1648 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
-Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:14
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 604 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:17
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 19711 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+Info (21057): Implemented 20298 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
     Info (21059): Implemented 60 output pins
-    Info (21061): Implemented 19633 logic cells
+    Info (21061): Implemented 20219 logic cells
     Info (21062): Implemented 3 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 92 warnings
-    Info: Peak virtual memory: 667 megabytes
-    Info: Processing ended: Tue Mar 15 05:03:19 2016
-    Info: Elapsed time: 00:01:18
-    Info: Total CPU time (on all processors): 00:01:17
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 680 megabytes
+    Info: Processing ended: Tue Mar 15 13:04:07 2016
+    Info: Elapsed time: 00:01:24
+    Info: Total CPU time (on all processors): 00:01:22
 
 

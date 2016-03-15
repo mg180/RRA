@@ -3,112 +3,112 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -147.269
-TNS   : -58533.863
-
-Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_lower|clk_10mhz'
-Slack : -9.109
-TNS   : -301.220
+Slack : -147.444
+TNS   : -67865.555
 
 Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_upper|clk_10mhz'
-Slack : -9.044
-TNS   : -303.130
+Slack : -7.970
+TNS   : -260.592
 
-Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
-Slack : -8.347
-TNS   : -293.873
-
-Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
-Slack : -7.636
-TNS   : -266.921
-
-Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_middle|clk_10mhz'
-Slack : -7.513
-TNS   : -273.257
+Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_lower|clk_10mhz'
+Slack : -7.896
+TNS   : -286.050
 
 Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_base|clk_10mhz'
-Slack : -6.652
-TNS   : -226.667
+Slack : -7.798
+TNS   : -279.802
 
-Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_lower|clk_1khz'
-Slack : -5.709
-TNS   : -74.906
+Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
+Slack : -7.691
+TNS   : -259.375
 
-Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_upper|clk_1khz'
-Slack : -5.223
-TNS   : -72.292
+Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
+Slack : -6.698
+TNS   : -233.258
 
 Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_1khz'
-Slack : -5.133
-TNS   : -65.375
+Slack : -6.398
+TNS   : -79.591
 
-Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_1khz'
-Slack : -4.940
-TNS   : -64.532
+Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_middle|clk_10mhz'
+Slack : -6.388
+TNS   : -221.655
+
+Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_upper|clk_1khz'
+Slack : -5.335
+TNS   : -70.204
+
+Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_lower|clk_1khz'
+Slack : -5.140
+TNS   : -68.056
 
 Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_middle|clk_1khz'
-Slack : -4.856
-TNS   : -65.643
+Slack : -5.132
+TNS   : -68.057
+
+Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_1khz'
+Slack : -5.131
+TNS   : -67.225
 
 Type  : Slow 1200mV 85C Model Setup 'rra_servo_controller:rra_servo_base|clk_1khz'
-Slack : -4.808
-TNS   : -61.763
+Slack : -4.732
+TNS   : -70.009
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.300
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_base|clk_1khz'
-Slack : 0.342
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_lower|clk_1khz'
-Slack : 0.344
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_middle|clk_1khz'
-Slack : 0.345
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_wrist|clk_1khz'
-Slack : 0.345
+Slack : 0.085
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_1khz'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_middle|clk_1khz'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_wrist|clk_1khz'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_base|clk_1khz'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_lower|clk_1khz'
 Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_upper|clk_1khz'
-Slack : 0.359
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_base|clk_10mhz'
-Slack : 0.376
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_lower|clk_10mhz'
-Slack : 0.378
+Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
-Slack : 0.385
+Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_middle|clk_10mhz'
+Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_upper|clk_10mhz'
 Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
-Slack : 0.393
+Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_upper|clk_10mhz'
-Slack : 0.400
+Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_lower|clk_10mhz'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_middle|clk_10mhz'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rra_servo_controller:rra_servo_base|clk_10mhz'
+Slack : 0.399
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -9739.000
+TNS   : -9897.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rra_servo_controller:rra_servo_base|clk_10mhz'
 Slack : -1.000
@@ -159,67 +159,63 @@ Slack : -1.000
 TNS   : -18.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -131.495
-TNS   : -51917.412
-
-Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_lower|clk_10mhz'
-Slack : -8.005
-TNS   : -265.335
+Slack : -131.546
+TNS   : -60183.776
 
 Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_upper|clk_10mhz'
-Slack : -7.951
-TNS   : -266.719
+Slack : -6.968
+TNS   : -227.051
 
-Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
-Slack : -7.381
-TNS   : -259.442
-
-Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
-Slack : -6.717
-TNS   : -235.378
-
-Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_middle|clk_10mhz'
-Slack : -6.574
-TNS   : -239.052
+Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_lower|clk_10mhz'
+Slack : -6.931
+TNS   : -251.182
 
 Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_base|clk_10mhz'
-Slack : -5.765
-TNS   : -195.976
+Slack : -6.864
+TNS   : -247.316
 
-Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_lower|clk_1khz'
-Slack : -5.042
-TNS   : -65.886
+Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
+Slack : -6.730
+TNS   : -227.639
 
-Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_upper|clk_1khz'
-Slack : -4.591
-TNS   : -62.960
+Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
+Slack : -5.875
+TNS   : -204.318
 
 Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_1khz'
-Slack : -4.502
-TNS   : -57.220
+Slack : -5.598
+TNS   : -69.959
+
+Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_middle|clk_10mhz'
+Slack : -5.556
+TNS   : -193.392
+
+Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_upper|clk_1khz'
+Slack : -4.773
+TNS   : -62.609
+
+Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_lower|clk_1khz'
+Slack : -4.560
+TNS   : -60.241
 
 Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_middle|clk_1khz'
-Slack : -4.400
-TNS   : -58.817
+Slack : -4.509
+TNS   : -60.026
 
 Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_1khz'
-Slack : -4.335
-TNS   : -55.804
+Slack : -4.471
+TNS   : -58.237
 
 Type  : Slow 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_base|clk_1khz'
-Slack : -4.218
-TNS   : -53.606
+Slack : -4.128
+TNS   : -60.806
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.218
+Slack : 0.016
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_lower|clk_1khz'
-Slack : 0.298
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_base|clk_1khz'
-Slack : 0.299
+Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_1khz'
+Slack : 0.300
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_middle|clk_1khz'
@@ -230,41 +226,45 @@ Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_wrist|clk_1khz
 Slack : 0.301
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_1khz'
+Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_upper|clk_1khz'
 Slack : 0.311
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_upper|clk_1khz'
+Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_lower|clk_1khz'
 Slack : 0.312
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_base|clk_10mhz'
-Slack : 0.335
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_lower|clk_10mhz'
-Slack : 0.336
+Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_base|clk_1khz'
+Slack : 0.313
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
-Slack : 0.342
+Slack : 0.349
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_middle|clk_10mhz'
-Slack : 0.348
+Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_upper|clk_10mhz'
+Slack : 0.349
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
 Slack : 0.349
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_upper|clk_10mhz'
-Slack : 0.355
+Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_base|clk_10mhz'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_lower|clk_10mhz'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_middle|clk_10mhz'
+Slack : 0.356
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -9739.000
+TNS   : -9897.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rra_servo_controller:rra_servo_base|clk_10mhz'
 Slack : -1.000
@@ -315,112 +315,112 @@ Slack : -1.000
 TNS   : -18.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -82.100
-TNS   : -30824.483
-
-Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_lower|clk_10mhz'
-Slack : -4.702
-TNS   : -152.502
+Slack : -82.776
+TNS   : -36088.959
 
 Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_upper|clk_10mhz'
-Slack : -4.611
-TNS   : -154.534
+Slack : -4.026
+TNS   : -129.492
 
-Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
-Slack : -4.274
-TNS   : -149.895
-
-Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
-Slack : -3.889
-TNS   : -134.461
-
-Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_middle|clk_10mhz'
-Slack : -3.761
-TNS   : -138.468
+Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_lower|clk_10mhz'
+Slack : -3.996
+TNS   : -145.333
 
 Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_base|clk_10mhz'
-Slack : -3.268
-TNS   : -110.114
+Slack : -3.964
+TNS   : -140.893
 
-Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_lower|clk_1khz'
-Slack : -2.996
-TNS   : -38.472
-
-Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_upper|clk_1khz'
-Slack : -2.547
-TNS   : -33.695
+Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
+Slack : -3.944
+TNS   : -130.731
 
 Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_wrist|clk_1khz'
-Slack : -2.438
-TNS   : -31.446
+Slack : -3.333
+TNS   : -40.145
+
+Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
+Slack : -3.303
+TNS   : -112.716
+
+Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_middle|clk_10mhz'
+Slack : -3.123
+TNS   : -105.915
+
+Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_upper|clk_1khz'
+Slack : -2.654
+TNS   : -33.699
 
 Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_middle|clk_1khz'
-Slack : -2.356
-TNS   : -31.519
+Slack : -2.639
+TNS   : -32.715
+
+Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_lower|clk_1khz'
+Slack : -2.525
+TNS   : -32.573
 
 Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_gripper|clk_1khz'
-Slack : -2.326
-TNS   : -29.856
+Slack : -2.409
+TNS   : -31.129
 
 Type  : Fast 1200mV 0C Model Setup 'rra_servo_controller:rra_servo_base|clk_1khz'
-Slack : -2.282
-TNS   : -28.893
+Slack : -2.163
+TNS   : -31.663
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.130
+Slack : 0.030
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_base|clk_1khz'
-Slack : 0.178
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_lower|clk_1khz'
-Slack : 0.179
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_wrist|clk_1khz'
-Slack : 0.179
+Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_1khz'
+Slack : 0.180
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_middle|clk_1khz'
 Slack : 0.180
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_1khz'
+Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_wrist|clk_1khz'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_base|clk_1khz'
 Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_lower|clk_1khz'
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_upper|clk_1khz'
-Slack : 0.186
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_lower|clk_10mhz'
-Slack : 0.197
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_base|clk_10mhz'
-Slack : 0.198
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
-Slack : 0.203
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_middle|clk_10mhz'
-Slack : 0.206
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_wrist|clk_10mhz'
-Slack : 0.206
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_gripper|clk_10mhz'
+Slack : 0.205
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_upper|clk_10mhz'
-Slack : 0.211
+Slack : 0.205
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_base|clk_10mhz'
+Slack : 0.209
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_lower|clk_10mhz'
+Slack : 0.209
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rra_servo_controller:rra_servo_middle|clk_10mhz'
+Slack : 0.209
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -10296.349
+TNS   : -10465.344
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rra_servo_controller:rra_servo_base|clk_10mhz'
 Slack : -1.000

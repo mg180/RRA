@@ -1755,3 +1755,5 @@ run 100ms
 #    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
 # ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
 #    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
+# End time: 05:08:24 on Mar 15,2016, Elapsed time: 2:46:51
+# Errors: 276, Warnings: 406
