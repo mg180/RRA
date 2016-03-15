@@ -42,11 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY rra
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:57:48  FEBRUARY 15, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
-set_global_assignment -name VHDL_FILE ../rra_servo_controller.vhd
-set_global_assignment -name VHDL_FILE ../rra_memory.vhd
-set_global_assignment -name VHDL_FILE ../rra_key_in.vhd
-set_global_assignment -name VHDL_FILE ../rra_controller.vhd
-set_global_assignment -name VHDL_FILE ../rra.vhd
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -77,7 +72,7 @@ set_location_assignment PIN_V8 -to m1
 set_location_assignment PIN_V11 -to m1_i
 set_location_assignment PIN_V12 -to u1
 set_location_assignment PIN_W13 -to u1_i
-set_location_assignment PIN_J6 -to rst
+set_location_assignment PIN_F1 -to rst
 set_location_assignment PIN_B1 -to leds[9]
 set_location_assignment PIN_B10 -to w1_i
 set_location_assignment PIN_B2 -to leds[8]
@@ -122,4 +117,24 @@ set_location_assignment PIN_H5 -to mode[0]
 set_location_assignment PIN_J7 -to display_id[2]
 set_location_assignment PIN_G5 -to display_id[1]
 set_location_assignment PIN_G4 -to display_id[0]
+set_global_assignment -name VHDL_FILE ../rra_feedback.vhd
+set_global_assignment -name VHDL_FILE ../rra_7seg.vhd
+set_global_assignment -name VHDL_FILE ../rra_servo_controller.vhd
+set_global_assignment -name VHDL_FILE ../rra_memory.vhd
+set_global_assignment -name VHDL_FILE ../rra_key_in.vhd
+set_global_assignment -name VHDL_FILE ../rra_controller.vhd
+set_global_assignment -name VHDL_FILE ../rra.vhd
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA ON
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name ENABLE_DRC_SETTINGS ON
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ON
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIXII NORMAL
+set_global_assignment -name ROUTER_CLOCKING_TOPOLOGY_ANALYSIS ON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -48,7 +48,7 @@ R10
 R11
 R12
 Erra
-Z13 w1457407195
+Z13 w1458014508
 Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
@@ -57,13 +57,13 @@ Z15 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
 Z16 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
 l0
 L6
-VM9^=nK]b]>Q=3kbi3bM483
-!s100 DQF2=[nzD>EDQNHBM7GPm1
+VXHYRRJ>FFQCcPO7Ngd=;71
+!s100 bl<448?7[?L5]L2_U2@b82
 R6
 32
-Z17 !s110 1457407197
+Z17 !s110 1458015651
 !i10b 1
-Z18 !s108 1457407197.000000
+Z18 !s108 1458015651.000000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd|
 Z20 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd|
 !i113 1
@@ -73,11 +73,11 @@ Av1
 R14
 R1
 R2
-DEx4 work 3 rra 0 22 M9^=nK]b]>Q=3kbi3bM483
-l158
+DEx4 work 3 rra 0 22 XHYRRJ>FFQCcPO7Ngd=;71
+l194
 L44
-V31<OCE>PDQ`>Vb9FjYXXb2
-!s100 O59?fRBD;GZ5ao^0KzW]j3
+VnXWX8QY5<]7oIPDg6@GDa1
+!s100 W4CPNg4ATgl0^PI<l>]^h1
 R6
 32
 R17
@@ -88,8 +88,49 @@ R20
 !i113 1
 R11
 R12
+Erra_7seg4
+Z21 w1458002796
+R14
+R1
+R2
+R3
+Z22 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd
+Z23 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd
+l0
+L5
+VL9GJ:b>h;CnCR4__Ag8cm0
+!s100 ee174DAa;o2>jK]@D?6hP2
+R6
+32
+Z24 !s110 1458015652
+!i10b 1
+Z25 !s108 1458015652.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd|
+Z27 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+Z28 DEx4 work 9 rra_7seg4 0 22 L9GJ:b>h;CnCR4__Ag8cm0
+l21
+L19
+Z29 Vk<5I8nYgE9M@dmARDKR952
+Z30 !s100 @C7jOIgegRCL`9agF4ko63
+R6
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R11
+R12
 Erra_controller
-Z21 w1457405005
+Z31 w1458010140
 R1
 R2
 R3
@@ -97,13 +138,13 @@ R4
 R5
 l0
 L4
-VV6Do^0P;6?31S_m`X[TYO0
-!s100 44d]6=4Gg8KL@ff8[;=ha2
+VU:eXmbUzJizaoEIY>?D1a0
+!s100 Wc9enO^]MPOR?^ZCRjX=?0
 R6
 32
-Z22 !s110 1457407187
+R17
 !i10b 1
-Z23 !s108 1457407187.000000
+R18
 R9
 R10
 !i113 1
@@ -112,40 +153,81 @@ R12
 Av1
 R1
 R2
-DEx4 work 14 rra_controller 0 22 V6Do^0P;6?31S_m`X[TYO0
-l25
-L18
-V6d6e;7h`dSh8Fm4KSOkA@2
-!s100 ?l>JZMO6Eh<@Y:kQ_0OV?2
+DEx4 work 14 rra_controller 0 22 U:eXmbUzJizaoEIY>?D1a0
+l26
+L19
+VAN`zm3?1SM>0RbT>aO?Pb3
+!s100 ;ljXXXM^Qa^ZE4bOO?AZA2
 R6
 32
-R22
+R17
 !i10b 1
-R23
+R18
 R9
 R10
 !i113 1
 R11
 R12
-Erra_key_in
-Z24 w1457391434
+Erra_feedback
+Z32 w1458002878
 R14
 R1
 R2
 R3
-Z25 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd
-Z26 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd
+Z33 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd
+Z34 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd
+l0
+L5
+VSMhA;KJWI1=Sj95JFZmOT3
+!s100 @MF7R@YQ5o^dUh]=1OmQX2
+R6
+32
+R24
+!i10b 1
+R25
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd|
+Z36 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+DEx4 work 12 rra_feedback 0 22 SMhA;KJWI1=Sj95JFZmOT3
+l46
+L25
+V@5GXR=C9j26Yb52>g[P1f1
+!s100 azTH>DJFC`IXH?Kc4JfOE2
+R6
+32
+R24
+!i10b 1
+R25
+R35
+R36
+!i113 1
+R11
+R12
+Erra_key_in
+Z37 w1457988752
+R14
+R1
+R2
+R3
+Z38 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd
+Z39 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd
 l0
 L5
 V761`j>1i:^NnXHk?Ilc3a1
 !s100 N_Skzj0;oVdj:_W;G2okW1
 R6
 32
-Z27 !s110 1457406472
+R17
 !i10b 1
-Z28 !s108 1457406472.000000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd|
-Z30 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd|
+R18
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd|
+Z41 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd|
 !i113 1
 R11
 R12
@@ -160,33 +242,33 @@ VNaHPFB2k8Eo`RKO4R[jG]2
 !s100 061eEAVFi[b]_lVQFh4oj1
 R6
 32
-R27
+R17
 !i10b 1
-R28
-R29
-R30
+R18
+R40
+R41
 !i113 1
 R11
 R12
 Erra_memory
-Z31 w1457404479
+Z42 w1458015632
 R14
 R1
 R2
 R3
-Z32 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd
-Z33 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd
+Z43 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd
+Z44 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd
 l0
 L5
-V9mKb33<61VOBSca8^D0B11
-!s100 SB22k4eUHlk6iDU_Y0WOk3
+VJYQ>UC@9B[[bzi?Bdb;^31
+!s100 WO>KD5LR:7[V2R1P8JLSb1
 R6
 32
-R27
+R24
 !i10b 1
-R28
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd|
-Z35 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd|
+R25
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd|
+Z46 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd|
 !i113 1
 R11
 R12
@@ -194,40 +276,40 @@ Artl
 R14
 R1
 R2
-DEx4 work 10 rra_memory 0 22 9mKb33<61VOBSca8^D0B11
-l23
-L19
-VZ6UT`G@1IH6JEzO?JAEMo2
-!s100 bOlG@HB@O3Cia;InP>`zC1
+DEx4 work 10 rra_memory 0 22 JYQ>UC@9B[[bzi?Bdb;^31
+l27
+L21
+VQYnY6ZM>jlYU2WYNMa2Qf1
+!s100 Gg6j6iCdE41kPOCnjGRD[2
 R6
 32
-R27
+R24
 !i10b 1
-R28
-R34
-R35
+R25
+R45
+R46
 !i113 1
 R11
 R12
 Erra_servo_controller
-Z36 w1457404032
+R37
 R14
 R1
 R2
 R3
-Z37 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd
-Z38 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd
+Z47 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd
+Z48 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd
 l0
 L5
 VZdZ^J2XQ4PUd9<=Z7>ngQ2
 !s100 R1QnHBJ14<=zIYekY_;M_2
 R6
 32
-R27
+R24
 !i10b 1
-R28
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd|
-Z40 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd|
+R25
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd|
+Z50 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd|
 !i113 1
 R11
 R12
@@ -242,33 +324,33 @@ V16VX2lzDWML3Jfg<D@@Nm1
 !s100 =<V^e]:lU]7NX0G@kY1dn0
 R6
 32
-R27
+R24
 !i10b 1
-R28
-R39
-R40
+R25
+R49
+R50
 !i113 1
 R11
 R12
 Erra_test
-Z41 w1457407707
+Z51 w1458011604
 R14
 R1
 R2
 R3
-Z42 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd
-Z43 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd
+Z52 8C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd
+Z53 FC:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd
 l0
 L5
 VU7=SaQWSX0lPPj;@S4M1H2
 !s100 <W5GcI4D8E0=E9>DNki;i3
 R6
 32
-Z44 !s110 1457407711
+R17
 !i10b 1
-Z45 !s108 1457407711.000000
-Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd|
-Z47 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd|
+R18
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd|
+Z55 !s107 C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_test.vhd|
 !i113 1
 R11
 R12
@@ -276,18 +358,18 @@ Atest1
 R14
 R1
 R2
-Z48 DEx4 work 8 rra_test 0 22 U7=SaQWSX0lPPj;@S4M1H2
+DEx4 work 8 rra_test 0 22 U7=SaQWSX0lPPj;@S4M1H2
 l63
 L9
-VJ7moSM>BC4l>4IR=P`:fB1
-!s100 3W_bViFf@8XQYYKSW5[Bd2
+Vh=_R^QTWaVe>_1l6nZ7Fd3
+!s100 1lcB<19<Nfh4NUKd4OX7>2
 R6
 32
-R44
+R17
 !i10b 1
-R45
-R46
-R47
+R18
+R54
+R55
 !i113 1
 R11
 R12

@@ -8,6 +8,7 @@ port (
         
         mode      : in  std_ulogic_vector(1 downto 0);
         moving    : in  std_ulogic;
+        moved     : in  std_ulogic;
         store     : in  std_ulogic;
         l_keypad  : out std_ulogic;
         l_memory  : out std_ulogic;
@@ -28,7 +29,7 @@ begin
   begin
     if (rst = '1') then
       c_state <= s_WAITING;
-  elsif (rising_edge(clk)) then
+    elsif (rising_edge(clk)) then
       c_state <= n_state;
   end if;
   end process;
@@ -65,7 +66,7 @@ begin
         n_state <= s_MOVING;
 
       when s_CHECK_KEYPAD =>
-        if store = '1' then
+        if (store = '1') AND (moved = '1') then
           l_keypad <= '0';
           w_memory <= '1';
           n_state  <= s_SET_MEMORY_NEXT;

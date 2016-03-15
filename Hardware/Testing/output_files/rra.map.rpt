@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rra
-Tue Mar 08 02:38:15 2016
+Tue Mar 15 05:03:19 2016
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -18,29 +18,31 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_lower
- 15. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_middle
- 16. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_upper
- 17. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_wrist
- 18. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_gripper
- 19. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_base
- 20. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
- 21. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 22. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 23. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
- 24. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 25. lpm_mult Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "rra_servo_controller:rra_servo_base"
- 27. Port Connectivity Checks: "rra_servo_controller:rra_servo_gripper"
- 28. Port Connectivity Checks: "rra_servo_controller:rra_servo_wrist"
- 29. Port Connectivity Checks: "rra_servo_controller:rra_servo_upper"
- 30. Port Connectivity Checks: "rra_servo_controller:rra_servo_middle"
- 31. Port Connectivity Checks: "rra_servo_controller:rra_servo_lower"
- 32. Port Connectivity Checks: "rra_memory:memory_lower"
- 33. Port Connectivity Checks: "rra_key_in:keypad"
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 13. Physical Synthesis Netlist Optimizations
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_lower
+ 16. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_middle
+ 17. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_upper
+ 18. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_wrist
+ 19. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_gripper
+ 20. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_base
+ 21. Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2
+ 22. Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0
+ 24. Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1
+ 25. Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0
+ 26. lpm_mult Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "rra_feedback:feedback"
+ 28. Port Connectivity Checks: "rra_servo_controller:rra_servo_base"
+ 29. Port Connectivity Checks: "rra_servo_controller:rra_servo_gripper"
+ 30. Port Connectivity Checks: "rra_servo_controller:rra_servo_wrist"
+ 31. Port Connectivity Checks: "rra_servo_controller:rra_servo_upper"
+ 32. Port Connectivity Checks: "rra_servo_controller:rra_servo_middle"
+ 33. Port Connectivity Checks: "rra_servo_controller:rra_servo_lower"
+ 34. Port Connectivity Checks: "rra_memory:memory"
+ 35. Port Connectivity Checks: "rra_key_in:keypad"
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
 
 
 
@@ -66,15 +68,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 08 02:38:14 2016      ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 15 05:03:18 2016      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; rra                                        ;
 ; Top-level Entity Name              ; rra                                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 3,502                                      ;
-;     Total combinational functions  ; 3,465                                      ;
-;     Dedicated logic registers      ; 502                                        ;
-; Total registers                    ; 502                                        ;
+; Total logic elements               ; 19,542                                     ;
+;     Total combinational functions  ; 10,145                                     ;
+;     Dedicated logic registers      ; 10,088                                     ;
+; Total registers                    ; 10088                                      ;
 ; Total pins                         ; 75                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -91,7 +93,8 @@ applicable agreement for further details.
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
 ; Top-level entity name                                                      ; rra                ; rra                ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                ; Off                ;
+; Use smart compilation                                                      ; On                 ; Off                ;
+; Optimization Technique                                                     ; Speed              ; Balanced           ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
 ; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
@@ -122,7 +125,6 @@ applicable agreement for further details.
 ; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
 ; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
 ; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
 ; Carry Chain Length                                                         ; 70                 ; 70                 ;
 ; Auto Carry Chains                                                          ; On                 ; On                 ;
 ; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
@@ -186,6 +188,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                         ; Library ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; ../rra_feedback.vhd              ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd                   ;         ;
+; ../rra_7seg.vhd                  ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd                       ;         ;
 ; ../rra_servo_controller.vhd      ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd           ;         ;
 ; ../rra_memory.vhd                ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd                     ;         ;
 ; ../rra_key_in.vhd                ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd                     ;         ;
@@ -241,64 +245,67 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,502     ;
+; Estimated Total logic elements              ; 19,542    ;
 ;                                             ;           ;
-; Total combinational functions               ; 3465      ;
+; Total combinational functions               ; 10145     ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 727       ;
-;     -- 3 input functions                    ; 1351      ;
-;     -- <=2 input functions                  ; 1387      ;
+;     -- 4 input functions                    ; 7178      ;
+;     -- 3 input functions                    ; 1379      ;
+;     -- <=2 input functions                  ; 1588      ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1640      ;
-;     -- arithmetic mode                      ; 1825      ;
+;     -- normal mode                          ; 8242      ;
+;     -- arithmetic mode                      ; 1903      ;
 ;                                             ;           ;
-; Total registers                             ; 502       ;
-;     -- Dedicated logic registers            ; 502       ;
+; Total registers                             ; 10088     ;
+;     -- Dedicated logic registers            ; 10088     ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 75        ;
 ; Embedded Multiplier 9-bit elements          ; 3         ;
 ; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 641       ;
-; Total fan-out                               ; 11648     ;
-; Average fan-out                             ; 2.83      ;
+; Maximum fan-out                             ; 10105     ;
+; Total fan-out                               ; 75789     ;
+; Average fan-out                             ; 3.72      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Library Name ;
-+---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; |rra                                        ; 3465 (419)        ; 502 (72)     ; 0           ; 3            ; 1       ; 1         ; 75   ; 0            ; |rra                                                                                                 ; work         ;
-;    |lpm_divide:Div0|                        ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div0                                                                                 ; work         ;
-;       |lpm_divide_2jm:auto_generated|       ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div0|lpm_divide_2jm:auto_generated                                                   ; work         ;
-;          |sign_div_unsign_3nh:divider|      ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider                       ; work         ;
-;             |alt_u_div_h8f:divider|         ; 61 (61)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider ; work         ;
-;    |lpm_divide:Div1|                        ; 466 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div1                                                                                 ; work         ;
-;       |lpm_divide_kvo:auto_generated|       ; 466 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div1|lpm_divide_kvo:auto_generated                                                   ; work         ;
-;          |abs_divider_obg:divider|          ; 466 (40)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider                           ; work         ;
-;             |alt_u_div_56f:divider|         ; 403 (403)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider     ; work         ;
-;             |lpm_abs_bv9:my_abs_num|        ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|lpm_abs_bv9:my_abs_num    ; work         ;
-;    |lpm_divide:Div2|                        ; 548 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div2                                                                                 ; work         ;
-;       |lpm_divide_gvo:auto_generated|       ; 548 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div2|lpm_divide_gvo:auto_generated                                                   ; work         ;
-;          |abs_divider_kbg:divider|          ; 548 (62)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                           ; work         ;
-;             |alt_u_div_t5f:divider|         ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider     ; work         ;
-;             |lpm_abs_av9:my_abs_num|        ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_av9:my_abs_num    ; work         ;
-;    |lpm_mult:Mult0|                         ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_mult:Mult0                                                                                  ; work         ;
-;       |multcore:mult_core|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|lpm_mult:Mult0|multcore:mult_core                                                               ; work         ;
-;    |lpm_mult:Mult1|                         ; 21 (0)            ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|lpm_mult:Mult1                                                                                  ; work         ;
-;       |mult_u6t:auto_generated|             ; 21 (21)           ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|lpm_mult:Mult1|mult_u6t:auto_generated                                                          ; work         ;
-;    |rra_controller:controller|              ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_controller:controller                                                                       ; work         ;
-;    |rra_key_in:keypad|                      ; 50 (50)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_key_in:keypad                                                                               ; work         ;
-;    |rra_servo_controller:rra_servo_base|    ; 315 (315)         ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_base                                                             ; work         ;
-;    |rra_servo_controller:rra_servo_gripper| ; 296 (296)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_gripper                                                          ; work         ;
-;    |rra_servo_controller:rra_servo_lower|   ; 336 (336)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_lower                                                            ; work         ;
-;    |rra_servo_controller:rra_servo_middle|  ; 306 (306)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_middle                                                           ; work         ;
-;    |rra_servo_controller:rra_servo_upper|   ; 325 (325)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_upper                                                            ; work         ;
-;    |rra_servo_controller:rra_servo_wrist|   ; 306 (306)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_wrist                                                            ; work         ;
-+---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                           ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |rra                                         ; 10145 (452)       ; 10088 (152)  ; 0           ; 3            ; 1       ; 1         ; 75   ; 0            ; |rra                                                                                                                                          ; work         ;
+;    |rra_controller:controller|               ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_controller:controller                                                                                                                ; work         ;
+;    |rra_feedback:feedback|                   ; 1336 (49)         ; 84 (40)      ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback                                                                                                                    ; work         ;
+;       |rra_7seg4:segments|                   ; 1287 (214)        ; 44 (44)      ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments                                                                                                 ; work         ;
+;          |lpm_divide:Div0|                   ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0                                                                                 ; work         ;
+;             |lpm_divide_2jm:auto_generated|  ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_3nh:divider| ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider                       ; work         ;
+;                   |alt_u_div_h8f:divider|    ; 58 (58)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider ; work         ;
+;          |lpm_divide:Div1|                   ; 426 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1                                                                                 ; work         ;
+;             |lpm_divide_kvo:auto_generated|  ; 426 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 426 (40)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider                           ; work         ;
+;                   |alt_u_div_56f:divider|    ; 357 (357)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider     ; work         ;
+;                   |lpm_abs_bv9:my_abs_num|   ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|lpm_abs_bv9:my_abs_num    ; work         ;
+;          |lpm_divide:Div2|                   ; 559 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2                                                                                 ; work         ;
+;             |lpm_divide_gvo:auto_generated|  ; 559 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated                                                   ; work         ;
+;                |abs_divider_kbg:divider|     ; 559 (62)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                           ; work         ;
+;                   |alt_u_div_t5f:divider|    ; 450 (450)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider     ; work         ;
+;                   |lpm_abs_av9:my_abs_num|   ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_av9:my_abs_num    ; work         ;
+;          |lpm_mult:Mult0|                    ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0                                                                                  ; work         ;
+;             |multcore:mult_core|             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0|multcore:mult_core                                                               ; work         ;
+;          |lpm_mult:Mult1|                    ; 21 (0)            ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1                                                                                  ; work         ;
+;             |mult_u6t:auto_generated|        ; 21 (21)           ; 0 (0)        ; 0           ; 3            ; 1       ; 1         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1|mult_u6t:auto_generated                                                          ; work         ;
+;    |rra_key_in:keypad|                       ; 73 (73)           ; 52 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_key_in:keypad                                                                                                                        ; work         ;
+;    |rra_memory:memory|                       ; 6359 (6359)       ; 9417 (9417)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_memory:memory                                                                                                                        ; work         ;
+;    |rra_servo_controller:rra_servo_base|     ; 327 (327)         ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_base                                                                                                      ; work         ;
+;    |rra_servo_controller:rra_servo_gripper|  ; 308 (308)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_gripper                                                                                                   ; work         ;
+;    |rra_servo_controller:rra_servo_lower|    ; 338 (338)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_lower                                                                                                     ; work         ;
+;    |rra_servo_controller:rra_servo_middle|   ; 308 (308)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_middle                                                                                                    ; work         ;
+;    |rra_servo_controller:rra_servo_upper|    ; 327 (327)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_upper                                                                                                     ; work         ;
+;    |rra_servo_controller:rra_servo_wrist|    ; 308 (308)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_wrist                                                                                                     ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -425,8 +432,7 @@ Encoding Type:  One-Hot
 ; rra_servo_controller:rra_servo_middle|clk_10mhz_count[0]  ; Merged with rra_servo_controller:rra_servo_base|clk_10mhz_count[0] ;
 ; rra_servo_controller:rra_servo_upper|clk_10mhz_count[0]   ; Merged with rra_servo_controller:rra_servo_base|clk_10mhz_count[0] ;
 ; rra_servo_controller:rra_servo_wrist|clk_10mhz_count[0]   ; Merged with rra_servo_controller:rra_servo_base|clk_10mhz_count[0] ;
-; rra_controller:controller|c_state.s_SET_MEMORY_NEXT       ; Stuck at GND due to stuck port data_in                             ;
-; Total Number of Removed Registers = 86                    ;                                                                    ;
+; Total Number of Removed Registers = 85                    ;                                                                    ;
 +-----------------------------------------------------------+--------------------------------------------------------------------+
 
 
@@ -435,12 +441,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 502   ;
-; Number of registers using Synchronous Clear  ; 253   ;
-; Number of registers using Synchronous Load   ; 37    ;
-; Number of registers using Asynchronous Clear ; 425   ;
+; Total registers                              ; 10088 ;
+; Number of registers using Synchronous Clear  ; 246   ;
+; Number of registers using Synchronous Load   ; 47    ;
+; Number of registers using Asynchronous Clear ; 9821  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 196   ;
+; Number of registers using Clock Enable       ; 9616  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -450,20 +456,307 @@ Encoding Type:  One-Hot
 +-------------------------------------------------+---------+
 ; Inverted Register                               ; Fan out ;
 +-------------------------------------------------+---------+
-; rra_servo_controller:rra_servo_base|delay[3]    ; 5       ;
-; rra_servo_controller:rra_servo_base|delay[1]    ; 5       ;
-; rra_servo_controller:rra_servo_gripper|delay[3] ; 5       ;
-; rra_servo_controller:rra_servo_gripper|delay[1] ; 5       ;
 ; rra_servo_controller:rra_servo_lower|delay[3]   ; 5       ;
 ; rra_servo_controller:rra_servo_lower|delay[1]   ; 5       ;
-; rra_servo_controller:rra_servo_wrist|delay[3]   ; 5       ;
-; rra_servo_controller:rra_servo_wrist|delay[1]   ; 5       ;
 ; rra_servo_controller:rra_servo_middle|delay[3]  ; 5       ;
 ; rra_servo_controller:rra_servo_middle|delay[1]  ; 5       ;
 ; rra_servo_controller:rra_servo_upper|delay[3]   ; 5       ;
 ; rra_servo_controller:rra_servo_upper|delay[1]   ; 5       ;
+; rra_servo_controller:rra_servo_wrist|delay[3]   ; 5       ;
+; rra_servo_controller:rra_servo_wrist|delay[1]   ; 5       ;
+; rra_servo_controller:rra_servo_gripper|delay[3] ; 5       ;
+; rra_servo_controller:rra_servo_gripper|delay[1] ; 5       ;
+; rra_servo_controller:rra_servo_base|delay[3]    ; 5       ;
+; rra_servo_controller:rra_servo_base|delay[1]    ; 5       ;
 ; Total number of inverted registers = 12         ;         ;
 +-------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Physical Synthesis Netlist Optimizations                                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+---------------------+
+; Node                                                                                                                                                                ; Action           ; Reason              ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+---------------------+
+; rra_feedback:feedback|rra_7seg4:segments|Add0~0                                                                                                                     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add1~0                                                                                                                     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add1~0_RTM080                                                                                                              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add1~0_RTM080                                                                                                              ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add1~62_RTM0112                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add1~62_RTM0112                                                                                                            ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add2~0                                                                                                                     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Add3~0                                                                                                                     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~4_Duplicate_19                                                                                                      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~5_Duplicate_20                                                                                                      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~6_Duplicate_18                                                                                                      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~7_Duplicate_17                                                                                                      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8                                                                                                                   ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_14                                                                                                      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_16                                                                                                      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_RTM0134                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_Duplicate_RTM0134                                                                                                 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_RTM064                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~8_RTM064                                                                                                            ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~9                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~11                                                                                                                  ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_Duplicate_13                                                                                                     ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM084                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM084                                                                                                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal0~11_RTM084_RTM0135                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal4~0                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal4~0_RTM0117                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~11_Duplicate_18                                                                                                    ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~12                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~12_Duplicate_16                                                                                                    ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~13_Duplicate_17                                                                                                    ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal10~13_Duplicate_17_Duplicate                                                                                          ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal14~0                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal14~0_RTM0113                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|Equal19~0                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM08                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM08                                                                                                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM08_RTM081                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~4_RTM08_RTM085                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~6                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~6_RTM065                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~7                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~7_RTM0119                                                                                                         ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor0~8                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~0                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~1                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~3                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~3_RTM039                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~3_RTM039                                                                                                          ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~4                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~4_RTM072                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor1~4_RTM072                                                                                                          ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor2~0                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor2~1                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor2~3                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideNor2~4                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr0                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr0_RTM09                                                                                                              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr1                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr1_RTM012                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2_RTM018                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2_RTM022                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2~0                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2~0_RTM0118                                                                                                          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2~1                                                                                                                  ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2~1_RTM021                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr2~1_RTM021                                                                                                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr4                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr4_RTM025                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr4_RTM026                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr5                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr5_RTM029                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr5_RTM030                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr6                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr6_RTM073                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr7~0                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8_RTM043                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8_RTM047                                                                                                             ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8~0                                                                                                                  ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8~0_RTM046                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr8~0_RTM046                                                                                                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr10                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr10_RTM050                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr10_RTM051                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr11                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr11_RTM054                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr11_RTM055                                                                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr13                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr14                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr14~2                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|WideOr17                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider|StageOut[102]~13           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider|StageOut[113]~29           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider|StageOut[114]~26           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider|add_sub_9_result_int[3]~0  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider|add_sub_9_result_int[3]~1  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider|add_sub_10_result_int[3]~1 ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[65]~213               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[70]~204               ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[74]~227               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[75]~224               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[83]~234               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[92]~242               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[101]~251              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[110]~259              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[119]~268              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[128]~276              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[137]~285              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[146]~294              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[155]~301              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[164]~309              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[173]~318              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[182]~326              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[191]~335              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|StageOut[200]~342              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_7_result_int[2]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_7_result_int[2]~1      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_8_result_int[2]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_8_result_int[8]~13     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_9_result_int[2]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_10_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_11_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_12_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_13_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_14_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_15_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_16_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_17_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_18_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_19_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_20_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_21_result_int[2]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|alt_u_div_56f:divider|add_sub_22_result_int[2]~1     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|lpm_abs_bv9:my_abs_num|_~6                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|op_1~1                                               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1|lpm_divide_kvo:auto_generated|abs_divider_obg:divider|quotient[0]~15                                       ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[19]~230               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[25]~237               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[26]~235               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[31]~244               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[37]~252               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[43]~256               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[49]~263               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[55]~271               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[61]~275               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[67]~282               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[73]~290               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[79]~294               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[85]~301               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[91]~309               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[97]~313               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[103]~320              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[109]~328              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[115]~332              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[121]~339              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[127]~347              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[133]~354              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[139]~358              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[145]~365              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[151]~373              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[157]~377              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[163]~384              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[169]~389              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[175]~393              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|StageOut[181]~397              ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_3_result_int[1]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_3_result_int[1]~1      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_4_result_int[1]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_5_result_int[1]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_6_result_int[1]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_7_result_int[1]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_8_result_int[1]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_9_result_int[1]~0      ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_10_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_11_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_12_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_13_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_14_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_15_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_16_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_17_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_18_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_19_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_20_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_21_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_22_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_23_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_24_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_25_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_26_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_27_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_28_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_29_result_int[1]~0     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider|add_sub_30_result_int[1]~1     ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|op_1~1                                               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[0]~3                                        ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[3]~0                                        ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[3]~0_Duplicate_30                           ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|quotient[3]~0_RTM0156                                ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]_OTERM28_OTERM91_OTERM137                                                                                        ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]_OTERM28_OTERM91_OTERM139                                                                                        ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]_OTERM28_OTERM91_OTERM141                                                                                        ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[0]_OTERM28_OTERM91_OTERM143                                                                                        ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[1]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM57                                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM59_OTERM127                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM61_OTERM103                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM61_OTERM105                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[2]_OTERM63                                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[3]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[4]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[4]_OTERM14                                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM11_OTERM87                                                                                                 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[5]_OTERM11_OTERM89_OTERM131                                                                                        ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM3_OTERM95_NEW_REG114_RTM0116                                                                               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM3_OTERM95_NEW_REG114_RTM0116                                                                               ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM3_OTERM95_OTERM115                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM7_OTERM77                                                                                                  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM7_OTERM79                                                                                                  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1[6]_OTERM7_OTERM83_OTERM133                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1~0                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg1~0_RTM017                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[0]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[0]_OTERM53_OTERM129                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[1]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM42_OTERM107                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM42_OTERM109                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[3]_OTERM42_OTERM111                                                                                                ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM32                                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM34                                                                                                         ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM36_OTERM123_OTERM149                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM36_OTERM123_OTERM151                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM36_OTERM123_OTERM153                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[4]_OTERM36_OTERM123_OTERM155                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM75_OTERM99                                                                                                 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM75_OTERM101_OTERM145                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[5]_OTERM75_OTERM101_OTERM147                                                                                       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2[6]                                                                                                                 ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2~0                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg2~0_RTM040                                                                                                           ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_7seg4:segments|o_7seg3~0                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_key_in:keypad|Add0~0                                                                                                                                            ; Deleted          ; Timing optimization ;
+; rra_key_in:keypad|Mux20~0                                                                                                                                           ; Deleted          ; Timing optimization ;
+; rra_key_in:keypad|Mux23~0                                                                                                                                           ; Deleted          ; Timing optimization ;
+; rra_key_in:keypad|Mux26~0                                                                                                                                           ; Deleted          ; Timing optimization ;
+; rra_key_in:keypad|Mux29~0                                                                                                                                           ; Deleted          ; Timing optimization ;
+; rra_key_in:keypad|key_count[1]~0                                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_key_in:keypad|key_next[1]~15                                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_key_in:keypad|key_next[4]~20                                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_key_in:keypad|key_next[7]~13                                                                                                                                    ; Modified         ; Timing optimization ;
+; rra_key_in:keypad|key_next[10]~21                                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_base|Add1~0                                                                                                                          ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_base|Add2~0                                                                                                                          ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_base|current[0]~15                                                                                                                   ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_gripper|Add1~0                                                                                                                       ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_gripper|Add2~0                                                                                                                       ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_gripper|current[0]~15                                                                                                                ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_lower|Add1~0                                                                                                                         ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_lower|Add2~0                                                                                                                         ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_lower|current[0]~15                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_middle|Add1~0                                                                                                                        ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_middle|Add2~0                                                                                                                        ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_middle|current[0]~15                                                                                                                 ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_upper|Add1~0                                                                                                                         ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_upper|Add2~0                                                                                                                         ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_upper|current[0]~15                                                                                                                  ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_wrist|Add1~0                                                                                                                         ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_wrist|Add2~0                                                                                                                         ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_wrist|current[0]~15                                                                                                                  ; Modified         ; Timing optimization ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+---------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -471,49 +764,52 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |rra|t_lower_pos[3]                                         ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |rra|t_middle_pos[7]                                        ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |rra|t_gripper_pos[9]                                       ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |rra|t_upper_pos[7]                                         ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |rra|t_wrist_pos[3]                                         ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |rra|t_base_pos[1]                                          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_10mhz_count[0] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_10mhz_count[2] ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_1khz           ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_1khz_count[4]  ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count[7]      ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count_i[2]    ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count[0]     ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count_i[16]  ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count[3]      ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count_i[17]   ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count[5]      ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count[8]    ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count_i[17]   ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count_i[14] ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count[2]       ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count_i[12]    ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[7]        ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[7]       ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[1]        ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[7]        ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[9]      ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[1]         ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[7]                          ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[11]                         ;
-; 21:1               ; 3 bits    ; 42 LEs        ; 18 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[2]                          ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |rra|addr[5]                                                ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 48 LEs               ; 12 LEs                 ; Yes        ; |rra|rra_feedback:feedback|segVal[11]                       ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|clk_1khz_count[7]  ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count[15]     ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count_i[10]   ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count[6]     ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count_i[2]   ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count[14]     ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count_i[1]    ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count[10]     ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count[5]    ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count_i[14]   ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count_i[3]  ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count[4]       ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count_i[17]    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[1]        ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[0]       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[0]        ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[1]        ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[8]      ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[0]         ;
+; 19:1               ; 4 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[12]                         ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_lower_pos[9]                                         ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_middle_pos[8]                                        ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_upper_pos[9]                                         ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_wrist_pos[9]                                         ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_gripper_pos[11]                                      ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |rra|t_base_pos[10]                                         ;
+; 129:1              ; 72 bits   ; 6192 LEs      ; 6192 LEs             ; 0 LEs                  ; Yes        ; |rra|rra_memory:memory|data_out_prev[67]                    ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[4]                          ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[9]                          ;
+; 21:1               ; 3 bits    ; 42 LEs        ; 18 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[8]                          ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[12]       ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[6]        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[13]      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[12]      ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[5]       ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[12]       ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[4]        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[13]       ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[5]        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[13]     ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[11]     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[2]        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[12]       ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[11]       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[12]     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[2]      ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[12]        ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[6]         ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 48 LEs               ; 12 LEs                 ; No         ; |rra|Mux0                                                   ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[2]         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -583,174 +879,188 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                ;
-; LPM_WIDTHD             ; 5              ; Untyped                ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_gvo ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2 ;
++------------------------+----------------+-----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                            ;
++------------------------+----------------+-----------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                         ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                         ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                         ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                         ;
+; CBXI_PARAMETER         ; lpm_divide_gvo ; Untyped                                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                  ;
++------------------------+----------------+-----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 24             ; Untyped                ;
-; LPM_WIDTHD             ; 8              ; Untyped                ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_kvo ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1 ;
++------------------------+----------------+-----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                            ;
++------------------------+----------------+-----------------------------------------------------------------+
+; LPM_WIDTHN             ; 24             ; Untyped                                                         ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                         ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                         ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                         ;
+; CBXI_PARAMETER         ; lpm_divide_kvo ; Untyped                                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                  ;
++------------------------+----------------+-----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 12             ; Untyped                ;
-; LPM_WIDTHD             ; 10             ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_2jm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                            ;
++------------------------+----------------+-----------------------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                                         ;
+; LPM_WIDTHD             ; 10             ; Untyped                                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                         ;
+; CBXI_PARAMETER         ; lpm_divide_2jm ; Untyped                                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                  ;
++------------------------+----------------+-----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                    ;
-+------------------------------------------------+-------------+---------------------+
-; Parameter Name                                 ; Value       ; Type                ;
-+------------------------------------------------+-------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 24          ; Untyped             ;
-; LPM_WIDTHB                                     ; 8           ; Untyped             ;
-; LPM_WIDTHP                                     ; 32          ; Untyped             ;
-; LPM_WIDTHR                                     ; 32          ; Untyped             ;
-; LPM_WIDTHS                                     ; 1           ; Untyped             ;
-; LPM_REPRESENTATION                             ; SIGNED      ; Untyped             ;
-; LPM_PIPELINE                                   ; 0           ; Untyped             ;
-; LATENCY                                        ; 0           ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; YES         ; Untyped             ;
-; USE_EAB                                        ; OFF         ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5           ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone III ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL      ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_u6t    ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped             ;
-+------------------------------------------------+-------------+---------------------+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1 ;
++------------------------------------------------+-------------+-------------------------------------------+
+; Parameter Name                                 ; Value       ; Type                                      ;
++------------------------------------------------+-------------+-------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE                            ;
+; LPM_WIDTHA                                     ; 24          ; Untyped                                   ;
+; LPM_WIDTHB                                     ; 8           ; Untyped                                   ;
+; LPM_WIDTHP                                     ; 32          ; Untyped                                   ;
+; LPM_WIDTHR                                     ; 32          ; Untyped                                   ;
+; LPM_WIDTHS                                     ; 1           ; Untyped                                   ;
+; LPM_REPRESENTATION                             ; SIGNED      ; Untyped                                   ;
+; LPM_PIPELINE                                   ; 0           ; Untyped                                   ;
+; LATENCY                                        ; 0           ; Untyped                                   ;
+; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped                                   ;
+; INPUT_B_IS_CONSTANT                            ; YES         ; Untyped                                   ;
+; USE_EAB                                        ; OFF         ; Untyped                                   ;
+; MAXIMIZE_SPEED                                 ; 5           ; Untyped                                   ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped                                   ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped                                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K                       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped                                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped                                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped                                   ;
+; CBXI_PARAMETER                                 ; mult_u6t    ; Untyped                                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped                                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped                                   ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped                                   ;
++------------------------------------------------+-------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                    ;
-+------------------------------------------------+-------------+---------------------+
-; Parameter Name                                 ; Value       ; Type                ;
-+------------------------------------------------+-------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 12          ; Untyped             ;
-; LPM_WIDTHB                                     ; 10          ; Untyped             ;
-; LPM_WIDTHP                                     ; 22          ; Untyped             ;
-; LPM_WIDTHR                                     ; 22          ; Untyped             ;
-; LPM_WIDTHS                                     ; 1           ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED    ; Untyped             ;
-; LPM_PIPELINE                                   ; 0           ; Untyped             ;
-; LATENCY                                        ; 0           ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; YES         ; Untyped             ;
-; USE_EAB                                        ; OFF         ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5           ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone III ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL      ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped             ;
-; CBXI_PARAMETER                                 ; NOTHING     ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped             ;
-+------------------------------------------------+-------------+---------------------+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0 ;
++------------------------------------------------+-------------+-------------------------------------------+
+; Parameter Name                                 ; Value       ; Type                                      ;
++------------------------------------------------+-------------+-------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE                            ;
+; LPM_WIDTHA                                     ; 12          ; Untyped                                   ;
+; LPM_WIDTHB                                     ; 10          ; Untyped                                   ;
+; LPM_WIDTHP                                     ; 22          ; Untyped                                   ;
+; LPM_WIDTHR                                     ; 22          ; Untyped                                   ;
+; LPM_WIDTHS                                     ; 1           ; Untyped                                   ;
+; LPM_REPRESENTATION                             ; UNSIGNED    ; Untyped                                   ;
+; LPM_PIPELINE                                   ; 0           ; Untyped                                   ;
+; LATENCY                                        ; 0           ; Untyped                                   ;
+; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped                                   ;
+; INPUT_B_IS_CONSTANT                            ; YES         ; Untyped                                   ;
+; USE_EAB                                        ; OFF         ; Untyped                                   ;
+; MAXIMIZE_SPEED                                 ; 5           ; Untyped                                   ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped                                   ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped                                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K                       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped                                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped                                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped                                   ;
+; CBXI_PARAMETER                                 ; NOTHING     ; Untyped                                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped                                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped                                   ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped                                   ;
++------------------------------------------------+-------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 2              ;
-; Entity Instance                       ; lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 24             ;
-;     -- LPM_WIDTHB                     ; 8              ;
-;     -- LPM_WIDTHP                     ; 32             ;
-;     -- LPM_REPRESENTATION             ; SIGNED         ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; YES            ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 12             ;
-;     -- LPM_WIDTHB                     ; 10             ;
-;     -- LPM_WIDTHP                     ; 22             ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; YES            ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
++-------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                  ;
++---------------------------------------+---------------------------------------------------------+
+; Name                                  ; Value                                                   ;
++---------------------------------------+---------------------------------------------------------+
+; Number of entity instances            ; 2                                                       ;
+; Entity Instance                       ; rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 24                                                      ;
+;     -- LPM_WIDTHB                     ; 8                                                       ;
+;     -- LPM_WIDTHP                     ; 32                                                      ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                      ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                     ;
+;     -- USE_EAB                        ; OFF                                                     ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                    ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                      ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                      ;
+; Entity Instance                       ; rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 12                                                      ;
+;     -- LPM_WIDTHB                     ; 10                                                      ;
+;     -- LPM_WIDTHP                     ; 22                                                      ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                      ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                     ;
+;     -- USE_EAB                        ; OFF                                                     ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                    ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                      ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                      ;
++---------------------------------------+---------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "rra_feedback:feedback" ;
++---------------+-------+----------+----------------+
+; Port          ; Type  ; Severity ; Details        ;
++---------------+-------+----------+----------------+
+; i_ch1[13..12] ; Input ; Info     ; Stuck at GND   ;
+; i_ch2[13..12] ; Input ; Info     ; Stuck at GND   ;
+; i_ch3[13..12] ; Input ; Info     ; Stuck at GND   ;
+; i_ch4[13..12] ; Input ; Info     ; Stuck at GND   ;
+; i_ch5[13..12] ; Input ; Info     ; Stuck at GND   ;
+; i_ch6[13..12] ; Input ; Info     ; Stuck at GND   ;
++---------------+-------+----------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -816,23 +1126,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rra_memory:memory_lower"                                                                ;
+; Port Connectivity Checks: "rra_memory:memory"                                                                      ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
-; addr     ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; data_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rra_key_in:keypad"                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; key_out[15..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; key_out[5]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_key_in:keypad"                                                                         ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; key_out[11] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; key_out[6]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; key_out[0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -840,7 +1150,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:01:09     ;
 +----------------+--------------+
 
 
@@ -850,9 +1160,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Mar 08 02:38:01 2016
+    Info: Processing started: Tue Mar 15 05:02:01 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rra -c rra
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_feedback.vhd
+    Info (12022): Found design unit 1: rra_feedback-rtl
+    Info (12023): Found entity 1: rra_feedback
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_7seg.vhd
+    Info (12022): Found design unit 1: rra_7seg4-rtl
+    Info (12023): Found entity 1: rra_7seg4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_servo_controller.vhd
     Info (12022): Found design unit 1: rra_servo_controller-rtl
     Info (12023): Found entity 1: rra_servo_controller
@@ -869,26 +1185,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: rra-v1
     Info (12023): Found entity 1: rra
 Info (12127): Elaborating entity "rra" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at rra.vhd(125): used implicit default value for signal "store" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at rra.vhd(129): used implicit default value for signal "data_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(130): object "data_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(141): object "c_lower_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(143): object "c_middle_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(145): object "c_upper_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(147): object "c_wrist_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(149): object "c_gripper_pos_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at rra.vhd(151): object "c_base_pos_i" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at rra.vhd(314): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at rra.vhd(437): signal "display_id" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at rra.vhd(441): signal "c_middle_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at rra.vhd(443): signal "c_upper_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at rra.vhd(445): signal "c_wrist_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at rra.vhd(447): signal "c_gripper_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at rra.vhd(449): signal "c_base_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10873): Using initial value X (don't care) for net "leds[9..7]" at rra.vhd(29)
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(156): object "data_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(174): object "c_lower_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(176): object "c_middle_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(178): object "c_upper_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(180): object "c_wrist_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(182): object "c_gripper_pos_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at rra.vhd(184): object "c_base_pos_i" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at rra.vhd(372): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rra.vhd(506): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "rra_key_in" for hierarchy "rra_key_in:keypad"
-Info (12128): Elaborating entity "rra_memory" for hierarchy "rra_memory:memory_lower"
+Info (12128): Elaborating entity "rra_memory" for hierarchy "rra_memory:memory"
 Info (12128): Elaborating entity "rra_controller" for hierarchy "rra_controller:controller"
+Warning (10492): VHDL Process Statement warning at rra_controller.vhd(69): signal "moved" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "rra_servo_controller" for hierarchy "rra_servo_controller:rra_servo_lower"
 Warning (10492): VHDL Process Statement warning at rra_servo_controller.vhd(87): signal "i_speed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at rra_servo_controller.vhd(88): signal "i_target" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -909,14 +1218,17 @@ Info (10041): Inferred latch for "o_current_i[8]" at rra_servo_controller.vhd(46
 Info (10041): Inferred latch for "o_current_i[9]" at rra_servo_controller.vhd(46)
 Info (10041): Inferred latch for "o_current_i[10]" at rra_servo_controller.vhd(46)
 Info (10041): Inferred latch for "o_current_i[11]" at rra_servo_controller.vhd(46)
+Info (12128): Elaborating entity "rra_feedback" for hierarchy "rra_feedback:feedback"
+Info (12128): Elaborating entity "rra_7seg4" for hierarchy "rra_feedback:feedback|rra_7seg4:segments"
+Info (286030): Timing-Driven Synthesis is running
 Info (278001): Inferred 5 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2"
-Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter:
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rra_feedback:feedback|rra_7seg4:segments|Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rra_feedback:feedback|rra_7seg4:segments|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rra_feedback:feedback|rra_7seg4:segments|Div0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rra_feedback:feedback|rra_7seg4:segments|Mult1"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rra_feedback:feedback|rra_7seg4:segments|Mult0"
+Info (12130): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2"
+Info (12133): Instantiated megafunction "rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div2" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -936,8 +1248,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_
     Info (12023): Found entity 1: lpm_abs_pt9
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_av9.tdf
     Info (12023): Found entity 1: lpm_abs_av9
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1"
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1"
+Info (12133): Instantiated megafunction "rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "24"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -953,8 +1265,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_
     Info (12023): Found entity 1: lpm_abs_st9
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_bv9.tdf
     Info (12023): Found entity 1: lpm_abs_bv9
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0"
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "rra_feedback:feedback|rra_7seg4:segments|lpm_divide:Div0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "12"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -965,8 +1277,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_3nh
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_h8f.tdf
     Info (12023): Found entity 1: alt_u_div_h8f
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1"
-Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1"
+Info (12133): Instantiated megafunction "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "24"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -978,8 +1290,8 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following para
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_u6t.tdf
     Info (12023): Found entity 1: mult_u6t
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0"
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "12"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "22"
@@ -989,111 +1301,116 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_efh.tdf
     Info (12023): Found entity 1: add_sub_efh
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ifh.tdf
     Info (12023): Found entity 1: add_sub_ifh
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "rra_feedback:feedback|rra_7seg4:segments|lpm_mult:Mult0"
 Info (13014): Ignored 103 buffer(s)
     Info (13016): Ignored 53 CARRY_SUM buffer(s)
     Info (13019): Ignored 50 SOFT buffer(s)
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "leds[6]" is stuck at VCC
-    Warning (13410): Pin "leds[7]" is stuck at GND
-    Warning (13410): Pin "leds[8]" is stuck at GND
-    Warning (13410): Pin "leds[9]" is stuck at GND
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[3] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[3] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[3] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[3] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[3] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[3] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[11] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[11] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[11] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[11] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[11] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[11] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[10] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[10] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[10] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[10] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[10] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[10] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[6] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[6] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[6] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[6] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[6] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[6] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[5] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[5] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[5] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[5] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[5] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[5] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[4] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[4] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[4] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[4] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[4] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[4] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[2] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[2] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[2] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[2] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[2] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[2] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[13] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[12] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|delay[3] will power up to High
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|delay[1] will power up to High
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[13] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[12] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|delay[3] will power up to High
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|delay[1] will power up to High
     Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[13] will power up to Low
     Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[12] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|delay[3] will power up to High
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|delay[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[11] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[10] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[6] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[5] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[4] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[3] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|current[2] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[13] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[12] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[11] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[10] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[6] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[5] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[4] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[3] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|current[2] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[13] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[12] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[11] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[10] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[6] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[5] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[4] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[3] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|current[2] will power up to Low
     Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[13] will power up to Low
     Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[12] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|delay[3] will power up to High
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|delay[1] will power up to High
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[13] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[12] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|delay[3] will power up to High
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|delay[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[11] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[10] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[6] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[5] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[4] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[3] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|current[2] will power up to Low
     Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[13] will power up to Low
     Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[12] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[11] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[10] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[6] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[5] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[4] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[3] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|current[2] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[13] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[12] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[11] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[10] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[6] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[5] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[4] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[3] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|current[2] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|delay[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|delay[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|delay[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|delay[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|delay[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|delay[1] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|delay[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|delay[1] will power up to High
     Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|delay[3] will power up to High
     Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|delay[1] will power up to High
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|delay[0] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|delay[0] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|delay[3] will power up to High
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|delay[1] will power up to High
     Critical Warning (18010): Register rra_servo_controller:rra_servo_lower|delay[0] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_middle|delay[0] will power up to Low
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_upper|delay[0] will power up to Low
     Critical Warning (18010): Register rra_servo_controller:rra_servo_wrist|delay[0] will power up to Low
-    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|delay[0] will power up to Low
     Critical Warning (18010): Register rra_servo_controller:rra_servo_gripper|delay[0] will power up to Low
-Info (286030): Timing-Driven Synthesis is running
+    Critical Warning (18010): Register rra_servo_controller:rra_servo_base|delay[0] will power up to Low
+Info (128000): Starting physical synthesis optimizations for speed
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'rra.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 1648 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:14
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3587 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 19711 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 60 output pins
-    Info (21061): Implemented 3509 logic cells
+    Info (21061): Implemented 19633 logic cells
     Info (21062): Implemented 3 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 103 warnings
-    Info: Peak virtual memory: 601 megabytes
-    Info: Processing ended: Tue Mar 08 02:38:15 2016
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 92 warnings
+    Info: Peak virtual memory: 667 megabytes
+    Info: Processing ended: Tue Mar 15 05:03:19 2016
+    Info: Elapsed time: 00:01:18
+    Info: Total CPU time (on all processors): 00:01:17
 
 

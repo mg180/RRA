@@ -24,14 +24,23 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity rra
 -- Compiling architecture v1 of rra
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd}
+} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity rra_memory
--- Compiling architecture rtl of rra_memory
+-- Compiling entity rra_feedback
+-- Compiling architecture rtl of rra_feedback
+
+} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity rra_7seg4
+-- Compiling architecture rtl of rra_7seg4
 
 } {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015

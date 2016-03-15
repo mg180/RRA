@@ -103,17 +103,19 @@ begin
 		mode <= "01";
 		store <= '0';
 		--Reset
-		rst <= '1';
-		wait for clk_period;
 		rst <= '0';
+		wait for clk_period;
+		rst <= '1';
 
-		wait for clk_period*0;
+		wait for clk_period*1;
 
-		for i in 0 to 400000 loop
+		for i in 0 to 800000 loop
 			i_key_row <= "0000";
-			wait for clk_period*3;
+			wait for clk_period*2;
 			i_key_row <= "0001";
-			wait for clk_period*1;	
+			wait for clk_period*1;
+			i_key_row <= "0010";
+			wait for clk_period*1;		
 		end loop;
 
 			i_key_row <= "0000";
