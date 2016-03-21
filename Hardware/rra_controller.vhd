@@ -34,7 +34,7 @@ begin
   end if;
   end process;
 
-  process (c_state, mode, moving, store)
+  process (c_state, mode, moving, store, moved)
   begin
     case c_state is
       when s_WAITING =>

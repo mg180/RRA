@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Servo_Test">
+		<CBX_INST_ENTRY INSTANCE_NAME="|rra_servo_test|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|altpll:altpll_component" CBX_FILE_NAME="rra_pll_10mhz_10khz_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|rra_servo_test|rra_servo_controller:rra_servo_lower|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_afh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|rra_servo_test|rra_servo_controller:rra_servo_lower|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_efh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

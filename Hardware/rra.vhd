@@ -31,9 +31,9 @@ port (
 		--7 segment
 		display_id : in  std_ulogic_vector(2 downto 0);
 		segment7_1 : out std_ulogic_vector(6 downto 0);
-       	segment7_2 : out std_ulogic_vector(6 downto 0);
-       	segment7_3 : out std_ulogic_vector(6 downto 0);
-       	segment7_4 : out std_ulogic_vector(6 downto 0);
+   	segment7_2 : out std_ulogic_vector(6 downto 0);
+   	segment7_3 : out std_ulogic_vector(6 downto 0);
+   	segment7_4 : out std_ulogic_vector(6 downto 0);
 		 
 		--Control
 		led_sel 	: in std_ulogic;
@@ -43,6 +43,15 @@ port (
 end rra;
 
 architecture v1 of rra is
+
+	component rra_pll_10mhz_10khz
+		port(
+			areset		: in  std_logic  := '0';
+			inclk0		: in  std_logic  := '0';
+			c0				: out std_logic;
+			c1				: out std_logic 
+		);
+	end component;
 
 	component rra_key_in is
   	port(
@@ -98,16 +107,18 @@ architecture v1 of rra is
 			MAX_STEPS : integer  
 		);
 	port(
-			i_clk		: in  std_ulogic;
-			i_rst		: in  std_ulogic;
+			i_clk         : in  std_ulogic;
+      i_clk_10mhz   : in  std_ulogic;
+		i_clk_10khz   : in  std_ulogic;
+      i_rst         : in  std_ulogic;
 
-			i_speed 	: in  std_ulogic_vector(3 downto 0);
-			o_current	: out std_ulogic_vector(11 downto 0);
-			o_current_i : out std_ulogic_vector(11 downto 0);
-			i_target  	: in  std_ulogic_vector(11 downto 0);
-			i_offset	: in  std_ulogic_vector(7 downto 0);
-			o_pwm_out 	: out std_ulogic;
-			o_pwm_out_i	: out std_ulogic
+			i_speed 			: in  std_ulogic_vector(3 downto 0);
+			o_current			: out std_ulogic_vector(11 downto 0);
+			o_current_i 	: out std_ulogic_vector(11 downto 0);
+			i_target  		: in  std_ulogic_vector(11 downto 0);
+			i_offset			: in  std_ulogic_vector(7 downto 0);
+			o_pwm_out 		: out std_ulogic;
+			o_pwm_out_i		: out std_ulogic
 		);
 	end component;
 
@@ -150,6 +161,12 @@ architecture v1 of rra is
 	signal bas_l	: std_ulogic;
 	signal bas_r	: std_ulogic;
 	signal store 	: std_ulogic;
+
+	--Clocks
+	signal clk_10mhz: std_ulogic;
+	signal clk_10khz: std_ulogic;
+	signal clk_10mhz_count: integer range 0 to 4;
+	signal clk_1khz_count: integer range 0 to 9999;
 
 	--Memory
 	signal addr			: std_ulogic_vector(6 downto 0);
@@ -194,6 +211,13 @@ architecture v1 of rra is
 
 begin
 	
+	rra_clk_10mhz_10kh : rra_pll_10mhz_10khz PORT MAP (
+		areset	 => '0',
+		inclk0	 => clk,
+		c0	 	   => clk_10mhz,
+		c1	     => clk_10khz
+	);
+
 	keypad 		: rra_key_in
 	port map(
 		clk 	=> clk,
@@ -235,15 +259,17 @@ begin
 		MAX_STEPS 	=> LOWER_MAX_STEPS
 	)
 	port map(
-		i_clk 		=> clk,
-		i_rst 		=> reset,
-		i_speed		=> speed,
-		i_offset 	=> "00111111",
-		o_current	=> c_lower_pos,
-		o_current_i	=> c_lower_pos_i,
-		i_target	=> t_lower_pos,
-		o_pwm_out	=> l_pwm,
-		o_pwm_out_i	=> l_pwm_i
+		i_clk 				=> clk,
+		i_clk_10mhz 	=> clk_10mhz,
+		i_clk_10khz 	=> clk_10khz,
+		i_rst 				=> reset,
+		i_speed				=> speed,
+		i_offset 			=> "00111111",
+		o_current			=> c_lower_pos,
+		o_current_i		=> c_lower_pos_i,
+		i_target			=> t_lower_pos,
+		o_pwm_out			=> l_pwm,
+		o_pwm_out_i		=> l_pwm_i
 	);
 	
 
@@ -253,7 +279,9 @@ begin
 		MAX_STEPS 	=> MIDDLE_MAX_STEPS
 	)
 	port map(
-		i_clk 		=> clk,
+		i_clk 				=> clk,
+		i_clk_10mhz 	=> clk_10mhz,
+		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
 		i_offset 	=> "00000000",
@@ -270,7 +298,9 @@ begin
 		MAX_STEPS 	=> UPPER_MAX_STEPS
 	)
 	port map(
-		i_clk 		=> clk,
+		i_clk 				=> clk,
+		i_clk_10mhz 	=> clk_10mhz,
+		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
 		i_offset 	=> "00111111",
@@ -287,7 +317,9 @@ begin
 		MAX_STEPS 	=> WRIST_MAX_STEPS
 	)
 	port map(
-		i_clk 		=> clk,
+		i_clk 				=> clk,
+		i_clk_10mhz 	=> clk_10mhz,
+		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
 		i_offset 	=> "00000000",
@@ -304,7 +336,9 @@ begin
 		MAX_STEPS 	=> GRIPPER_MAX_STEPS
 	)
 	port map(
-		i_clk 		=> clk,
+		i_clk 				=> clk,
+		i_clk_10mhz 	=> clk_10mhz,
+		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
 		i_offset 	=> "00000000",
@@ -321,7 +355,9 @@ begin
 		MAX_STEPS 	=> BASE_MAX_STEPS
 	)
 	port map(
-		i_clk 		=> clk,
+		i_clk 				=> clk,
+		i_clk_10mhz 	=> clk_10mhz,
+		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
 		i_offset 	=> "00000000",
@@ -370,15 +406,15 @@ begin
 		variable adjusted_step: integer range 0 to (SERVO_STEP*15);
 		variable new_target: 	integer;
 	begin
-		if reset = '1' then
-			t_lower_pos <= (others => '0');
-			t_middle_pos <= (others => '0');
-			t_upper_pos <= (others => '0');
-			t_gripper_pos <= (others => '0');
-			t_wrist_pos <= (others => '0');
-			t_base_pos <= (others => '0');
-		else
-			if rising_edge(clk) then
+		if rising_edge(clk_10khz) then
+			if reset = '1' then
+				t_lower_pos <= (others => '0');
+				t_middle_pos <= (others => '0');
+				t_upper_pos <= (others => '0');
+				t_gripper_pos <= (others => '0');
+				t_wrist_pos <= (others => '0');
+				t_base_pos <= (others => '0');
+			else
 				if l_memory = '1' then
 					t_lower_pos <= data_out(11 downto 0);
 					t_middle_pos <= data_out(23 downto 12);
@@ -504,18 +540,21 @@ begin
 
 	increment_memory: process(clk)
 	begin
-		if reset = '1' then
-			addr <= (others => '0');
-		elsif rising_edge(clk) then
-			if w_memory = '1' then
-				addr <= std_ulogic_vector(to_unsigned((to_integer(unsigned(addr)) + 1), addr'length));
-			end if;
-			if l_memory = '1' then
-				if valid_out = '1' then
-					
+	
+		if rising_edge(clk) then
+			if reset = '1' then
+				addr <= (others => '0');
+			else
+				if w_memory = '1' then
 					addr <= std_ulogic_vector(to_unsigned((to_integer(unsigned(addr)) + 1), addr'length));
-				else 
-					addr <= (others => '0');
+				end if;
+				if l_memory = '1' then
+					if valid_out = '1' then
+						
+						addr <= std_ulogic_vector(to_unsigned((to_integer(unsigned(addr)) + 1), addr'length));
+					else 
+						addr <= (others => '0');
+					end if;
 				end if;
 			end if;
 		end if;
@@ -592,6 +631,8 @@ begin
 	ch4(13 downto 12) <= "00";	ch4(11 downto 0)  <= c_wrist_pos;
 	ch5(13 downto 12) <= "00";	ch5(11 downto 0)  <= c_gripper_pos;
 	ch6(13 downto 12) <= "00";	ch6(11 downto 0)  <= c_base_pos;
+
+
 end v1;
 
 

@@ -29,74 +29,76 @@ display : process(i_clk, i_rst)
     variable tho: integer;
 
 	begin
-		if i_rst = '1' then
-			o_7seg1 <= (others => '0');
-			o_7seg2 <= (others => '0');
-			o_7seg3 <= (others => '0');
-			o_7seg4 <= (others => '0');
-	  	elsif rising_edge(i_clk) then
-		  	num := i_num(11 downto 0);
+		if rising_edge(i_clk) then
+			if i_rst = '1' then
+				o_7seg1 <= (others => '0');
+				o_7seg2 <= (others => '0');
+				o_7seg3 <= (others => '0');
+				o_7seg4 <= (others => '0');
+		  	else
+			  	num := i_num(11 downto 0);
 
-		  	tho := to_integer(unsigned(num))/1000;
-		    hun := (to_integer(unsigned(num))-(tho*1000))/100;
-		    ten := (to_integer(unsigned(num))-(tho*1000)-(hun*100))/10;
-		    dig := to_integer(unsigned(num))-(tho*1000)-(hun*100)-(ten*10);
+			  	tho := to_integer(unsigned(num))/1000;
+			    hun := (to_integer(unsigned(num))-(tho*1000))/100;
+			    ten := (to_integer(unsigned(num))-(tho*1000)-(hun*100))/10;
+			    dig := to_integer(unsigned(num))-(tho*1000)-(hun*100)-(ten*10);
 
-		    case dig is
-				when 0 => o_7seg1 <= "0000001";     
-				when 1 => o_7seg1 <= "1001111";   
-				when 2 => o_7seg1 <= "0010010";     
-				when 3 => o_7seg1 <= "0000110";     
-				when 4 => o_7seg1 <= "1001100";      
-				when 5 => o_7seg1 <= "0100100";     
-				when 6 => o_7seg1 <= "0100000";     
-				when 7 => o_7seg1 <= "0001111";     
-				when 8 => o_7seg1 <= "0000000";       
-				when 9 => o_7seg1 <= "0000100";        
-				when others => o_7seg1 <= "1111111";
-		    end case;
+			    case dig is
+					when 0 => o_7seg1 <= "0000001";     
+					when 1 => o_7seg1 <= "1001111";   
+					when 2 => o_7seg1 <= "0010010";     
+					when 3 => o_7seg1 <= "0000110";     
+					when 4 => o_7seg1 <= "1001100";      
+					when 5 => o_7seg1 <= "0100100";     
+					when 6 => o_7seg1 <= "0100000";     
+					when 7 => o_7seg1 <= "0001111";     
+					when 8 => o_7seg1 <= "0000000";       
+					when 9 => o_7seg1 <= "0000100";        
+					when others => o_7seg1 <= "1111111";
+			    end case;
 
-		    case ten is
-				when 0 => o_7seg2 <= "0000001";     
-				when 1 => o_7seg2 <= "1001111";   
-				when 2 => o_7seg2 <= "0010010";     
-				when 3 => o_7seg2 <= "0000110";     
-				when 4 => o_7seg2 <= "1001100";      
-				when 5 => o_7seg2 <= "0100100";     
-				when 6 => o_7seg2 <= "0100000";     
-				when 7 => o_7seg2 <= "0001111";     
-				when 8 => o_7seg2 <= "0000000";       
-				when 9 => o_7seg2 <= "0000100";        
-				when others => o_7seg2 <= "1111111";
-		    end case;
+			    case ten is
+					when 0 => o_7seg2 <= "0000001";     
+					when 1 => o_7seg2 <= "1001111";   
+					when 2 => o_7seg2 <= "0010010";     
+					when 3 => o_7seg2 <= "0000110";     
+					when 4 => o_7seg2 <= "1001100";      
+					when 5 => o_7seg2 <= "0100100";     
+					when 6 => o_7seg2 <= "0100000";     
+					when 7 => o_7seg2 <= "0001111";     
+					when 8 => o_7seg2 <= "0000000";       
+					when 9 => o_7seg2 <= "0000100";        
+					when others => o_7seg2 <= "1111111";
+			    end case;
 
-		    case hun is
-				when 0 => o_7seg3 <= "0000001";     
-				when 1 => o_7seg3 <= "1001111";   
-				when 2 => o_7seg3 <= "0010010";     
-				when 3 => o_7seg3 <= "0000110";     
-				when 4 => o_7seg3 <= "1001100";      
-				when 5 => o_7seg3 <= "0100100";     
-				when 6 => o_7seg3 <= "0100000";     
-				when 7 => o_7seg3 <= "0001111";     
-				when 8 => o_7seg3 <= "0000000";       
-				when 9 => o_7seg3 <= "0000100";        
-				when others => o_7seg3 <= "1111111";
-		    end case;
+			    case hun is
+					when 0 => o_7seg3 <= "0000001";     
+					when 1 => o_7seg3 <= "1001111";   
+					when 2 => o_7seg3 <= "0010010";     
+					when 3 => o_7seg3 <= "0000110";     
+					when 4 => o_7seg3 <= "1001100";      
+					when 5 => o_7seg3 <= "0100100";     
+					when 6 => o_7seg3 <= "0100000";     
+					when 7 => o_7seg3 <= "0001111";     
+					when 8 => o_7seg3 <= "0000000";       
+					when 9 => o_7seg3 <= "0000100";        
+					when others => o_7seg3 <= "1111111";
+			    end case;
 
-		    case tho is
-				when 0 => o_7seg4 <= "0000001";    
-				when 1 => o_7seg4 <= "1001111";   
-				when 2 => o_7seg4 <= "0010010";     
-				when 3 => o_7seg4 <= "0000110";     
-				when 4 => o_7seg4 <= "1001100";      
-				when 5 => o_7seg4 <= "0100100";     
-				when 6 => o_7seg4 <= "0100000";     
-				when 7 => o_7seg4 <= "0001111";     
-				when 8 => o_7seg4 <= "0000000";
-				when 9 => o_7seg4 <= "0000100";        
-				when others => o_7seg4 <= "1111111";
-		    end case;
-	end if;
-  end process display;
+			    case tho is
+					when 0 => o_7seg4 <= "0000001";    
+					when 1 => o_7seg4 <= "1001111";   
+					when 2 => o_7seg4 <= "0010010";     
+					when 3 => o_7seg4 <= "0000110";     
+					when 4 => o_7seg4 <= "1001100";      
+					when 5 => o_7seg4 <= "0100100";     
+					when 6 => o_7seg4 <= "0100000";     
+					when 7 => o_7seg4 <= "0001111";     
+					when 8 => o_7seg4 <= "0000000";
+					when 9 => o_7seg4 <= "0000100";        
+					when others => o_7seg4 <= "1111111";
+			    end case;
+			end if;
+		end if;
+  	end process display;
 end rtl;

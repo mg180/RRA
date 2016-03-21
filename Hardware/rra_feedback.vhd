@@ -58,31 +58,31 @@ begin
 		o_7seg4 	=> seg4
 	);
 
-	seg_display: process(i_clk)
-	begin
-		if rising_edge(i_clk) then
-			case i_select is
-		  		when "000" =>
-		  			segVal <= i_ch1;
-		  		when "001" =>
-		  			segVal <= i_ch2;
-		  		when "010" =>
-		  			segVal <= i_ch3;
-		  		when "011" =>
-		  			segVal <= i_ch4;
-		  		when "100" =>
-		  			segVal <= i_ch5;
-		  		when "101" =>
-		  			segVal <= i_ch6;
-		  		when others =>
-		  			segVal <= (others => '0');
-		  	end case;
+	--seg_display: process(i_clk)
+	--begin
+	--	if rising_edge(i_clk) then
+	--		case i_select is
+	--	  		when "000" =>
+	--	  			segVal <= i_ch1;
+	--	  		when "001" =>
+	--	  			segVal <= i_ch2;
+	--	  		when "010" =>
+	--	  			segVal <= i_ch3;
+	--	  		when "011" =>
+	--	  			segVal <= i_ch4;
+	--	  		when "100" =>
+	--	  			segVal <= i_ch5;
+	--	  		when "101" =>
+	--	  			segVal <= i_ch6;
+	--	  		when others =>
+	--	  			segVal <= (others => '0');
+	--	  	end case;
 
-		  	o_7seg1 <= seg1;
-		  	o_7seg2 <= seg2;
-		  	o_7seg3 <= seg3;
-		  	o_7seg4 <= seg4;
-		end if;
-  	end process seg_display;
+	--	  	o_7seg1 <= seg1;
+	--	  	o_7seg2 <= seg2;
+	--	  	o_7seg3 <= seg3;
+	--	  	o_7seg4 <= seg4;
+	--		end if;
+ -- 	end process seg_display;
 
 end rtl;
