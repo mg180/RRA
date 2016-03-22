@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for rra
-Mon Mar 21 02:19:04 2016
+Tue Mar 22 12:36:49 2016
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -137,7 +137,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; rra.sdc       ; OK     ; Mon Mar 21 02:18:48 2016 ;
+; rra.sdc       ; OK     ; Tue Mar 22 12:36:35 2016 ;
 +---------------+--------+--------------------------+
 
 
@@ -4104,7 +4104,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Mar 21 02:18:45 2016
+    Info: Processing started: Tue Mar 22 12:36:32 2016
 Info: Command: quartus_sta rra -c rra
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -4181,9 +4181,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.441
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 654 megabytes
-    Info: Processing ended: Mon Mar 21 02:19:04 2016
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 656 megabytes
+    Info: Processing ended: Tue Mar 22 12:36:49 2016
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:17
 
 
