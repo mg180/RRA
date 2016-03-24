@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Mar 22 12:32:48 2016
+Analysis & Synthesis Status : Successful - Thu Mar 24 03:55:31 2016
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : rra
 Top-level Entity Name : rra
 Family : Cyclone III
-Total logic elements : 18,865
-    Total combinational functions : 9,433
-    Dedicated logic registers : 10,202
-Total registers : 10202
-Total pins : 76
+Total logic elements : 19,246
+    Total combinational functions : 9,786
+    Dedicated logic registers : 10,360
+Total registers : 10360
+Total pins : 87
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -1,4 +1,11 @@
 
+State Machine - |rra|rra_feedback:feedback|rra_lcd_controller:lcd|state
+Name state.send state.ready state.initialize state.power_up 
+state.power_up 0 0 0 0 
+state.initialize 0 0 1 1 
+state.ready 0 1 0 1 
+state.send 1 0 0 1 
+
 State Machine - |rra|rra_controller:controller|c_state
 Name c_state.s_MOVING c_state.s_GET_MEMORY_NEXT c_state.s_SET_MEMORY_NEXT c_state.s_CHECK_KEYPAD c_state.s_LOAD_KEYPAD c_state.s_WAITING 
 c_state.s_WAITING 0 0 0 0 0 0 

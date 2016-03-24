@@ -31,6 +31,7 @@ architecture test1 of rra_test is
 	       	segment7_4 : out std_ulogic_vector(6 downto 0);
 
 			--Control
+			led_sel 	: in std_ulogic;
 			speed		: in std_ulogic_vector(3 downto 0);
 			mode		: in std_ulogic_vector(1 downto 0)
 		);
@@ -84,6 +85,7 @@ begin
 		segment7_3 => open,
 		segment7_4 => open,
 
+		led_sel 	=> '0',
 		speed 		=> speed,
 		mode 		=> mode
 	);
@@ -104,7 +106,7 @@ begin
 		store <= '0';
 		--Reset
 		rst <= '0';
-		wait for clk_period;
+		wait for clk_period*8001;
 		rst <= '1';
 
 		wait for clk_period*1;

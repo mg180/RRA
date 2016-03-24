@@ -1,108 +1,3 @@
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of rra.vhd was successful.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of rra.vhd was successful.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd failed with 3 errors.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 2 failed with 6 errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd failed with 3 errors.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 2 failed with 6 errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd failed with 12 errors.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd failed with 12 errors.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 2 failed with 24 errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd failed with 12 errors.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd failed with 11 errors.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 2 failed with 23 errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd failed with 7 errors.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd failed with 11 errors.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 2 failed with 18 errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd failed with 19 errors.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd failed with 11 errors.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 2 failed with 30 errors.
-# Compile of rra.vhd failed with 7 errors.
-# Compile of rra.vhd failed with 7 errors.
-# Compile of rra.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_feedback.vhd failed with 11 errors.
-# Compile of rra_feedback.vhd failed with 11 errors.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_feedback.vhd was successful.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd failed with 3 errors.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 1 failed with 3 errors.
-# Compile of rra_feedback.vhd failed with 4 errors.
-# Compile of rra_feedback.vhd failed with 5 errors.
-# Compile of rra_feedback.vhd was successful.
 vsim -gui work.rra_test
 # //  ModelSim PE Student Edition 10.4a Apr  7 2015 
 # //
@@ -123,212 +18,37 @@ vsim -gui work.rra_test
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
 # vsim -gui 
-# Start time: 00:51:13 on Mar 15,2016
+# Start time: 00:30:35 on Mar 24,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading work.rra_test(test1)
 # Loading work.rra(v1)
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
 # Loading work.rra_key_in(rtl)
 # Loading work.rra_memory(rtl)
 # Loading work.rra_controller(v1)
 # Loading work.rra_servo_controller(rtl)
 # Loading work.rra_feedback(rtl)
-# Loading work.rra_7seg4(rtl)
-add wave -position end sim:/rra_test/uut/feedback/*
-add wave -position end sim:/rra_test/uut/feedback/segments/*
-run 1ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+add wave -position end sim:/rra_test/uut/rra_servo_lower/*
+force -freeze sim:/rra_test/uut/rra_servo_lower/i_clk_10mhz 1 0, 0 {50 ns} -r 100ns
+force -freeze sim:/rra_test/uut/rra_servo_lower/i_clk_10khz 1 0, 0 {50000 ns} -r 100us
 run 50ms
-quit -sim
-# Compile of rra_memory.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra.vhd failed with 2 errors.
-# Compile of rra.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd was successful.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 0 failed with no errors.
-vsim -gui work.rra_test
-# vsim 
-# Start time: 02:21:33 on Mar 15,2016
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.rra_test(test1)
-# Loading work.rra(v1)
-# Loading work.rra_key_in(rtl)
-# Loading work.rra_memory(rtl)
-# Loading work.rra_controller(v1)
-# Loading work.rra_servo_controller(rtl)
-# Loading work.rra_feedback(rtl)
-# Loading work.rra_7seg4(rtl)
-add wave -position end sim:/rra_test/uut/controller/*
-add wave -position end sim:/rra_test/uut/memory/*
 run 50ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
 # Compile of rra_test.vhd was successful.
 # Compile of rra.vhd was successful.
 # Compile of rra_controller.vhd was successful.
@@ -341,1232 +61,130 @@ run 50ms
 restart
 # Loading work.rra_test(test1)
 # Loading work.rra(v1)
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
 # Loading work.rra_key_in(rtl)
 # Loading work.rra_memory(rtl)
 # Loading work.rra_controller(v1)
 # Loading work.rra_servo_controller(rtl)
 # Loading work.rra_feedback(rtl)
-# Loading work.rra_7seg4(rtl)
-run 50ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd was successful.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 0 failed with no errors.
-add wave -position end sim:/rra_test/uut/keypad/*
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+force -freeze sim:/rra_test/uut/rra_servo_lower/i_clk_10mhz 1 0, 0 {50 ns} -r 100ns
+force -freeze sim:/rra_test/uut/rra_servo_lower/i_clk_10khz 1 0, 0 {50000 ns} -r 100us
+run 100ms
+add wave -position end  sim:/rra_test/uut/low_u
+add wave -position end  sim:/rra_test/uut/low_d
+add wave -position end  sim:/rra_test/uut/c_lower_pos
+add wave -position end  sim:/rra_test/uut/t_lower_pos
+add wave -position end  sim:/rra_test/uut/c_lower_pos_i
+add wave -position end  sim:/rra_test/uut/c_middle_pos
+add wave -position end  sim:/rra_test/uut/t_middle_pos
+add wave -position end  sim:/rra_test/uut/c_middle_pos_i
+add wave -position end  sim:/rra_test/uut/c_upper_pos
+add wave -position end  sim:/rra_test/uut/t_upper_pos
+add wave -position end  sim:/rra_test/uut/c_upper_pos_i
+add wave -position end  sim:/rra_test/uut/c_wrist_pos
+add wave -position end  sim:/rra_test/uut/t_wrist_pos
+add wave -position end  sim:/rra_test/uut/c_wrist_pos_i
+add wave -position end  sim:/rra_test/uut/c_gripper_pos
+add wave -position end  sim:/rra_test/uut/t_gripper_pos
+add wave -position end  sim:/rra_test/uut/c_gripper_pos_i
+add wave -position end  sim:/rra_test/uut/c_base_pos
+add wave -position end  sim:/rra_test/uut/t_base_pos
+add wave -position end  sim:/rra_test/uut/c_base_pos_i
+add wave -position end  sim:/rra_test/uut/controller/l_keypad
+add wave -position end  sim:/rra_test/uut/controller/c_state
+add wave -position end  sim:/rra_test/uut/controller/n_state
 restart
-# Loading work.rra_test(test1)
-# Loading work.rra(v1)
-# Loading work.rra_key_in(rtl)
-# Loading work.rra_memory(rtl)
-# Loading work.rra_controller(v1)
-# Loading work.rra_servo_controller(rtl)
-# Loading work.rra_feedback(rtl)
-# Loading work.rra_7seg4(rtl)
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+force -freeze sim:/rra_test/uut/rra_servo_lower/i_clk_10mhz 1 0, 0 {50 ns} -r 100ns
+force -freeze sim:/rra_test/uut/rra_servo_lower/i_clk_10khz 1 0, 0 {50000 ns} -r 100us
+run 100ms
+add wave -position 23  sim:/rra_test/uut/keypad/key_out
+restart
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
 
-restart
-run 50ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-restart
-run 50ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-restart
-add wave -position 1  sim:/rra_test/uut/reset
-restart
-run 5ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-add wave -position 0  sim:/rra_test/uut/rst
-restart
-run 5ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 2  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/memory
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# Compile of rra_test.vhd was successful.
-restart
-# Loading work.rra_test(test1)
-# ** Warning: Design size of 10818 statements or 13 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-run 5ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-restart
-
-run 10ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-run 10ms
-run 80ms
-add wave -position 0  sim:/rra_test/clk
-restart
-# Compile of rra_controller.vhd was successful.
-# Compile of rra.vhd was successful.
-restart
-# Loading work.rra(v1)
-# Loading work.rra_controller(v1)
-# ** Warning: Design size of 10654 statements or 13 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
+./rra_sim.tcl
+# couldn't execute ".\rra_sim.tcl": no such file or directory
+./rra_sim.tcl
+# couldn't execute ".\rra_sim.tcl": no such file or directory
+rra_sim.tcl
+# couldn't execute ".\rra_sim.tcl": no such file or directory
+./rra_sim.tcl
+# couldn't execute ".\rra_sim.tcl": no such file or directory
+./rra_sim.tcl
+# couldn't execute ".\rra_sim.tcl": no such file or directory
+run ./rra_sim.tcl
+# Invalid time value: ./rra_sim.tcl
+do {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_sim.tcl}
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
 run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-restart
+do ./rra_sim.tcl
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
 run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# Compile of rra.vhd was successful.
-restart
-# Loading work.rra(v1)
-# ** Warning: Design size of 10706 statements or 13 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-restart
-run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-restart
-# Compile of rra.vhd was successful.
-restart
-# Loading work.rra(v1)
-# ** Warning: Design size of 10707 statements or 13 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-restart
-run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# Compile of rra.vhd was successful.
-# Compile of rra_memory.vhd failed with 2 errors.
-# Compile of rra_memory.vhd failed with 2 errors.
-# Compile of rra_memory.vhd failed with 2 errors.
-# Compile of rra_memory.vhd failed with 4 errors.
-# Compile of rra_memory.vhd was successful.
-restart
-# Loading work.rra(v1)
-# Loading work.rra_memory(rtl)
-# ** Warning: Design size of 10708 statements or 13 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-restart
-run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-add wave -position 18  sim:/rra_test/uut/memory/data_out_prev
-# Compile of rra_test.vhd was successful.
-restart
-# Loading work.rra_test(test1)
-# ** Warning: Design size of 10838 statements or 13 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
-# Expect performance to be quite adversely affected.
-run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-restart
-run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /rra_test/uut/feedback/segments
-# Compile of rra.vhd was successful.
-# Compile of rra_memory.vhd was successful.
 # Compile of rra_test.vhd was successful.
 # Compile of rra.vhd was successful.
 # Compile of rra_controller.vhd was successful.
@@ -1576,184 +194,212 @@ run 100ms
 # Compile of rra_feedback.vhd was successful.
 # Compile of rra_7seg.vhd was successful.
 # 8 compiles, 0 failed with no errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful with warnings.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd was successful.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 0 failed with no errors.
-# Compile of rra_test.vhd was successful.
-# Compile of rra.vhd was successful.
-# Compile of rra_controller.vhd was successful.
-# Compile of rra_key_in.vhd was successful.
-# Compile of rra_memory.vhd was successful.
-# Compile of rra_servo_controller.vhd was successful.
-# Compile of rra_feedback.vhd was successful.
-# Compile of rra_7seg.vhd was successful.
-# 8 compiles, 0 failed with no errors.
-restart
+do ./rra_sim.tcl
 # Loading work.rra_test(test1)
 # Loading work.rra(v1)
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
 # Loading work.rra_key_in(rtl)
 # Loading work.rra_memory(rtl)
 # Loading work.rra_controller(v1)
 # Loading work.rra_servo_controller(rtl)
 # Loading work.rra_feedback(rtl)
-# Loading work.rra_7seg4(rtl)
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
 run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-restart
-add wave -position end sim:/rra_test/uut/memory/*
-add wave -position end sim:/rra_test/uut/controller/*
+# Compile of rra_test.vhd was successful.
+# Compile of rra.vhd was successful.
+# Compile of rra_controller.vhd was successful.
+# Compile of rra_key_in.vhd was successful.
+# Compile of rra_memory.vhd was successful.
+# Compile of rra_servo_controller.vhd was successful.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra_7seg.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+do ./rra_sim.tcl
+# Loading work.rra_test(test1)
+# Loading work.rra(v1)
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# Loading work.rra_key_in(rtl)
+# Loading work.rra_memory(rtl)
+# Loading work.rra_controller(v1)
+# Loading work.rra_servo_controller(rtl)
+# Loading work.rra_feedback(rtl)
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
 run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-add wave -position 3  sim:/rra_test/uut/memory/data
-restart
+do ./rra_sim.tcl
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
 run 100ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_gripper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_wrist
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_upper
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_middle
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# ** Error: (vsim-86) Argument value -900 is not in bounds of subtype NATURAL.
-#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut/rra_servo_lower
-# End time: 05:08:24 on Mar 15,2016, Elapsed time: 2:46:51
-# Errors: 276, Warnings: 406
+# Compile of rra_test.vhd was successful.
+# Compile of rra.vhd was successful.
+# Compile of rra_controller.vhd was successful.
+# Compile of rra_key_in.vhd was successful.
+# Compile of rra_memory.vhd was successful.
+# Compile of rra_servo_controller.vhd was successful.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra_7seg.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+do ./rra_sim.tcl
+# Loading work.rra_test(test1)
+# Loading work.rra(v1)
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# Loading work.rra_key_in(rtl)
+# Loading work.rra_memory(rtl)
+# Loading work.rra_controller(v1)
+# Loading work.rra_servo_controller(rtl)
+# Loading work.rra_feedback(rtl)
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+run 100ms
+# Compile of rra_test.vhd was successful.
+# Compile of rra.vhd was successful.
+# Compile of rra_controller.vhd was successful.
+# Compile of rra_key_in.vhd was successful.
+# Compile of rra_memory.vhd was successful.
+# Compile of rra_servo_controller.vhd was successful.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra_7seg.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+do ./rra_sim.tcl
+# Loading work.rra_test(test1)
+# Loading work.rra(v1)
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# Loading work.rra_key_in(rtl)
+# Loading work.rra_memory(rtl)
+# Loading work.rra_controller(v1)
+# Loading work.rra_servo_controller(rtl)
+# Loading work.rra_feedback(rtl)
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+run 100ms
+do ./rra_sim.tcl
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+run 100ms
+add wave -position end  sim:/rra_test/uut/feedback/i_ch1
+add wave -position end  sim:/rra_test/uut/feedback/i_ch2
+add wave -position end  sim:/rra_test/uut/feedback/i_ch3
+add wave -position end  sim:/rra_test/uut/feedback/i_ch4
+add wave -position end  sim:/rra_test/uut/feedback/i_ch5
+add wave -position end  sim:/rra_test/uut/feedback/i_ch6
+add wave -position end  sim:/rra_test/uut/feedback/ch1_bcd
+do ./rra_sim.tcl
+# ** Warning: (vsim-3473) Component instance "rra_clk_10mhz_10kh : rra_pll_10mhz_10khz" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /rra_test/uut File: C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg1(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg2(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg3(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /rra_test/uut/feedback/o_7seg4(6 downto 0) has no driver.
+# 
+# This port will contribute value (7'hXX) to the signal network.
+run 100ms
+run 200ms
+# Compile of rra_lcd_controller.vhd was successful.
+# Compile of rra_lcd_controller.vhd was successful.
+# Compile of rra_lcd_controller.vhd was successful.
+# Compile of rra_feedback.vhd failed with 3 errors.
+# Compile of rra_feedback.vhd failed with 1 errors.
+# Compile of rra_feedback.vhd failed with 2 errors.
+# Compile of rra_feedback.vhd failed with 3 errors.
+# Compile of rra_feedback.vhd failed with 3 errors.
+# Compile of rra_feedback.vhd failed with 3 errors.
+# Compile of rra_feedback.vhd failed with 2 errors.
+# Compile of rra_feedback.vhd failed with 3 errors.
+# Compile of rra_feedback.vhd failed with 3 errors.
+# Compile of rra_feedback.vhd failed with 3 errors.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra.vhd failed with 3 errors.
+# Compile of rra.vhd was successful.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra_lcd_controller.vhd was successful.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra.vhd was successful.
+# Compile of rra_test.vhd was successful.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra_7seg.vhd was successful.
+# Compile of rra_feedback.vhd failed with 2 errors.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra_7seg.vhd was successful.
+# Compile of rra_servo_controller.vhd was successful.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra_feedback.vhd was successful.
+# Compile of rra_memory.vhd was successful.
+# Compile of rra.vhd was successful.
+# Compile of rra.vhd was successful.
+# End time: 04:07:27 on Mar 24,2016, Elapsed time: 3:36:52
+# Errors: 6, Warnings: 65, Suppressed Warnings: 24

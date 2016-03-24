@@ -28,6 +28,12 @@ port (
 		--LEDs
 		 leds       : out std_ulogic_vector(9 downto 0);
 		
+		--LCD
+		o_lcd_rw				: out std_ulogic;  
+		o_lcd_rs				: out std_ulogic;  
+		o_lcd_e 				: out std_ulogic;  
+    o_lcd_data  		: out std_ulogic_vector(7 DOWNTO 0);
+
 		--7 segment
 		display_id : in  std_ulogic_vector(2 downto 0);
 		segment7_1 : out std_ulogic_vector(6 downto 0);
@@ -138,7 +144,12 @@ architecture v1 of rra is
 		o_7seg1		: out std_ulogic_vector(6 downto 0);
 		o_7seg2		: out std_ulogic_vector(6 downto 0);
 		o_7seg3		: out std_ulogic_vector(6 downto 0);
-		o_7seg4		: out std_ulogic_vector(6 downto 0)
+		o_7seg4		: out std_ulogic_vector(6 downto 0);
+
+		o_rw				: out std_ulogic;  
+		o_rs				: out std_ulogic;  
+		o_e 				: out std_ulogic;  
+    o_lcd_data  : out std_ulogic_vector(7 DOWNTO 0)
     );
 	end component;
 
@@ -211,7 +222,8 @@ architecture v1 of rra is
 
 begin
 	
-	rra_clk_10mhz_10kh : rra_pll_10mhz_10khz PORT MAP (
+	rra_clk_10mhz_10kh : rra_pll_10mhz_10khz
+	port map(
 		areset	 => '0',
 		inclk0	 => clk,
 		c0	 	   => clk_10mhz,
@@ -370,20 +382,25 @@ begin
 
 	feedback : rra_feedback
 	port map(
-		i_clk 	 	=> clk,
-		i_rst 		=> reset,
-		i_select 	=> display_id,
-		i_ch1 	 	=> ch1,
-		i_ch2 	 	=> ch2,
-		i_ch3 	 	=> ch3,
-		i_ch4 	 	=> ch4,
-		i_ch5 	 	=> ch5,
-		i_ch6 	 	=> ch6,
+		i_clk 	 		=> clk,
+		i_rst 			=> reset,
+		i_select 		=> display_id,
+		i_ch1 	 		=> ch1,
+		i_ch2 	 		=> ch2,
+		i_ch3 	 		=> ch3,
+		i_ch4 	 		=> ch4,
+		i_ch5 	 		=> ch5,
+		i_ch6 	 		=> ch6,
 
-		o_7seg1 	=> segment7_1,
-		o_7seg2 	=> segment7_2,
-		o_7seg3 	=> segment7_3,
-		o_7seg4 	=> segment7_4
+		o_7seg1 		=> segment7_1,
+		o_7seg2 		=> segment7_2,
+		o_7seg3 		=> segment7_3,
+		o_7seg4 		=> segment7_4,
+
+		o_rw				=> o_lcd_rw,
+		o_rs				=> o_lcd_rs,
+		o_e 				=> o_lcd_e,
+		o_lcd_Data 	=> o_lcd_data
 	);
 
 
@@ -406,7 +423,7 @@ begin
 		variable adjusted_step: integer range 0 to (SERVO_STEP*15);
 		variable new_target: 	integer;
 	begin
-		if rising_edge(clk_10khz) then
+		if rising_edge(clk) then
 			if reset = '1' then
 				t_lower_pos <= (others => '0');
 				t_middle_pos <= (others => '0');

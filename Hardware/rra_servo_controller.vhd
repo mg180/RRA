@@ -10,7 +10,7 @@ entity rra_servo_controller is
   port(
       i_clk         : in  std_ulogic;
       i_clk_10mhz   : in  std_ulogic;
-		i_clk_10khz   : in  std_ulogic;
+		  i_clk_10khz   : in  std_ulogic;
       i_rst         : in  std_ulogic;
 
       i_speed   	  : in  std_ulogic_vector(3 downto 0);
@@ -145,9 +145,9 @@ begin
     end if;
   end process;
   
-  cnt_1khz: process(i_clk)
+  cnt_1khz: process(i_clk_10khz)
   begin
-	if rising_edge(i_clk) then
+	if rising_edge(i_clk_10khz) then
 		if counter_1khz < 10 then
 			counter_1khz <= counter_1khz + 1;
 		else

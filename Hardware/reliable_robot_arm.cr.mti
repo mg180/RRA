@@ -15,15 +15,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity rra_controller
 -- Compiling architecture v1 of rra_controller
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity rra_memory
--- Compiling architecture rtl of rra_memory
-
 } {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -33,14 +24,23 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity rra
 -- Compiling architecture v1 of rra
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd}
+} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity rra_feedback
--- Compiling architecture rtl of rra_feedback
+-- Compiling entity rra_memory
+-- Compiling architecture rtl of rra_memory
+
+} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity rra_servo_controller
+-- Compiling architecture rtl of rra_servo_controller
 
 } {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -51,14 +51,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity rra_7seg4
 -- Compiling architecture rtl of rra_7seg4
 
-} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd}
+} {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_lcd_controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_lcd_controller.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity rra_servo_controller
--- Compiling architecture rtl of rra_servo_controller
+-- Compiling entity rra_lcd_controller
+-- Compiling architecture controller of rra_lcd_controller
 
 } {} {}} {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
