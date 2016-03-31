@@ -5,7 +5,8 @@ use ieee.numeric_std.all;
 entity rra_servo_controller is
   generic(
       STEP      : integer;
-      MAX_STEPS : integer   --Must divide exactly by 10000
+      MAX_STEPS : integer;   --Must divide exactly by 10000
+		OFFSET 	 : integer
     );
   port(
       i_clk         : in  std_ulogic;
@@ -14,7 +15,6 @@ entity rra_servo_controller is
       i_rst         : in  std_ulogic;
 
       i_speed   	  : in  std_ulogic_vector(3 downto 0);
-		  i_offset 	    : in  std_ulogic_vector(7 downto 0);
       o_current 	  : out std_ulogic_vector(11 downto 0);
       o_current_i	  : out std_ulogic_vector(11 downto 0);
       i_target  	  : in  std_ulogic_vector(11 downto 0);
@@ -49,7 +49,7 @@ begin
           target <= 0;
           speed <= 0;
 
-          o_current <= (others => '0');
+          o_current <= "000000000000";
 
           delay <= 10;
         else
@@ -126,11 +126,12 @@ begin
         o_pwm_out_i <= '0';
         pwm_count_i <= 0;
       else
+	
 		  if pwm_count_i < 10000 then
 			 --Stay high for at least 1ms
 			 pwm_count_i <= pwm_count_i + 1;
 			 pwm_out_i <= '1';
-		  elsif pwm_count_i < (10000 + ((current_i*(10000/MAX_STEPS))) + (to_integer(signed(i_offset)))) then
+		  elsif pwm_count_i < (10000 + ((current_i*(10000/MAX_STEPS))) + OFFSET) then
 			 pwm_count_i <= pwm_count_i + 1;
 			 pwm_out_i <= '1';
 		  elsif pwm_count_i < 200000 then

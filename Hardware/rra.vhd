@@ -7,7 +7,7 @@ entity rra is
 port (
 		clk			: in  std_ulogic;
 		rst			: in  std_ulogic;
-
+		
 		--Servo Positions (PWM)
 		l1,l2		: out std_ulogic;
 		l1_i,l2_i	: out std_ulogic;		
@@ -110,7 +110,8 @@ architecture v1 of rra is
 	component rra_servo_controller
 	generic(
 			STEP      : integer;
-			MAX_STEPS : integer  
+			MAX_STEPS : integer;
+			OFFSET 	 : integer
 		);
 	port(
 			i_clk         : in  std_ulogic;
@@ -122,7 +123,6 @@ architecture v1 of rra is
 			o_current			: out std_ulogic_vector(11 downto 0);
 			o_current_i 	: out std_ulogic_vector(11 downto 0);
 			i_target  		: in  std_ulogic_vector(11 downto 0);
-			i_offset			: in  std_ulogic_vector(7 downto 0);
 			o_pwm_out 		: out std_ulogic;
 			o_pwm_out_i		: out std_ulogic
 		);
@@ -268,7 +268,8 @@ begin
 	rra_servo_lower : rra_servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP,
-		MAX_STEPS 	=> LOWER_MAX_STEPS
+		MAX_STEPS 	=> LOWER_MAX_STEPS,
+		OFFSET	=> 1000
 	)
 	port map(
 		i_clk 				=> clk,
@@ -276,7 +277,6 @@ begin
 		i_clk_10khz 	=> clk_10khz,
 		i_rst 				=> reset,
 		i_speed				=> speed,
-		i_offset 			=> "00111111",
 		o_current			=> c_lower_pos,
 		o_current_i		=> c_lower_pos_i,
 		i_target			=> t_lower_pos,
@@ -288,7 +288,8 @@ begin
 	rra_servo_middle: rra_servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP,
-		MAX_STEPS 	=> MIDDLE_MAX_STEPS
+		MAX_STEPS 	=> MIDDLE_MAX_STEPS,
+		OFFSET	=> 0
 	)
 	port map(
 		i_clk 				=> clk,
@@ -296,7 +297,6 @@ begin
 		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
-		i_offset 	=> "00000000",
 		o_current	=> c_middle_pos,
 		o_current_i	=> c_middle_pos_i,
 		i_target	=> t_middle_pos,
@@ -307,7 +307,8 @@ begin
 	rra_servo_upper : rra_servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP,
-		MAX_STEPS 	=> UPPER_MAX_STEPS
+		MAX_STEPS 	=> UPPER_MAX_STEPS,
+		OFFSET	=> 250
 	)
 	port map(
 		i_clk 				=> clk,
@@ -315,7 +316,6 @@ begin
 		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
-		i_offset 	=> "00111111",
 		o_current	=> c_upper_pos,
 		o_current_i	=> c_upper_pos_i,
 		i_target	=> t_upper_pos,
@@ -326,7 +326,8 @@ begin
    rra_servo_wrist : rra_servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP,
-		MAX_STEPS 	=> WRIST_MAX_STEPS
+		MAX_STEPS 	=> WRIST_MAX_STEPS,
+		OFFSET	=> 0
 	)
 	port map(
 		i_clk 				=> clk,
@@ -334,7 +335,6 @@ begin
 		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
-		i_offset 	=> "00000000",
 		o_current	=> c_wrist_pos,
 		o_current_i	=> c_wrist_pos_i,
 		i_target	=> t_wrist_pos,
@@ -345,7 +345,8 @@ begin
 	rra_servo_gripper : rra_servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP,
-		MAX_STEPS 	=> GRIPPER_MAX_STEPS
+		MAX_STEPS 	=> GRIPPER_MAX_STEPS,
+		OFFSET	=> 0
 	)
 	port map(
 		i_clk 				=> clk,
@@ -353,7 +354,6 @@ begin
 		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
-		i_offset 	=> "00000000",
 		o_current	=> c_gripper_pos,
 		o_current_i	=> c_gripper_pos_i,
 		i_target	=> t_gripper_pos,
@@ -364,7 +364,8 @@ begin
 	rra_servo_base : rra_servo_controller 
 	generic map(
 		STEP 		=> SERVO_STEP,
-		MAX_STEPS 	=> BASE_MAX_STEPS
+		MAX_STEPS 	=> BASE_MAX_STEPS,
+		OFFSET	=> 0
 	)
 	port map(
 		i_clk 				=> clk,
@@ -372,7 +373,6 @@ begin
 		i_clk_10khz 	=> clk_10khz,
 		i_rst 		=> reset,
 		i_speed		=> speed,
-		i_offset 	=> "00000000",
 		o_current	=> c_base_pos,
 		o_current_i	=> c_base_pos_i,
 		i_target	=> t_base_pos,
@@ -425,12 +425,12 @@ begin
 	begin
 		if rising_edge(clk) then
 			if reset = '1' then
-				t_lower_pos <= (others => '0');
-				t_middle_pos <= (others => '0');
-				t_upper_pos <= (others => '0');
-				t_gripper_pos <= (others => '0');
-				t_wrist_pos <= (others => '0');
-				t_base_pos <= (others => '0');
+				t_lower_pos <= "000000000000";
+				t_middle_pos <= "000000000000";
+				t_upper_pos <= "000000000000";
+				t_gripper_pos <= "000000000000";
+				t_wrist_pos <= "000000000000";
+				t_base_pos <= "000000000000";
 			else
 				if l_memory = '1' then
 					t_lower_pos <= data_out(11 downto 0);

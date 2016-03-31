@@ -1,6 +1,6 @@
 Analysis & Synthesis report for rra
-Thu Mar 24 03:55:32 2016
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Tue Mar 29 17:17:37 2016
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
 ---------------------
@@ -20,33 +20,34 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  12. Removed Registers Triggering Further Register Optimizations
  13. General Register Statistics
  14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Parameter Settings for User Entity Instance: rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|altpll:altpll_component
- 17. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_lower
- 18. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_middle
- 19. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_upper
- 20. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_wrist
- 21. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_gripper
- 22. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_base
- 23. altpll Parameter Settings by Entity Instance
- 24. Port Connectivity Checks: "rra_feedback:feedback"
- 25. Port Connectivity Checks: "rra_servo_controller:rra_servo_base"
- 26. Port Connectivity Checks: "rra_servo_controller:rra_servo_gripper"
- 27. Port Connectivity Checks: "rra_servo_controller:rra_servo_wrist"
- 28. Port Connectivity Checks: "rra_servo_controller:rra_servo_upper"
- 29. Port Connectivity Checks: "rra_servo_controller:rra_servo_middle"
- 30. Port Connectivity Checks: "rra_servo_controller:rra_servo_lower"
- 31. Port Connectivity Checks: "rra_key_in:keypad"
- 32. Port Connectivity Checks: "rra_pll_10mhz_10khz:rra_clk_10mhz_10kh"
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+ 15. Physical Synthesis Netlist Optimizations
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|altpll:altpll_component
+ 18. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_lower
+ 19. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_middle
+ 20. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_upper
+ 21. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_wrist
+ 22. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_gripper
+ 23. Parameter Settings for User Entity Instance: rra_servo_controller:rra_servo_base
+ 24. altpll Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "rra_feedback:feedback"
+ 26. Port Connectivity Checks: "rra_servo_controller:rra_servo_base"
+ 27. Port Connectivity Checks: "rra_servo_controller:rra_servo_gripper"
+ 28. Port Connectivity Checks: "rra_servo_controller:rra_servo_wrist"
+ 29. Port Connectivity Checks: "rra_servo_controller:rra_servo_upper"
+ 30. Port Connectivity Checks: "rra_servo_controller:rra_servo_middle"
+ 31. Port Connectivity Checks: "rra_servo_controller:rra_servo_lower"
+ 32. Port Connectivity Checks: "rra_key_in:keypad"
+ 33. Port Connectivity Checks: "rra_pll_10mhz_10khz:rra_clk_10mhz_10kh"
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2011 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -62,24 +63,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 24 03:55:31 2016      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; rra                                        ;
-; Top-level Entity Name              ; rra                                        ;
-; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 19,246                                     ;
-;     Total combinational functions  ; 9,786                                      ;
-;     Dedicated logic registers      ; 10,360                                     ;
-; Total registers                    ; 10360                                      ;
-; Total pins                         ; 87                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 1                                          ;
-+------------------------------------+--------------------------------------------+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Mar 29 17:17:37 2016         ;
+; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
+; Revision Name                      ; rra                                           ;
+; Top-level Entity Name              ; rra                                           ;
+; Family                             ; Cyclone III                                   ;
+; Total logic elements               ; 19,544                                        ;
+;     Total combinational functions  ; 10,083                                        ;
+;     Dedicated logic registers      ; 10,452                                        ;
+; Total registers                    ; 10452                                         ;
+; Total pins                         ; 87                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 1                                             ;
++------------------------------------+-----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -153,7 +154,6 @@ applicable agreement for further details.
 ; HDL message level                                                          ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
 ; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
 ; Clock MUX Protection                                                       ; On                 ; On                 ;
 ; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
@@ -161,7 +161,6 @@ applicable agreement for further details.
 ; SDC constraint protection                                                  ; Off                ; Off                ;
 ; Synthesis Effort                                                           ; Auto               ; Auto               ;
 ; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
 ; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
@@ -169,38 +168,44 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 6      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ; < 0.1%      ;
++----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; ../rra_lcd_controller.vhd        ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_lcd_controller.vhd                  ;         ;
-; ../rra_pll_10mhz_10khz.vhd       ; yes             ; User Wizard-Generated File   ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_pll_10mhz_10khz.vhd                 ;         ;
-; ../rra_feedback.vhd              ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_feedback.vhd                        ;         ;
-; ../rra_7seg.vhd                  ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_7seg.vhd                            ;         ;
-; ../rra_servo_controller.vhd      ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_servo_controller.vhd                ;         ;
-; ../rra_memory.vhd                ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_memory.vhd                          ;         ;
-; ../rra_key_in.vhd                ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_key_in.vhd                          ;         ;
-; ../rra_controller.vhd            ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_controller.vhd                      ;         ;
-; ../rra.vhd                       ; yes             ; User VHDL File               ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra.vhd                                 ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf                                                 ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                             ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc                                            ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/stratixii_pll.inc                                          ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                          ;         ;
-; db/rra_pll_10mhz_10khz_altpll.v  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/testing/db/rra_pll_10mhz_10khz_altpll.v ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+
+; ../rra_lcd_controller.vhd        ; yes             ; User VHDL File               ; H:/RRA/Hardware/rra_lcd_controller.vhd                      ;
+; ../rra_pll_10mhz_10khz.vhd       ; yes             ; User Wizard-Generated File   ; H:/RRA/Hardware/rra_pll_10mhz_10khz.vhd                     ;
+; ../rra_feedback.vhd              ; yes             ; User VHDL File               ; H:/RRA/Hardware/rra_feedback.vhd                            ;
+; ../rra_7seg.vhd                  ; yes             ; User VHDL File               ; H:/RRA/Hardware/rra_7seg.vhd                                ;
+; ../rra_servo_controller.vhd      ; yes             ; User VHDL File               ; H:/RRA/Hardware/rra_servo_controller.vhd                    ;
+; ../rra_memory.vhd                ; yes             ; User VHDL File               ; H:/RRA/Hardware/rra_memory.vhd                              ;
+; ../rra_key_in.vhd                ; yes             ; User VHDL File               ; H:/RRA/Hardware/rra_key_in.vhd                              ;
+; ../rra_controller.vhd            ; yes             ; User VHDL File               ; H:/RRA/Hardware/rra_controller.vhd                          ;
+; ../rra.vhd                       ; yes             ; User VHDL File               ; H:/RRA/Hardware/rra.vhd                                     ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera/quartus/libraries/megafunctions/altpll.tdf        ;
+; aglobal111.inc                   ; yes             ; Megafunction                 ; c:/altera/quartus/libraries/megafunctions/aglobal111.inc    ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera/quartus/libraries/megafunctions/stratix_pll.inc   ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/quartus/libraries/megafunctions/stratixii_pll.inc ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/quartus/libraries/megafunctions/cycloneii_pll.inc ;
+; db/rra_pll_10mhz_10khz_altpll.v  ; yes             ; Auto-Generated Megafunction  ; H:/RRA/Hardware/Testing/db/rra_pll_10mhz_10khz_altpll.v     ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+
 
 
 +---------------------------------------------------------+
@@ -208,30 +213,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 19,246    ;
+; Estimated Total logic elements              ; 19,544    ;
 ;                                             ;           ;
-; Total combinational functions               ; 9786      ;
+; Total combinational functions               ; 10083     ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 7355      ;
-;     -- 3 input functions                    ; 1238      ;
-;     -- <=2 input functions                  ; 1193      ;
+;     -- 4 input functions                    ; 7653      ;
+;     -- 3 input functions                    ; 1234      ;
+;     -- <=2 input functions                  ; 1196      ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 8573      ;
-;     -- arithmetic mode                      ; 1213      ;
+;     -- normal mode                          ; 8874      ;
+;     -- arithmetic mode                      ; 1209      ;
 ;                                             ;           ;
-; Total registers                             ; 10360     ;
-;     -- Dedicated logic registers            ; 10360     ;
+; Total registers                             ; 10452     ;
+;     -- Dedicated logic registers            ; 10452     ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 87        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Total PLLs                                  ; 1         ;
 ;     -- PLLs                                 ; 1         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 9868      ;
-; Total fan-out                               ; 75889     ;
+; Maximum fan-out                             ; 9960      ;
+; Total fan-out                               ; 77261     ;
 ; Average fan-out                             ; 3.73      ;
 +---------------------------------------------+-----------+
 
@@ -241,33 +245,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; |rra                                                 ; 9786 (488)        ; 10360 (162)  ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |rra                                                                                                          ; work         ;
-;    |rra_controller:controller|                       ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_controller:controller                                                                                ; work         ;
-;    |rra_feedback:feedback|                           ; 472 (211)         ; 158 (84)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback                                                                                    ; work         ;
-;       |rra_7seg4:segments|                           ; 28 (28)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments                                                                 ; work         ;
-;       |rra_lcd_controller:lcd|                       ; 233 (233)         ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_lcd_controller:lcd                                                             ; work         ;
-;    |rra_key_in:keypad|                               ; 56 (56)           ; 52 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_key_in:keypad                                                                                        ; work         ;
-;    |rra_memory:memory|                               ; 6810 (6810)       ; 9489 (9489)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_memory:memory                                                                                        ; work         ;
-;    |rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh                                                                   ; work         ;
-;       |altpll:altpll_component|                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|altpll:altpll_component                                           ; work         ;
-;          |rra_pll_10mhz_10khz_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|altpll:altpll_component|rra_pll_10mhz_10khz_altpll:auto_generated ; work         ;
-;    |rra_servo_controller:rra_servo_base|             ; 358 (358)         ; 103 (103)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_base                                                                      ; work         ;
-;    |rra_servo_controller:rra_servo_gripper|          ; 310 (310)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_gripper                                                                   ; work         ;
-;    |rra_servo_controller:rra_servo_lower|            ; 333 (333)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_lower                                                                     ; work         ;
-;    |rra_servo_controller:rra_servo_middle|           ; 311 (311)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_middle                                                                    ; work         ;
-;    |rra_servo_controller:rra_servo_upper|            ; 329 (329)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_upper                                                                     ; work         ;
-;    |rra_servo_controller:rra_servo_wrist|            ; 310 (310)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_wrist                                                                     ; work         ;
+; |rra                                                 ; 10083 (455)       ; 10452 (162)  ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |rra                                                                                                          ;              ;
+;    |rra_controller:controller|                       ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_controller:controller                                                                                ;              ;
+;    |rra_feedback:feedback|                           ; 816 (562)         ; 250 (140)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback                                                                                    ;              ;
+;       |rra_7seg4:segments|                           ; 28 (28)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_7seg4:segments                                                                 ;              ;
+;       |rra_lcd_controller:lcd|                       ; 226 (226)         ; 82 (82)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_feedback:feedback|rra_lcd_controller:lcd                                                             ;              ;
+;    |rra_key_in:keypad|                               ; 56 (56)           ; 52 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_key_in:keypad                                                                                        ;              ;
+;    |rra_memory:memory|                               ; 6800 (6800)       ; 9489 (9489)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_memory:memory                                                                                        ;              ;
+;    |rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh                                                                   ;              ;
+;       |altpll:altpll_component|                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|altpll:altpll_component                                           ;              ;
+;          |rra_pll_10mhz_10khz_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|altpll:altpll_component|rra_pll_10mhz_10khz_altpll:auto_generated ;              ;
+;    |rra_servo_controller:rra_servo_base|             ; 358 (358)         ; 103 (103)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_base                                                                      ;              ;
+;    |rra_servo_controller:rra_servo_gripper|          ; 310 (310)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_gripper                                                                   ;              ;
+;    |rra_servo_controller:rra_servo_lower|            ; 331 (331)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_lower                                                                     ;              ;
+;    |rra_servo_controller:rra_servo_middle|           ; 310 (310)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_middle                                                                    ;              ;
+;    |rra_servo_controller:rra_servo_upper|            ; 328 (328)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_upper                                                                     ;              ;
+;    |rra_servo_controller:rra_servo_wrist|            ; 310 (310)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rra|rra_servo_controller:rra_servo_wrist                                                                     ;              ;
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                   ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------+-------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                             ; IP Include File                                                                           ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------+-------------------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |rra|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh ; C:/Users/Matt/Google Drive/UWE/Year 3 - Group Design/RRA/Hardware/rra_pll_10mhz_10khz.vhd ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------+-------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                 ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                             ; IP Include File                         ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------------------------------+
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |rra|rra_pll_10mhz_10khz:rra_clk_10mhz_10kh ; H:/RRA/Hardware/rra_pll_10mhz_10khz.vhd ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -304,6 +308,10 @@ Encoding Type:  One-Hot
 ; Register name                                              ; Reason for Removal                                               ;
 +------------------------------------------------------------+------------------------------------------------------------------+
 ; rra_feedback:feedback|lcd_bus[7,8]                         ; Stuck at GND due to stuck port data_in                           ;
+; rra_feedback:feedback|ch6_bcd[0]                           ; Merged with data_in[60]                                          ;
+; rra_feedback:feedback|ch5_bcd[0]                           ; Merged with data_in[48]                                          ;
+; rra_feedback:feedback|ch4_bcd[0]                           ; Merged with data_in[36]                                          ;
+; rra_feedback:feedback|ch3_bcd[0]                           ; Merged with data_in[24]                                          ;
 ; rra_feedback:feedback|ch2_bcd[0]                           ; Merged with data_in[12]                                          ;
 ; rra_feedback:feedback|ch1_bcd[0]                           ; Merged with data_in[0]                                           ;
 ; rra_servo_controller:rra_servo_gripper|counter_1khz[15]    ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[15] ;
@@ -366,78 +374,82 @@ Encoding Type:  One-Hot
 ; rra_servo_controller:rra_servo_middle|counter_1khz[4]      ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[4]  ;
 ; rra_servo_controller:rra_servo_upper|counter_1khz[4]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[4]  ;
 ; rra_servo_controller:rra_servo_wrist|counter_1khz[4]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[4]  ;
-; rra_servo_controller:rra_servo_gripper|counter_1khz[2]     ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
-; rra_servo_controller:rra_servo_lower|counter_1khz[2]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
-; rra_servo_controller:rra_servo_middle|counter_1khz[2]      ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
-; rra_servo_controller:rra_servo_upper|counter_1khz[2]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
-; rra_servo_controller:rra_servo_wrist|counter_1khz[2]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
-; rra_servo_controller:rra_servo_gripper|counter_1khz[0]     ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
-; rra_servo_controller:rra_servo_lower|counter_1khz[0]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
-; rra_servo_controller:rra_servo_middle|counter_1khz[0]      ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
-; rra_servo_controller:rra_servo_upper|counter_1khz[0]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
-; rra_servo_controller:rra_servo_wrist|counter_1khz[0]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
 ; rra_servo_controller:rra_servo_gripper|counter_1khz[3]     ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[3]  ;
 ; rra_servo_controller:rra_servo_lower|counter_1khz[3]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[3]  ;
 ; rra_servo_controller:rra_servo_middle|counter_1khz[3]      ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[3]  ;
 ; rra_servo_controller:rra_servo_upper|counter_1khz[3]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[3]  ;
 ; rra_servo_controller:rra_servo_wrist|counter_1khz[3]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[3]  ;
+; rra_servo_controller:rra_servo_gripper|counter_1khz[2]     ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
+; rra_servo_controller:rra_servo_lower|counter_1khz[2]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
+; rra_servo_controller:rra_servo_middle|counter_1khz[2]      ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
+; rra_servo_controller:rra_servo_upper|counter_1khz[2]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
+; rra_servo_controller:rra_servo_wrist|counter_1khz[2]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[2]  ;
 ; rra_servo_controller:rra_servo_gripper|counter_1khz[1]     ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[1]  ;
 ; rra_servo_controller:rra_servo_lower|counter_1khz[1]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[1]  ;
 ; rra_servo_controller:rra_servo_middle|counter_1khz[1]      ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[1]  ;
 ; rra_servo_controller:rra_servo_upper|counter_1khz[1]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[1]  ;
 ; rra_servo_controller:rra_servo_wrist|counter_1khz[1]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[1]  ;
-; rra_servo_controller:rra_servo_gripper|speed[3]            ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
-; rra_servo_controller:rra_servo_lower|speed[3]              ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
-; rra_servo_controller:rra_servo_middle|speed[3]             ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
-; rra_servo_controller:rra_servo_upper|speed[3]              ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
-; rra_servo_controller:rra_servo_wrist|speed[3]              ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
-; rra_servo_controller:rra_servo_gripper|speed[2]            ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
-; rra_servo_controller:rra_servo_lower|speed[2]              ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
-; rra_servo_controller:rra_servo_middle|speed[2]             ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
-; rra_servo_controller:rra_servo_upper|speed[2]              ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
-; rra_servo_controller:rra_servo_wrist|speed[2]              ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
-; rra_servo_controller:rra_servo_gripper|speed[1]            ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
-; rra_servo_controller:rra_servo_lower|speed[1]              ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
-; rra_servo_controller:rra_servo_middle|speed[1]             ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
-; rra_servo_controller:rra_servo_upper|speed[1]              ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
-; rra_servo_controller:rra_servo_wrist|speed[1]              ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
+; rra_servo_controller:rra_servo_gripper|counter_1khz[0]     ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
+; rra_servo_controller:rra_servo_lower|counter_1khz[0]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
+; rra_servo_controller:rra_servo_middle|counter_1khz[0]      ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
+; rra_servo_controller:rra_servo_upper|counter_1khz[0]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
+; rra_servo_controller:rra_servo_wrist|counter_1khz[0]       ; Merged with rra_servo_controller:rra_servo_base|counter_1khz[0]  ;
+; rra_servo_controller:rra_servo_gripper|delay[0]            ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
+; rra_servo_controller:rra_servo_lower|delay[0]              ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
+; rra_servo_controller:rra_servo_middle|delay[0]             ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
+; rra_servo_controller:rra_servo_upper|delay[0]              ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
+; rra_servo_controller:rra_servo_wrist|delay[0]              ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
+; rra_servo_controller:rra_servo_gripper|delay[1]            ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
+; rra_servo_controller:rra_servo_lower|delay[1]              ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
+; rra_servo_controller:rra_servo_middle|delay[1]             ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
+; rra_servo_controller:rra_servo_upper|delay[1]              ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
+; rra_servo_controller:rra_servo_wrist|delay[1]              ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
+; rra_servo_controller:rra_servo_gripper|delay[2]            ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
+; rra_servo_controller:rra_servo_lower|delay[2]              ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
+; rra_servo_controller:rra_servo_middle|delay[2]             ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
+; rra_servo_controller:rra_servo_upper|delay[2]              ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
+; rra_servo_controller:rra_servo_wrist|delay[2]              ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
+; rra_servo_controller:rra_servo_gripper|delay[3]            ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
+; rra_servo_controller:rra_servo_lower|delay[3]              ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
+; rra_servo_controller:rra_servo_middle|delay[3]             ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
+; rra_servo_controller:rra_servo_upper|delay[3]              ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
+; rra_servo_controller:rra_servo_wrist|delay[3]              ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
 ; rra_servo_controller:rra_servo_gripper|speed[0]            ; Merged with rra_servo_controller:rra_servo_base|speed[0]         ;
 ; rra_servo_controller:rra_servo_lower|speed[0]              ; Merged with rra_servo_controller:rra_servo_base|speed[0]         ;
 ; rra_servo_controller:rra_servo_middle|speed[0]             ; Merged with rra_servo_controller:rra_servo_base|speed[0]         ;
 ; rra_servo_controller:rra_servo_upper|speed[0]              ; Merged with rra_servo_controller:rra_servo_base|speed[0]         ;
 ; rra_servo_controller:rra_servo_wrist|speed[0]              ; Merged with rra_servo_controller:rra_servo_base|speed[0]         ;
+; rra_servo_controller:rra_servo_gripper|speed[1]            ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
+; rra_servo_controller:rra_servo_lower|speed[1]              ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
+; rra_servo_controller:rra_servo_middle|speed[1]             ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
+; rra_servo_controller:rra_servo_upper|speed[1]              ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
+; rra_servo_controller:rra_servo_wrist|speed[1]              ; Merged with rra_servo_controller:rra_servo_base|speed[1]         ;
+; rra_servo_controller:rra_servo_gripper|speed[2]            ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
+; rra_servo_controller:rra_servo_lower|speed[2]              ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
+; rra_servo_controller:rra_servo_middle|speed[2]             ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
+; rra_servo_controller:rra_servo_upper|speed[2]              ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
+; rra_servo_controller:rra_servo_wrist|speed[2]              ; Merged with rra_servo_controller:rra_servo_base|speed[2]         ;
+; rra_servo_controller:rra_servo_gripper|speed[3]            ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
+; rra_servo_controller:rra_servo_lower|speed[3]              ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
+; rra_servo_controller:rra_servo_middle|speed[3]             ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
+; rra_servo_controller:rra_servo_upper|speed[3]              ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
+; rra_servo_controller:rra_servo_wrist|speed[3]              ; Merged with rra_servo_controller:rra_servo_base|speed[3]         ;
 ; rra_servo_controller:rra_servo_base|target[13]             ; Merged with rra_servo_controller:rra_servo_base|target[12]       ;
 ; rra_servo_controller:rra_servo_gripper|target[12,13]       ; Merged with rra_servo_controller:rra_servo_base|target[12]       ;
 ; rra_servo_controller:rra_servo_lower|target[12,13]         ; Merged with rra_servo_controller:rra_servo_base|target[12]       ;
 ; rra_servo_controller:rra_servo_middle|target[12,13]        ; Merged with rra_servo_controller:rra_servo_base|target[12]       ;
 ; rra_servo_controller:rra_servo_upper|target[12,13]         ; Merged with rra_servo_controller:rra_servo_base|target[12]       ;
 ; rra_servo_controller:rra_servo_wrist|target[12,13]         ; Merged with rra_servo_controller:rra_servo_base|target[12]       ;
-; rra_servo_controller:rra_servo_gripper|delay[3]            ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
-; rra_servo_controller:rra_servo_lower|delay[3]              ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
-; rra_servo_controller:rra_servo_middle|delay[3]             ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
-; rra_servo_controller:rra_servo_upper|delay[3]              ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
-; rra_servo_controller:rra_servo_wrist|delay[3]              ; Merged with rra_servo_controller:rra_servo_base|delay[3]         ;
-; rra_servo_controller:rra_servo_gripper|delay[2]            ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
-; rra_servo_controller:rra_servo_lower|delay[2]              ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
-; rra_servo_controller:rra_servo_middle|delay[2]             ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
-; rra_servo_controller:rra_servo_upper|delay[2]              ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
-; rra_servo_controller:rra_servo_wrist|delay[2]              ; Merged with rra_servo_controller:rra_servo_base|delay[2]         ;
-; rra_servo_controller:rra_servo_gripper|delay[1]            ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
-; rra_servo_controller:rra_servo_lower|delay[1]              ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
-; rra_servo_controller:rra_servo_middle|delay[1]             ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
-; rra_servo_controller:rra_servo_upper|delay[1]              ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
-; rra_servo_controller:rra_servo_wrist|delay[1]              ; Merged with rra_servo_controller:rra_servo_base|delay[1]         ;
-; rra_servo_controller:rra_servo_gripper|delay[0]            ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
-; rra_servo_controller:rra_servo_lower|delay[0]              ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
-; rra_servo_controller:rra_servo_middle|delay[0]             ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
-; rra_servo_controller:rra_servo_upper|delay[0]              ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
-; rra_servo_controller:rra_servo_wrist|delay[0]              ; Merged with rra_servo_controller:rra_servo_base|delay[0]         ;
+; rra_feedback:feedback|ch6_bcd[15]                          ; Stuck at GND due to stuck port data_in                           ;
+; rra_feedback:feedback|ch5_bcd[15]                          ; Stuck at GND due to stuck port data_in                           ;
+; rra_feedback:feedback|ch4_bcd[15]                          ; Stuck at GND due to stuck port data_in                           ;
+; rra_feedback:feedback|ch3_bcd[15]                          ; Stuck at GND due to stuck port data_in                           ;
 ; rra_feedback:feedback|ch2_bcd[15]                          ; Stuck at GND due to stuck port data_in                           ;
 ; rra_feedback:feedback|ch1_bcd[15]                          ; Stuck at GND due to stuck port data_in                           ;
 ; rra_feedback:feedback|segVal[15]                           ; Stuck at GND due to stuck port data_in                           ;
 ; rra_feedback:feedback|rra_lcd_controller:lcd|o_rw          ; Stuck at GND due to stuck port data_in                           ;
 ; rra_feedback:feedback|rra_lcd_controller:lcd|o_lcd_data[7] ; Stuck at GND due to stuck port data_in                           ;
-; Total Number of Removed Registers = 140                    ;                                                                  ;
+; Total Number of Removed Registers = 148                    ;                                                                  ;
 +------------------------------------------------------------+------------------------------------------------------------------+
 
 
@@ -446,11 +458,9 @@ Encoding Type:  One-Hot
 +-----------------------------------+---------------------------+------------------------------------------------------------+
 ; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                     ;
 +-----------------------------------+---------------------------+------------------------------------------------------------+
-; rra_feedback:feedback|lcd_bus[8]  ; Stuck at GND              ; rra_feedback:feedback|rra_lcd_controller:lcd|o_rw          ;
-;                                   ; due to stuck port data_in ;                                                            ;
 ; rra_feedback:feedback|lcd_bus[7]  ; Stuck at GND              ; rra_feedback:feedback|rra_lcd_controller:lcd|o_lcd_data[7] ;
 ;                                   ; due to stuck port data_in ;                                                            ;
-; rra_feedback:feedback|ch2_bcd[15] ; Stuck at GND              ; rra_feedback:feedback|segVal[15]                           ;
+; rra_feedback:feedback|ch6_bcd[15] ; Stuck at GND              ; rra_feedback:feedback|segVal[15]                           ;
 ;                                   ; due to stuck port data_in ;                                                            ;
 +-----------------------------------+---------------------------+------------------------------------------------------------+
 
@@ -460,7 +470,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10360 ;
+; Total registers                              ; 10452 ;
 ; Number of registers using Synchronous Clear  ; 383   ;
 ; Number of registers using Synchronous Load   ; 71    ;
 ; Number of registers using Asynchronous Clear ; 9350  ;
@@ -530,15 +540,15 @@ Encoding Type:  One-Hot
 ; rra_servo_controller:rra_servo_base|current[3]      ; 9       ;
 ; rra_servo_controller:rra_servo_base|current[2]      ; 9       ;
 ; rra_feedback:feedback|rra_lcd_controller:lcd|o_busy ; 1       ;
-; rra_servo_controller:rra_servo_base|target[12]      ; 59      ;
+; rra_servo_controller:rra_servo_base|target[12]      ; 60      ;
 ; rra_servo_controller:rra_servo_lower|target[2]      ; 6       ;
 ; rra_servo_controller:rra_servo_lower|target[3]      ; 6       ;
 ; rra_servo_controller:rra_servo_lower|target[4]      ; 6       ;
 ; rra_servo_controller:rra_servo_lower|target[5]      ; 6       ;
 ; rra_servo_controller:rra_servo_lower|target[6]      ; 7       ;
-; rra_servo_controller:rra_servo_lower|target[10]     ; 7       ;
-; rra_servo_controller:rra_servo_lower|target[11]     ; 7       ;
-; rra_servo_controller:rra_servo_base|counter_1khz[0] ; 2       ;
+; rra_servo_controller:rra_servo_lower|target[10]     ; 6       ;
+; rra_servo_controller:rra_servo_lower|target[11]     ; 6       ;
+; rra_servo_controller:rra_servo_base|counter_1khz[0] ; 3       ;
 ; rra_servo_controller:rra_servo_middle|target[2]     ; 6       ;
 ; rra_servo_controller:rra_servo_middle|target[3]     ; 6       ;
 ; rra_servo_controller:rra_servo_middle|target[4]     ; 6       ;
@@ -558,8 +568,8 @@ Encoding Type:  One-Hot
 ; rra_servo_controller:rra_servo_wrist|target[4]      ; 6       ;
 ; rra_servo_controller:rra_servo_wrist|target[5]      ; 6       ;
 ; rra_servo_controller:rra_servo_wrist|target[6]      ; 7       ;
-; rra_servo_controller:rra_servo_wrist|target[10]     ; 7       ;
-; rra_servo_controller:rra_servo_wrist|target[11]     ; 7       ;
+; rra_servo_controller:rra_servo_wrist|target[10]     ; 6       ;
+; rra_servo_controller:rra_servo_wrist|target[11]     ; 6       ;
 ; rra_servo_controller:rra_servo_gripper|target[2]    ; 6       ;
 ; rra_servo_controller:rra_servo_gripper|target[3]    ; 6       ;
 ; rra_servo_controller:rra_servo_gripper|target[4]    ; 6       ;
@@ -572,68 +582,209 @@ Encoding Type:  One-Hot
 ; rra_servo_controller:rra_servo_base|target[4]       ; 6       ;
 ; rra_servo_controller:rra_servo_base|target[5]       ; 6       ;
 ; rra_servo_controller:rra_servo_base|target[6]       ; 7       ;
-; rra_servo_controller:rra_servo_base|target[10]      ; 6       ;
-; rra_servo_controller:rra_servo_base|target[11]      ; 6       ;
+; rra_servo_controller:rra_servo_base|target[10]      ; 7       ;
+; rra_servo_controller:rra_servo_base|target[11]      ; 7       ;
 ; rra_servo_controller:rra_servo_base|delay[0]        ; 4       ;
 ; Total number of inverted registers = 100            ;         ;
 +-----------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 106 bits  ; 212 LEs       ; 106 LEs              ; 106 LEs                ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|o_current[3]         ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 30 LEs               ; 45 LEs                 ; Yes        ; |rra|rra_feedback:feedback|segVal[11]                           ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |rra|rra_servo_controller:rra_servo_base|delay[3]               ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |rra|addr[5]                                                    ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 27 LEs               ; 3 LEs                  ; Yes        ; |rra|rra_feedback:feedback|lcd_bus[0]                           ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count[4]          ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|pwm_count_i[6]        ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count[5]         ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|pwm_count_i[7]       ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count[2]          ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|pwm_count_i[13]       ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count[16]         ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count[12]       ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count_i[9]        ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count_i[14]     ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count[1]           ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|pwm_count_i[12]        ;
-; 8:1                ; 72 bits   ; 360 LEs       ; 360 LEs              ; 0 LEs                  ; Yes        ; |rra|rra_memory:memory|data_out[64]                             ;
-; 19:1               ; 4 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[13]                             ;
-; 9:1                ; 72 bits   ; 432 LEs       ; 432 LEs              ; 0 LEs                  ; Yes        ; |rra|rra_memory:memory|data_out_prev[45]                        ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[9]            ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[9]           ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[1]            ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[8]            ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[9]          ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[1]             ;
-; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |rra|t_lower_pos[11]                                            ;
-; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |rra|t_middle_pos[10]                                           ;
-; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |rra|t_upper_pos[4]                                             ;
-; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |rra|t_wrist_pos[8]                                             ;
-; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |rra|t_gripper_pos[3]                                           ;
-; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |rra|t_base_pos[2]                                              ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[7]                              ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[3]                              ;
-; 21:1               ; 3 bits    ; 42 LEs        ; 18 LEs               ; 24 LEs                 ; Yes        ; |rra|rra_key_in:keypad|key_next[5]                              ;
-; 14:1               ; 7 bits    ; 63 LEs        ; 49 LEs               ; 14 LEs                 ; Yes        ; |rra|rra_feedback:feedback|rra_lcd_controller:lcd|o_lcd_data[5] ;
-; 14:1               ; 31 bits   ; 279 LEs       ; 31 LEs               ; 248 LEs                ; Yes        ; |rra|rra_feedback:feedback|rra_lcd_controller:lcd|clk_count[4]  ;
-; 3:1                ; 42 bits   ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|target[5]             ;
-; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_lower|current[10]           ;
-; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_middle|current[6]           ;
-; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_upper|current[10]           ;
-; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_wrist|current[12]           ;
-; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_gripper|current[11]         ;
-; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |rra|rra_servo_controller:rra_servo_base|current[4]             ;
-; 4:1                ; 72 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux34                                    ;
-; 8:1                ; 72 bits   ; 360 LEs       ; 360 LEs              ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux64                                    ;
-; 16:1               ; 72 bits   ; 720 LEs       ; 720 LEs              ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux56                                    ;
-; 32:1               ; 72 bits   ; 1512 LEs      ; 1512 LEs             ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux48                                    ;
-; 64:1               ; 72 bits   ; 3024 LEs      ; 3024 LEs             ; 0 LEs                  ; No         ; |rra|rra_memory:memory|Mux26                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Physical Synthesis Netlist Optimizations                                                                   ;
++-------------------------------------------------------------------+------------------+---------------------+
+; Node                                                              ; Action           ; Reason              ;
++-------------------------------------------------------------------+------------------+---------------------+
+; Add4~0                                                            ; Modified         ; Timing optimization ;
+; Add5~1                                                            ; Modified         ; Timing optimization ;
+; Add6~0                                                            ; Modified         ; Timing optimization ;
+; Add7~1                                                            ; Modified         ; Timing optimization ;
+; Add8~0                                                            ; Modified         ; Timing optimization ;
+; Add9~1                                                            ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~0_OTERM63       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~0_RTM065        ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~0_RTM065        ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~1               ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~2_OTERM61       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~4_OTERM59       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~6_OTERM57       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~8_OTERM55       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~10_OTERM53      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~12_OTERM51      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~14_OTERM49      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~16_OTERM47      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~18_OTERM45      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~20_OTERM43      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~22_OTERM41      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~24_OTERM39      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~26_OTERM37      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~28_OTERM35      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~30_OTERM33      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~32_OTERM31      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~34_OTERM29      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~36_OTERM27      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~38_OTERM25      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~40_OTERM23      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~42_OTERM21      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~44_OTERM19      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~46_OTERM17      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~48_OTERM15      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~50_OTERM13      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~52_OTERM11      ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~54_OTERM9       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~56_OTERM7       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~58_OTERM5       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~60_OTERM3       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Add0~62_OTERM1       ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~6          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~6_RTM069   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~6_RTM069   ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~7          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~7_OTERM101 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~7_RTM068   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~7_RTM0103  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~7_RTM0103  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~9          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan0~9_RTM0102  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan2~0_OTERM93  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan2~1          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan2~1_OTERM83  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan2~1_RTM085   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan2~1_RTM085   ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan2~2          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan2~2_RTM084   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan3~0          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan3~0_OTERM71  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan3~0_RTM073   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan3~0_RTM073   ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan3~1          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan3~1_RTM072   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan4~0          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan4~0_OTERM79  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan4~0_RTM081   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan4~0_RTM081   ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan4~1          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan4~1_RTM080   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan4~4_OTERM87  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~5          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~5_RTM077   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~5_RTM077   ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~6          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~6_OTERM113 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~6_RTM076   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~6_RTM0115  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~6_RTM0115  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~7          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan5~7_RTM0114  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~0          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~0_RTM091   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~0_RTM091   ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~1          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~1_OTERM117 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~1_RTM090   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~1_RTM0119  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~1_RTM0119  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~2          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan6~2_RTM0118  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan7~3          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan7~3_RTM099   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan7~3_RTM099   ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan7~4          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan7~4_RTM098   ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan8~1          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan8~1_OTERM109 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan8~1_RTM0111  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan8~1_RTM0111  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan8~2          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan8~2_RTM0110  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan9~1          ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan9~1_OTERM105 ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan9~1_RTM0107  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan9~1_RTM0107  ; Retimed Register ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan9~2          ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|LessThan9~2_RTM0106  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Selector32~0         ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|Selector32~0_RTM064  ; Modified         ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|clk_count[0]         ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|clk_count[22]        ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|clk_count[23]        ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|clk_count[24]        ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|clk_count[25]        ; Deleted          ; Timing optimization ;
+; rra_feedback:feedback|rra_lcd_controller:lcd|clk_count[26]        ; Deleted          ; Timing optimization ;
+; rra_servo_controller:rra_servo_base|Add1~0                        ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_base|Add9~1                        ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_base|Add9~11                       ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_base|current~42                    ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_gripper|Add1~0                     ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_gripper|current~42                 ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_lower|Add1~0                       ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_lower|current~43                   ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_middle|Add1~0                      ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_middle|current~42                  ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_upper|Add1~0                       ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_upper|current~42                   ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_wrist|Add1~0                       ; Modified         ; Timing optimization ;
+; rra_servo_controller:rra_servo_wrist|current~42                   ; Modified         ; Timing optimization ;
+; t_gripper_pos[0]~27                                               ; Modified         ; Timing optimization ;
+; t_upper_pos[0]~27                                                 ; Modified         ; Timing optimization ;
+; t_wrist_pos[0]~27                                                 ; Modified         ; Timing optimization ;
++-------------------------------------------------------------------+------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+-----------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                      ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+-----------------------------------------------------------------+----------------------------+
+; 3:1                ; 106 bits  ; 212 LEs       ; 106 LEs              ; 106 LEs                ; |rra|rra_servo_controller:rra_servo_lower|o_current[9]          ;                            ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 60 LEs               ; 15 LEs                 ; |rra|rra_feedback:feedback|segVal[1]                            ;                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; |rra|rra_servo_controller:rra_servo_base|delay[2]               ;                            ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; |rra|addr[1]                                                    ;                            ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 27 LEs               ; 3 LEs                  ; |rra|rra_feedback:feedback|lcd_bus[0]                           ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_lower|pwm_count[16]         ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_lower|pwm_count_i[14]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_middle|pwm_count[10]        ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_middle|pwm_count_i[4]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_upper|pwm_count[16]         ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_upper|pwm_count_i[1]        ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count[13]         ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count[17]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_wrist|pwm_count_i[6]        ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_gripper|pwm_count_i[6]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_base|pwm_count[13]          ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_base|pwm_count_i[2]         ;                            ;
+; 8:1                ; 72 bits   ; 360 LEs       ; 360 LEs              ; 0 LEs                  ; |rra|rra_memory:memory|data_out[68]                             ;                            ;
+; 19:1               ; 4 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; |rra|rra_key_in:keypad|key_next[15]                             ;                            ;
+; 9:1                ; 72 bits   ; 432 LEs       ; 432 LEs              ; 0 LEs                  ; |rra|rra_memory:memory|data_out_prev[26]                        ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |rra|rra_servo_controller:rra_servo_lower|current[9]            ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |rra|rra_servo_controller:rra_servo_middle|current[1]           ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |rra|rra_servo_controller:rra_servo_upper|current[1]            ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |rra|rra_servo_controller:rra_servo_wrist|current[7]            ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |rra|rra_servo_controller:rra_servo_gripper|current[1]          ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |rra|rra_servo_controller:rra_servo_base|current[1]             ;                            ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; |rra|t_lower_pos[10]                                            ;                            ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; |rra|t_middle_pos[1]                                            ;                            ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; |rra|t_upper_pos[10]                                            ;                            ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; |rra|t_wrist_pos[3]                                             ;                            ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; |rra|t_gripper_pos[1]                                           ;                            ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; |rra|t_base_pos[10]                                             ;                            ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; |rra|rra_key_in:keypad|key_next[4]                              ;                            ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; |rra|rra_key_in:keypad|key_next[3]                              ;                            ;
+; 21:1               ; 3 bits    ; 42 LEs        ; 18 LEs               ; 24 LEs                 ; |rra|rra_key_in:keypad|key_next[5]                              ;                            ;
+; 14:1               ; 7 bits    ; 63 LEs        ; 49 LEs               ; 14 LEs                 ; |rra|rra_feedback:feedback|rra_lcd_controller:lcd|o_lcd_data[1] ;                            ;
+; 14:1               ; 31 bits   ; 279 LEs       ; 31 LEs               ; 248 LEs                ; |rra|rra_feedback:feedback|rra_lcd_controller:lcd|clk_count[6]  ;                            ;
+; 3:1                ; 42 bits   ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; |rra|rra_servo_controller:rra_servo_gripper|target[6]           ;                            ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_lower|current[5]            ;                            ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_middle|current[2]           ;                            ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_upper|current[6]            ;                            ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_wrist|current[12]           ;                            ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_gripper|current[6]          ;                            ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |rra|rra_servo_controller:rra_servo_base|current[10]            ;                            ;
+; 4:1                ; 72 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; |rra|rra_memory:memory|Mux25                                    ;                            ;
+; 8:1                ; 72 bits   ; 360 LEs       ; 360 LEs              ; 0 LEs                  ; |rra|rra_memory:memory|Mux17                                    ;                            ;
+; 16:1               ; 72 bits   ; 720 LEs       ; 720 LEs              ; 0 LEs                  ; |rra|rra_memory:memory|Mux68                                    ;                            ;
+; 32:1               ; 72 bits   ; 1512 LEs      ; 1512 LEs             ; 0 LEs                  ; |rra|rra_memory:memory|Mux2                                     ;                            ;
+; 64:1               ; 72 bits   ; 3024 LEs      ; 3024 LEs             ; 0 LEs                  ; |rra|rra_memory:memory|Mux66                                    ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-----------------------------------------------------------------+----------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -1017,6 +1168,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------+
 ; step           ; 1     ; Signed Integer                                           ;
 ; max_steps      ; 2000  ; Signed Integer                                           ;
+; offset         ; 1000  ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1028,6 +1180,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------+
 ; step           ; 1     ; Signed Integer                                            ;
 ; max_steps      ; 2000  ; Signed Integer                                            ;
+; offset         ; 0     ; Signed Integer                                            ;
 +----------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1039,6 +1192,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------+
 ; step           ; 1     ; Signed Integer                                           ;
 ; max_steps      ; 2000  ; Signed Integer                                           ;
+; offset         ; 250   ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1050,6 +1204,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------+
 ; step           ; 1     ; Signed Integer                                           ;
 ; max_steps      ; 2000  ; Signed Integer                                           ;
+; offset         ; 0     ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1061,6 +1216,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------+
 ; step           ; 1     ; Signed Integer                                             ;
 ; max_steps      ; 2000  ; Signed Integer                                             ;
+; offset         ; 0     ; Signed Integer                                             ;
 +----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1072,6 +1228,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------+
 ; step           ; 1     ; Signed Integer                                          ;
 ; max_steps      ; 2000  ; Signed Integer                                          ;
+; offset         ; 0     ; Signed Integer                                          ;
 +----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1113,7 +1270,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; o_current_i ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; i_offset    ; Input  ; Info     ; Stuck at GND                                                                        ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1123,7 +1279,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; o_current_i ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; i_offset    ; Input  ; Info     ; Stuck at GND                                                                        ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1133,19 +1288,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; o_current_i ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; i_offset    ; Input  ; Info     ; Stuck at GND                                                                        ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rra_servo_controller:rra_servo_upper"                                                         ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; o_current_i    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; i_offset[5..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; i_offset[7..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_servo_controller:rra_servo_upper"                                                      ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_current_i ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -1154,19 +1306,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; o_current_i ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; i_offset    ; Input  ; Info     ; Stuck at GND                                                                        ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rra_servo_controller:rra_servo_lower"                                                         ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; o_current_i    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; i_offset[5..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; i_offset[7..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rra_servo_controller:rra_servo_lower"                                                      ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_current_i ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -1194,7 +1343,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:24     ;
+; Top            ; 00:01:19     ;
 +----------------+--------------+
 
 
@@ -1202,36 +1351,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Mar 24 03:53:59 2016
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Mar 29 17:16:12 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rra -c rra
-Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_lcd_controller.vhd
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra_lcd_controller.vhd
     Info (12022): Found design unit 1: rra_lcd_controller-controller
     Info (12023): Found entity 1: rra_lcd_controller
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_pll_10mhz_10khz.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra_pll_10mhz_10khz.vhd
     Info (12022): Found design unit 1: rra_pll_10mhz_10khz-SYN
     Info (12023): Found entity 1: rra_pll_10mhz_10khz
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_feedback.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra_feedback.vhd
     Info (12022): Found design unit 1: rra_feedback-rtl
     Info (12023): Found entity 1: rra_feedback
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_7seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra_7seg.vhd
     Info (12022): Found design unit 1: rra_7seg4-rtl
     Info (12023): Found entity 1: rra_7seg4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_servo_controller.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra_servo_controller.vhd
     Info (12022): Found design unit 1: rra_servo_controller-rtl
     Info (12023): Found entity 1: rra_servo_controller
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_memory.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra_memory.vhd
     Info (12022): Found design unit 1: rra_memory-rtl
     Info (12023): Found entity 1: rra_memory
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_key_in.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra_key_in.vhd
     Info (12022): Found design unit 1: rra_key_in-rtl
     Info (12023): Found entity 1: rra_key_in
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra_controller.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra_controller.vhd
     Info (12022): Found design unit 1: rra_controller-v1
     Info (12023): Found entity 1: rra_controller
-Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/google drive/uwe/year 3 - group design/rra/hardware/rra.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /rra/hardware/rra.vhd
     Info (12022): Found design unit 1: rra-v1
     Info (12023): Found entity 1: rra
 Info (12127): Elaborating entity "rra" for the top level hierarchy
@@ -1310,9 +1459,13 @@ Info (12128): Elaborating entity "rra_key_in" for hierarchy "rra_key_in:keypad"
 Info (12128): Elaborating entity "rra_memory" for hierarchy "rra_memory:memory"
 Info (12128): Elaborating entity "rra_controller" for hierarchy "rra_controller:controller"
 Info (12128): Elaborating entity "rra_servo_controller" for hierarchy "rra_servo_controller:rra_servo_lower"
+Info (12128): Elaborating entity "rra_servo_controller" for hierarchy "rra_servo_controller:rra_servo_middle"
+Info (12128): Elaborating entity "rra_servo_controller" for hierarchy "rra_servo_controller:rra_servo_upper"
 Info (12128): Elaborating entity "rra_feedback" for hierarchy "rra_feedback:feedback"
 Info (12128): Elaborating entity "rra_7seg4" for hierarchy "rra_feedback:feedback|rra_7seg4:segments"
 Info (12128): Elaborating entity "rra_lcd_controller" for hierarchy "rra_feedback:feedback|rra_lcd_controller:lcd"
+Info (13005): Duplicate registers merged to single register
+Info (13005): Duplicate registers merged to single register
 Info (286030): Timing-Driven Synthesis is running
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_lcd_rw" is stuck at GND
@@ -1327,21 +1480,21 @@ Info (332111): Found 3 clocks
     Info (332111):  100.000 rra_clk_10mhz_10kh|altpll_component|auto_generated|pll1|clk[0]
     Info (332111): 100000.000 rra_clk_10mhz_10kh|altpll_component|auto_generated|pll1|clk[1]
 Info (128002): Starting physical synthesis algorithm register retiming
-Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 409 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:09
+Info (128001): Physical synthesis optimizations for speed complete: elapsed CPU time is 00:00:09
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 19345 device resources after synthesis - the final resource count might be different
+    Info (16011): Adding node "rra_pll_10mhz_10khz:rra_clk_10mhz_10kh|altpll:altpll_component|rra_pll_10mhz_10khz_altpll:auto_generated|pll1"
+Info (21057): Implemented 19680 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 71 output pins
-    Info (21061): Implemented 19257 logic cells
+    Info (21061): Implemented 19592 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 692 megabytes
-    Info: Processing ended: Thu Mar 24 03:55:32 2016
-    Info: Elapsed time: 00:01:33
-    Info: Total CPU time (on all processors): 00:01:30
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 428 megabytes
+    Info: Processing ended: Tue Mar 29 17:17:37 2016
+    Info: Elapsed time: 00:01:25
+    Info: Total CPU time (on all processors): 00:01:24
 
 

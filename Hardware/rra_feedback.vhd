@@ -99,6 +99,10 @@ architecture rtl of rra_feedback is
 
 	signal ch1_bcd  	: std_ulogic_vector(15 downto 0);
 	signal ch2_bcd  	: std_ulogic_vector(15 downto 0);
+	signal ch3_bcd  	: std_ulogic_vector(15 downto 0);
+	signal ch4_bcd  	: std_ulogic_vector(15 downto 0);
+	signal ch5_bcd  	: std_ulogic_vector(15 downto 0);
+	signal ch6_bcd  	: std_ulogic_vector(15 downto 0);
 
 begin
 
@@ -133,6 +137,10 @@ begin
 		if rising_edge(i_clk) then
 			ch1_bcd <= to_bcd(i_ch1(12 downto 0));
 			ch2_bcd <= to_bcd(i_ch2(12 downto 0));
+			ch3_bcd <= to_bcd(i_ch3(12 downto 0));
+			ch4_bcd <= to_bcd(i_ch4(12 downto 0));
+			ch5_bcd <= to_bcd(i_ch5(12 downto 0));
+			ch6_bcd <= to_bcd(i_ch6(12 downto 0));
 		end if;
 	end process;
 
@@ -145,13 +153,13 @@ begin
 		  		when "001" =>
 		  			segVal <= ch2_bcd;
 		  		when "010" =>
-		  			segVal <= ch1_bcd;
+		  			segVal <= ch3_bcd;
 		  		when "011" =>
-		  			segVal <= ch1_bcd;
+		  			segVal <= ch4_bcd;
 		  		when "100" =>
-		  			segVal <= ch1_bcd;
+		  			segVal <= ch5_bcd;
 		  		when "101" =>
-		  			segVal <= ch1_bcd;
+		  			segVal <= ch6_bcd;
 		  		when others =>
 		  			segVal <= (others => '0');
 		  	end case;
